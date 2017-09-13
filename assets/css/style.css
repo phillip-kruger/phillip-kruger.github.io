@@ -285,7 +285,7 @@
 			pointer-events: none;
 			position: absolute;
 			right: 0;
-			text-align: left;
+			text-align: center;
 			top: 0;
 			width: 3em;
 		}
@@ -485,7 +485,7 @@
 				}
 
 		.box.special {
-			text-align: center;
+			text-align: left;
 		}
 
 		.box .image.featured {
