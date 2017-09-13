@@ -2,12 +2,13 @@
 layout: post
 title: "29 Hours later"
 date: "2015-10-13 12:22:40 +0200"
+categories: javaone
+excerpt: We arrived in San Francisco! Let's see some sights before the conference start
 ---
 
 ![]({{ site.baseurl }}/assets/images/blog/29_hours_later/alcatraz.jpg)
 {: .image.featured}
 
-### 29 Hours later
 Centurion -> JHB International Airport -> Dubai -> San Francisco international Airport -> Hotel
 29 hours !
 

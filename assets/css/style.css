@@ -2,7 +2,7 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 
 
-/* 
+/*
     ok
 	Alpha by HTML5 UP
 	html5up.net | @n33co
@@ -285,7 +285,7 @@
 			pointer-events: none;
 			position: absolute;
 			right: 0;
-			text-align: center;
+			text-align: left;
 			top: 0;
 			width: 3em;
 		}
