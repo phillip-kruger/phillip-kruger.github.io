@@ -37,3 +37,13 @@ And then we did a quick hop-on-hop-off city tour.
 Tomorrow the [conference](https://events.rainfocus.com/oow15/catalog/oracle.jsp?event=javaone&search.event=javaoneEvent) starts in full swing. I will keep you updated with all the cool stuff we learn :)
 
 ![]({{ site.baseurl }}/assets/images/blog/29_hours_later/no_one.jpg)
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
