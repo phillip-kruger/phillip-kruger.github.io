@@ -1,7 +1,27 @@
-name: Phillip Kruger
-description: Phillip Kruger template for Jekyll
-baseurl: ''
+# Site settings
+title: Phillip Krüger
+header-img: img/grand_canyon.jpg
+email: phillip.kruger@phillip-kruger.com
+copyright_name: Phillip Krüger
+description: "Java Geek, Software Architecture, Blogger"
+baseurl: ""
+url: "http://github.phillip-kruger.com"
+twitter_username: phillipkruger
+github_username:  phillip-kruger
+linkedin_username:  phillipkruger
+lastfm_username: phillipkruger
+udemy_username: phillip-kruger
+email_username:  phillip.kruger@phillip-kruger.com
 
-url: "http://localhost:4000"
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
 
-paginate: 10
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]

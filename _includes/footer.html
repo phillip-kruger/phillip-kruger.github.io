@@ -1,19 +1,90 @@
-		</section>
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://www.twitter.com/phillipkruger" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-					<li><a href="https://plus.google.com/u/0/+PhillipKr%C3%BCger" class="icon fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
-					<li><a href="http://www.linkedin.com/in/phillipkruger" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/phillip-kruger" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
-					<li><a href="https://www.last.fm/user/phillipkruger" class="icon fa-lastfm" target="_blank"><span class="label">LastFM</span></a></li>
-					<li><a href="https://www.udemy.com/user/phillip-kruger/" class="icon fa-graduation-cap" target="_blank"><span class="label">Udemy</span></a></li>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% if site.twitter_username %}
+                    <li>
+                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.linkedin_username %}
+                    <li>
+                        <a href="http://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.github_username %}
+                    <li>
+                        <a href="https://github.com/{{ site.github_username }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.lastfm_username %}
+                    <li>
+                        <a href="https://www.last.fm/user/{{ site.lastfm_username }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-lastfm fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.udemy_username %}
+                    <li>
+                        <a href="https://www.udemy.com/user/{{ site.udemy_username }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
 
-				</ul>
-				<ul class="copyright">
-					<li>&copy; 2017 Phillip Krüger . All rights reserved.</li>
-				</ul>
-			</footer>
+                    {% if site.email_username %}
+                    <li>
+                        <a href="mailto:{{ site.email_username }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; {{ site.time | date: '%Y' }} . {{ site.copyright_name }} </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-	</body>
-</html>
+<!-- jQuery -->
+<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
