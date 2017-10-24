@@ -32,7 +32,7 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/grand_canyon_face.jpg"
+avatar: "/images/grand_canyon_face.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -44,7 +44,7 @@ avatar: "/img/grand_canyon_face.jpg"
 # has a white background. You can specify a different background colour or a background image
 # for the navigation bar, the main page, and the footer.
 # navbar-col: "orange"
-navbar-img: "/img/bgimage.png"
+# navbar-img: "/images/bgimage.png"
 # footer-col: "blue"
 # footer-img: "/img/bgimage.png"
 # page-col: "#FF0000"
@@ -57,23 +57,13 @@ navbar-img: "/img/bgimage.png"
 author:
   name: Phillip Krüger
   email: "phillip.kruger@phillip-kruger.com"
-  #facebook: yourname  # eg. daattali
-  github: phillip-kruger    # eg. daattali
-  twitter: phillipkruger   # eg. daattali
-  #reddit: yourname    # eg. daattali
+  github: phillip-kruger
+  twitter: phillipkruger
   #google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
   #linkedin: yourname  # eg. daattali
-  #xing: yourname      # eg. daattali
   #stackoverflow: yourlink  # eg. "3943160/daattali"
-  #snapchat: yourname  # eg. daattali
-  #instagram: yourname # eg. daattali
   #youtube: yourlink   # eg. user/daattali or channel/daattali
-  #spotify: yourname   # eg. daattali
-  #telephone: yourphone   # eg. +14159998888
-  #steam: yourname     # eg. daattali
-  #twitch: yourname    # eg. daattali
-  #yelp: yourname      # eg. daattali
-
+  
 # Select which links to show in the footer
 footer-links-active:
   rss: true
@@ -104,7 +94,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "www.phillip-kruger.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "www.phillip-kruger.com"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
@@ -133,7 +123,7 @@ title-separator: "-"
 timezone: "Africa/Johannesburg"
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /post/:title/
 paginate: 5
 
 kramdown:
