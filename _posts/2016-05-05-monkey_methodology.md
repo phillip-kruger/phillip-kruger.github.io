@@ -1,10 +1,8 @@
 ---
-date: 2016-05-05T20:04:40.407Z
+layout: post
 title: Monkey methodology
-tags: ["Agile", "Lean"]
-image: "images/Monkey_methodology/monkeys2.jpg"
-share: true
-authorlocation: "Centurion, South Africa"
+tags: [Agile, Lean]
+bigimg: "/images/Monkey_methodology/monkeys2.jpg"
 aliases:
     - /2016/05/monkey-methodology.html
 ---
@@ -62,7 +60,7 @@ You have to (really have to!) involve business if you want to become truly agile
 In fact, I would argue that breaking down the line between business and IT will do more for your agility than any sprint or stand-up meeting.
 
 # It's not about speed
-![speed](images/Monkey_methodology/Waterfall_vs_agile.png)
+![speed](/images/Monkey_methodology/Waterfall_vs_agile.png)
 
 Over time, there might be no difference in the speed of the delivery if you compare waterfall to agile.
 
@@ -87,7 +85,7 @@ So when the client (or business) says "Hey, what about this ?" or "Can we please
 
 # Project vs. Product
 That's why it's also better to think of a product rather than a project. A project usually has a start time, end time and a set of features. A product has versions and features and evolve over time. A Product might never be done. That's OK. We are not building a house :)
-![product](images/Monkey_methodology/Waterfall_vs_agile2.jpg)
+![product](/images/Monkey_methodology/Waterfall_vs_agile2.jpg)
 
 # Adaptive vs. Predictive
 

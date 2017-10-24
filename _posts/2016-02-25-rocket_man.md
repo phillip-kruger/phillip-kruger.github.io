@@ -1,10 +1,8 @@
 ---
-date: 2016-02-25T20:04:40.407Z
+layout: post
 title: Rocket man
-tags: ["IBM Interconnect 2016"]
-image: "images/Rocket_man/20160224_185720.jpg"
-share: true
-authorlocation: "Las Vegas, NV, USA"
+tags: [IBM Interconnect 2016]
+bigimg: "/images/Rocket_man/20160224_185720.jpg"
 aliases:
     - /2016/02/rocket-man.html
 ---
@@ -53,7 +51,7 @@ It is:
 * apiDiscovery feature (more on that later)
 
 # dev@
-![dev_at](images/Rocket_man/20160224_152900.jpg)
+![dev_at](/images/Rocket_man/20160224_152900.jpg)
 
 I then spent some time a the dev@ section where you can play with new technologies. I wrote a quick app that uses [IBM Watson](https://developer.ibm.com/watson/) API. I detected a security breach with [IBM X-Force](http://www-03.ibm.com/security/xforce/). I did some analysis on my golf swing with some awesome IoT gadget. Apparently I should go Pro ...
 
@@ -61,7 +59,7 @@ I then spent some time a the dev@ section where you can play with new technologi
 Very interesting talk on how Social and IoT are changing the way we are going to work in the future. I did not know this, but IBM has a stack of tools in this area. A few years ago your business competitor was clear. Today you can not see it, it's not your natural enemy.
 see [http://www-03.ibm.com/software/products/en/ibm-connections-cloud-s1](http://www-03.ibm.com/software/products/en/ibm-connections-cloud-s1)
 
-![work](images/Rocket_man/20160224_160102560.jpg)
+![work](/images/Rocket_man/20160224_160102560.jpg)
 
 # Using IBM WebSphere Liberty and Swagger to Make your Services Accessible
 Presentation available [here](https://drive.google.com/open?id=0B_k6LNFyOaDHRVIxMjVOSFJpVDA)
@@ -70,4 +68,4 @@ Very good talk on the new apiDiscovery feature in Liberty. This allows liberty t
 
 # Elton John
 Then we all went to Elton John concert. I am not a big fan, but the food and drinks were good.
-![work](images/Rocket_man/20160224_195642_Pano.jpg)
+![work](/images/Rocket_man/20160224_195642_Pano.jpg)

@@ -1,15 +1,12 @@
 ---
-date: 2017-10-02T22:34:23.407Z
+layout: post
 title: Creativity has no filter
-tags: ["JavaOne 2017"]
-image: "images/Creativity_has_no_filter/banner.jpg"
-share: true
-comments: true
-authorlocation: "San Francisco, USA"
+tags: [JavaOne 2017]
+bigimg: "/images/Creativity_has_no_filter/banner.jpg"
 ---
 # Baking a Java EE 8 Micro Pi
 
-![](images/Creativity_has_no_filter/javaeepi.jpg)
+![](/images/Creativity_has_no_filter/javaeepi.jpg)
 This talk by Payara guys [Ondrej Mihalyi](https://twitter.com/OMihalyi) and [Mike Croft](https://twitter.com/croft) debunked the myth that Java EE is heavy.
 
 Some recent history (to put things into perspective):
@@ -48,7 +45,7 @@ Some nice (Payara specific) features:
 Some prediction on the future of Java EE - *"Look at Microprofile"*
 
 # Java EE 8: What’s New in the Java EE 8 Release
-![](images/Creativity_has_no_filter/javaee8.jpg)
+![](/images/Creativity_has_no_filter/javaee8.jpg)
 
 [Linda DeMichiel](https://jcp.org/ja/press/news/specLeadStars/commFocus_stars_demichiel) is the spec lead for Java EE and part of many other specs. She gave a high level overview of new features in Java EE 8, that was focus on:
 
@@ -183,7 +180,7 @@ private String password;
 She then discussed the future of Java EE. More on that later in another talk.
 
 # Servlet 4.0: A New Twist on an Old Favorite
-![](images/Creativity_has_no_filter/servlet4.jpg)
+![](/images/Creativity_has_no_filter/servlet4.jpg)
 
 Servlet 4.0 Spec leads [Ed Burns](https://twitter.com/edburns) and [Shing wai Chan](https://github.com/shingwaichan) went into detail on the new HTTP2 support in Servlet 4.0.
 
@@ -205,7 +202,7 @@ Servlet 4:
 Another new cool feature, Mapping discovery, allows you to discover how the current servlet was reached.
 
 # Java Keynote
-![](images/Creativity_has_no_filter/keynote.jpg)
+![](/images/Creativity_has_no_filter/keynote.jpg)
 
 This keynote actually deserves a blog post on it's own. You can see the video [here](https://developer.oracle.com/videos)
 
@@ -222,13 +219,13 @@ container-native applications at scale
 * RedHat, IBM, Oracle and Tomitribe discussed the Java EE move to Eclipse.
 * [Mark Reinhold](https://twitter.com/mreinhold) showed some features of the recently release Java 9.
 
-![](images/Creativity_has_no_filter/grow_up.jpg)
+![](/images/Creativity_has_no_filter/grow_up.jpg)
 
 *Java changed more in the last 3 week than in the last 13 years*
 
 # Opening Up Java EE: Panel Discussion with Oracle, IBM, Red Hat, and the Eclipse Foundation
 
-![](images/Creativity_has_no_filter/ee4j.jpg)
+![](/images/Creativity_has_no_filter/ee4j.jpg)
 
 Discussion Panel:
 
@@ -257,13 +254,13 @@ Community involvement matters ! *"Resist the urge to wait and see"* - David Blev
 
 The eclipse foundation is funded by it's members. see https://www.eclipse.org/membership/exploreMembership.php#allmembers
 
-![](images/Creativity_has_no_filter/ee4j_2.jpg)
+![](/images/Creativity_has_no_filter/ee4j_2.jpg)
 
 *"I don't care about the name of the band, I care about the music"* - David Blevins on the name change.
 
 # When Should You Look at GraphQL as an Alternative to REST APIs?
 
-![](images/Creativity_has_no_filter/graphql.jpg)
+![](/images/Creativity_has_no_filter/graphql.jpg)
 
 [Jobinesh Purushothaman](http://www.jobinesh.com/), a published author on REST, discussed GraphQL and when you might want to look at using that rather than REST.
 
@@ -291,6 +288,6 @@ Some client side libraries (Android, JavaScript etc) can be found here:https://g
 
 # JCP Party !
 
-![](images/Creativity_has_no_filter/jcp_party.jpg)
+![](/images/Creativity_has_no_filter/jcp_party.jpg)
 
 I then went to the JCP Party on the 38th floor of the Marriott Hotel, where the winners of [Duke's choice awards](https://blogs.oracle.com/java/2017-dukes-choice-award-nominations-v2) and JCP Awards were announced. I also got a change to chat to many community leaders and Spec leads.

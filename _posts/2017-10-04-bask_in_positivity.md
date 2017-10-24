@@ -1,15 +1,12 @@
 ---
-date: 2017-10-04T22:34:23.407Z
+layout: post
 title: Bask in positivity
-tags: ["JavaOne 2017"]
-image: "images/Bask_in_positivity/banner.jpg"
-share: true
-comments: true
-authorlocation: "San Francisco, USA"
+tags: [JavaOne 2017]
+bigimg: "/images/Bask_in_positivity/banner.jpg"
 ---
 
 # Java EE: Heavyweight or Lightweight—Mythbusters
-![](images/Bask_in_positivity/adam1.jpg)
+![](/images/Bask_in_positivity/adam1.jpg)
 
 You can not attend a conference without going to an [Adam Bien](https://twitter.com/AdamBien) talk.
 This talk (available [here](https://www.youtube.com/watch?v=LwimkQQDhio)) debunked the myth that Java EE is Heavyweight.
@@ -42,7 +39,7 @@ Docker, Full application server and Thin wars.
 * Very light war file that can deploy quickly
 * Light upload to cloud
 
-![](images/Bask_in_positivity/adam2.jpg)
+![](/images/Bask_in_positivity/adam2.jpg)
 
 # Modules and Services
 
@@ -50,7 +47,7 @@ Alex Buckley is the specification lead for the Java language and the Java Virtua
 
 Oracle spent 10 year to clean up the JDK code and make that modular:
 
-![](images/Bask_in_positivity/module1.jpg)
+![](/images/Bask_in_positivity/module1.jpg)
 
 You will now define the SPI in the module.java:
 
@@ -67,7 +64,7 @@ module java.desktop {
 
 This talk (available [here](https://www.youtube.com/watch?v=yshXLB_HdhU)) went though the new features in JSF that is now included in Java EE 8.
 
-![](images/Bask_in_positivity/jsf.jpg)
+![](/images/Bask_in_positivity/jsf.jpg)
 Above one of the first JSF slides presented at JavaOne 16 years ago...
 
 * Use of Servlet 4.0 server push - mostly under the cover, you get it for free. Performance enhancements
@@ -80,7 +77,7 @@ Above one of the first JSF slides presented at JavaOne 16 years ago...
 see https://javaserverfaces.github.io/
 
 # Panel: Accelerating the Adoption of Java EE 8 with MicroProfile
-![](images/Bask_in_positivity/panel.jpg)
+![](/images/Bask_in_positivity/panel.jpg)
 
 Panel discussion with the [Microprofile](https://twitter.com/MicroProfileIO) leads on the future of Microprofile, what the Java EE move to eclipse means for Microprofile and how they can assist with making the transition smooth.
 
@@ -101,7 +98,7 @@ It already has:
 OAuth is the standardization of multiple companies that tried to solve the same problem, example, Google had AuthSub and Yahoo BBAuth.
 
 The API economy changed that and forced the industry to standardize.
-![](images/Bask_in_positivity/oauth1.jpg)
+![](/images/Bask_in_positivity/oauth1.jpg)
 
 OAuth does not have a User, it only deals with Authorization delegation. This is where OpenID Connect comes in.
 
@@ -110,17 +107,17 @@ The Speakers (Sanjay Rallapalliand Kiran Thakkar from Oracle) then showcased [ID
 # Asynchronous API with CompletableFuture: Performance Tips and Tricks
 This very advanced talk went into details on how you can get more out of [CompletableFuture](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html)
 
-![](images/Bask_in_positivity/cf.jpg)
+![](/images/Bask_in_positivity/cf.jpg)
 
 It was a bit hard to relate as the speaker (Sergey Kuksenko from Oracle) assumed you are already using and understanding CompletableFuture in you projects. That is not the case with us...
 
 # Deconstructing and Evolving REST Security
 
-![](images/Bask_in_positivity/restsec.jpg)
+![](/images/Bask_in_positivity/restsec.jpg)
 
 One of my favorite talks of the conference by one of my favorite speakers, [David Blevins](https://twitter.com/dblevins) (also available [here](https://www.youtube.com/watch?v=9CJ_BAeOmW0))
 
-![](images/Bask_in_positivity/pi.jpg)
+![](/images/Bask_in_positivity/pi.jpg)
 
 OAuth 2.0 = Session ID
 
@@ -128,7 +125,7 @@ OAuth 2.0 + JWT = Signed cookies.
 
 # Portlet 3.0 Deep Dive
 
-![](images/Bask_in_positivity/portal.jpg)
+![](/images/Bask_in_positivity/portal.jpg)
 
 This talk by Vernon Singleton from Liferay went through the new features in Portlet 3.0.
 
@@ -156,6 +153,6 @@ Also see:
 
 We then went to Oracle Cloudfest at [AT&T Park](http://sanfrancisco.giants.mlb.com/sf/ballpark/) to watch Elle Golding and The Chainsmokers.
 
-![](images/Bask_in_positivity/fest1.jpg)
-![](images/Bask_in_positivity/fest2.jpg)
-![](images/Bask_in_positivity/fest3.jpg)
+![](/images/Bask_in_positivity/fest1.jpg)
+![](/images/Bask_in_positivity/fest2.jpg)
+![](/images/Bask_in_positivity/fest3.jpg)

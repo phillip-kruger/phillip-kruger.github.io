@@ -1,10 +1,8 @@
 ---
-date: 2016-02-23T20:04:40.407Z
+layout: post
 title: It's cold in the shade
-tags: ["IBM Interconnect 2016"]
-image: "images/It_cold_in_shade/20160219_175340%2B%25281%2529.jpg"
-share: true
-authorlocation: "Las Vegas, NV, USA"
+tags: [IBM Interconnect 2016]
+bigimg: "/images/It_cold_in_shade/20160219_175340%2B%25281%2529.jpg"
 aliases:
     - /2016/02/it-cold-in-shade.html
 ---
@@ -13,7 +11,7 @@ For the morning of day two I spent most of my time in the Open Lab. This is a ro
 I played with IBM Mobile first, not really that impressive. I am not sure if there are any real benefits, other than just using Cordova. I also spent some time with [Docker](https://en.wikipedia.org/wiki/Docker_(software)), Liberty and [IBM Bluemix](https://en.wikipedia.org/wiki/Bluemix). All very cool and definitely something we need to look at.
 
 All of the Lab stuff is in one building - The MGM Grand as seen in the photo above. It's a bus drive to the other venue (Mandalay Bay) and due to the time it took (and the queue) I missed my next session (IBM BPM Best Practices). That sucks. Maybe I'll do some BPM in the Lab if I get a chance. (The Lab below)
-![microservices](images/It_cold_in_shade/20160222_101839.jpg)
+![microservices](/images/It_cold_in_shade/20160222_101839.jpg)
 
 # IBM DataPower Gateway: Common Use Cases
 Datapower is an impressive piece of software. It feels like there is not much you can not do with it. But as with any thing that can do everything it does feel daunting sometimes. You are going to need a real datapower expert to get the most value for your money.

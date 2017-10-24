@@ -1,17 +1,14 @@
 ---
-date: 2017-10-01T18:34:23.407Z
+layout: post
 title: Live for the code
-tags: ["JavaOne 2017"]
-image: "images/Live_for_the_code/banner.jpg"
-share: true
-comments: true
-authorlocation: "San Francisco, USA"
+tags: [JavaOne 2017]
+bigimg: "/images/Live_for_the_code/banner.jpg"
 ---
 # Meet Apache Netbeans
 
 We had a sneak peak at some of the Apache Netbeans features last night with the informal Netbeans get together at the [thirsty bear](http://thirstybear.com/), when [Geertjan Wielenga](https://twitter.com/GeertjanW) gave us a quick demo of (the very impressive) [Oracle JET](http://www.oracle.com/webfolder/technetwork/jet/index.html).
 
-![](images/Live_for_the_code/oracle_jet.jpg)
+![](/images/Live_for_the_code/oracle_jet.jpg)
 
 This session gave us a quick history of Netbeans, and the future plans for it. Especially now that it's an [Apache](https://netbeans.org/community/apache-incubator.html) project.
 
@@ -19,7 +16,7 @@ Oracle is still invested in making this a success as many of their own tools are
 
 We also got shown a quick demo of Netbeans 9, running Java 9 and the tool support for Java 9 features like JShell and Modules, with a cool visual representation of the module graph.
 
-![](images/Live_for_the_code/netbeans.jpg)
+![](/images/Live_for_the_code/netbeans.jpg)
 
 ### Read more:
 
@@ -32,7 +29,7 @@ We also got shown a quick demo of Netbeans 9, running Java 9 and the tool suppor
 
 This talk by [Edson Yanaga](https://twitter.com/yanaga) gave us some background on DevOps, and more specifically DevOps in the cloud.
 
-![](images/Live_for_the_code/devops.jpg)
+![](/images/Live_for_the_code/devops.jpg)
 
 Cloud vendors might try and lock you in with some extra services like Pipeline automation, Blue Green Deployments etc, making the cost of change too high.
 
@@ -55,13 +52,13 @@ https://istio.io/
 
 # 5 Pillars of a Successful Java Web application
 
-![](images/Live_for_the_code/pillars.jpg)
+![](/images/Live_for_the_code/pillars.jpg)
 
 Very interesting talk on some pillars (or principles) to create a sustainable web app in Java.
 
 [Eder Ignatowicz](https://twitter.com/ederign) and [Alex Porcelli](https://twitter.com/porcelli) from Red Hat took CDI to the browser, allowing you to code with CDI Annotations and bind that to HTML. Very interesting concept. It decouples the code very nicely and abstracts the underlying implementation. This allows you to change to (whatever the latest JavaScript library is) with parts of your system, while other parts stay in the older technology.
 
-![](images/Live_for_the_code/pillars2.jpg)
+![](/images/Live_for_the_code/pillars2.jpg)
 
 They also brought CDI Events to the browser, underlying using a Bus, Long polling, SSE and WebSockets.
 
@@ -71,17 +68,17 @@ Look at http://erraiframework.org/
 
 [Otavio Santana](https://twitter.com/otaviojava) and [Hilmer Chona](https://twitter.com/hchona) explained why recommendations are next in our web journey ([Web 3.0](https://en.wikipedia.org/wiki/Semantic_Web#Web_3.0)). Context matters. And for us to store the information in a way for us to get this context easy, traditional relational DB might not be the choice.
 
-![](images/Live_for_the_code/graph.jpg)
+![](/images/Live_for_the_code/graph.jpg)
 
 However, graph databases do not have a standard, and this means you lock yourself into the implementation, and this is where [Apache TinkerPop](http://tinkerpop.apache.org/) and [JNoSQL](https://github.com/eclipse/jnosql-artemis) can help.
 
-![](images/Live_for_the_code/graph2.jpg)
+![](/images/Live_for_the_code/graph2.jpg)
 
 # Microservices Data Patterns: CQRS and Event Sourcing
 
 [Edson Yanaga](https://twitter.com/yanaga) and [Víctor Orozco](https://twitter.com/tuxtor) gave a high level talk on the strong eventual consistency model using [CQRS](https://martinfowler.com/bliki/CQRS.html) and [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html). Basically this means that your data might be outdated for a moment (but never wrong).
 
-![](images/Live_for_the_code/cqrs.jpg)
+![](/images/Live_for_the_code/cqrs.jpg)
 
 Event sourcing (or the streaming of events) is then basically the storing of changes, rather that the actual updated date. This means you can get to the current value by re-playing the changes (this might be something that you can cache, as the replay might be slow).
 
@@ -110,7 +107,7 @@ Some projects we need to look at:
 
 This was a discussion panel with some of the Java EE Industry experts where the audience could ask question.
 
-![](images/Live_for_the_code/experts.jpg)
+![](/images/Live_for_the_code/experts.jpg)
 
 This discussion was mostly around
 * the recent [open sourcing of the Java EE spec](https://blogs.oracle.com/theaquarium/opening-up-java-ee),
@@ -147,7 +144,7 @@ Some of the experts on stage:
 
 # REST Services with the Play Framework and a security level with JWT
 
-![](images/Live_for_the_code/play.jpg)
+![](/images/Live_for_the_code/play.jpg)
 
 [Mercedes Wyss](https://twitter.com/itrjwyss) showed us how you can (very easily) use the [play framework](https://www.playframework.com/) (that one traditionally links to view technology) to create REST Services. The nice thing is you can choose Java or Scala when implementing this.
 

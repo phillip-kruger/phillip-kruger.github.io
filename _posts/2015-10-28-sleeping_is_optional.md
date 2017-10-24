@@ -1,10 +1,8 @@
 ---
-date: 2015-10-28T20:04:40.407Z
+layout: post
 title: Sleeping is optional
-tags: ["JavaOne 2015"]
-image: "images/Sleeping_is_optional/4_swag.jpg"
-share: true
-authorlocation: "San Francisco, CA, USA"
+tags: [JavaOne 2015]
+bigimg: "/images/Sleeping_is_optional/4_swag.jpg"
 aliases:
     - /2015/10/sleeping-is-optional.html
 ---
@@ -17,7 +15,7 @@ Very interesting talk on the Stream API that is now available in Java 8 as part 
 
 The Streams and Lambdas addition to the language allows you to do functional pieces inside your normal code. Once we move over to this we would again be able to delete more bloated code. This talk went into detail on what happens behind the scenes on some of these builds in functions (toList, toMap, groupBy, counting, maxBy, minBy) on streams.
 
-![badge](images/Sleeping_is_optional/1_badge.jpg)
+![badge](/images/Sleeping_is_optional/1_badge.jpg)
 *(your badge has a barcode that has all your details on. To enter a session your badge needs to be scanned to see if you have access. Preference is given to people that have booked.)*
 
 # CDI and EJB alignment
@@ -27,7 +25,7 @@ One of the awesome things about CDI is that you can define your own scope, or in
 
 We then went through some examples on how to create your own scope.
 
-![screenshot](images/Sleeping_is_optional/Screenshot_2015-10-28-05-26-13.png)
+![screenshot](/images/Sleeping_is_optional/Screenshot_2015-10-28-05-26-13.png)
 *(All your booked sessions, and some other info, are available on a mobile app.)*
 
 # Servlet 4.0: HTTP/2 and Reactive Programming in Java EE 8
@@ -48,7 +46,7 @@ One of the things in the Java world that would go on top of HTTP, is Servlets. S
 That in turn will allow other frameworks and protocols built on top of Servlets to also upgrade. Think REST, SOAP, JSF etc...
 
 This also means a new HTTP Client in Java SE that will be included in version 9
-![vote](images/Sleeping_is_optional/5_vote.jpg)
+![vote](/images/Sleeping_is_optional/5_vote.jpg)
 *(after every talk you can rate the speaker and the talk. This will influence what you see next year)*
 
 # JPA in Reverse: Pushing Database Events to Java EE Applications in Real Time
@@ -65,7 +63,7 @@ Current known solutions:
 * **Database change notification:** Specific to Oracle database
 
 The second part was a bit disappointing as their proposed solution is tied to a oracle product called Golden Gate, and from what I could gather still not really a better solution as what's already out there. The real-time in their solution is actually near real time.  The use of JPA in the talk title was also a bit misleading.
-![rasp](images/Sleeping_is_optional/2_rasp.jpg)
+![rasp](/images/Sleeping_is_optional/2_rasp.jpg)
 *(the voting stations are powered by raspberry pi !!)*
 
 # Avoiding Big Data Antipatterns
@@ -78,7 +76,7 @@ Some of the things he mentioned that I need to go and read up on:
 * [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog)
 
 The take away for me was, do not believe the hype, you possibly do not need big data. But if you do beware of the vendors and the [big hammer syndrome](https://en.wikipedia.org/wiki/Law_of_the_instrument).
-![mic](images/Sleeping_is_optional/6_mic.jpg)
+![mic](/images/Sleeping_is_optional/6_mic.jpg)
 *(In some session rooms you can use you phone as a mic to ask questions)*
 
 # What Would ESBs Look Like If They Were Done Today?
@@ -87,9 +85,9 @@ This talk by [Markus Eisele](http://blog.eisele.net/) did not give the answer to
 Micro-services is still a very loose definition and depending on who you ask you will get different answers.
 
 The general feeling though,  is  that the centralization of concerns, like what an ESB does is maybe not a good idea.
-![tshirt1](images/Sleeping_is_optional/7_tshirt1.jpg)
-![tshirt2](images/Sleeping_is_optional/7_tshirt3.jpg)
-![tshirt3](images/Sleeping_is_optional/7_tshirt2.jpg)
+![tshirt1](/images/Sleeping_is_optional/7_tshirt1.jpg)
+![tshirt2](/images/Sleeping_is_optional/7_tshirt3.jpg)
+![tshirt3](/images/Sleeping_is_optional/7_tshirt2.jpg)
 **(you can make your own t-shirt)**
 
 # Let’s Discuss MVC 1.0
@@ -111,7 +109,7 @@ The technical content of this talk was good, but this was yet another definition
 
 Still very informative talk and demo on WebSockets.
 
-![coffee](images/Sleeping_is_optional/3_free_coffee.jpg)
+![coffee](/images/Sleeping_is_optional/3_free_coffee.jpg)
 *(did I mention the free cappuccinos ?)*
 
 # Meet the Java Standards Leaders

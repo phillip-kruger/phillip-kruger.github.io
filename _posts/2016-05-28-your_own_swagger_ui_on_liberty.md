@@ -1,10 +1,8 @@
 ---
-date: 2016-05-28T20:04:40.407Z
+layout: post
 title: Your own Swagger UI on Liberty
-tags: ["IBM Websphere Liberty", "Java EE", "JAX-RS", "Project Lombok", "REST", "Swagger", "Webjars"]
-image: "images/Your_own_Swagger_UI_on_Liberty/ibm_swagger.png"
-share: true
-authorlocation: "Centurion, South Africa"
+tags: [IBM Websphere Liberty, Java EE, JAX-RS, Project Lombok, REST, Swagger, Webjars]
+bigimg: "/images/Your_own_Swagger_UI_on_Liberty/ibm_swagger.png"
 aliases:
     - /2016/05/your-own-swagger-ui-on-liberty.html
 ---
@@ -357,7 +355,7 @@ body {
 
 **logo.png**
 Include your company logo, example
-![logo](images/Your_own_Swagger_UI_on_Liberty/logo.png)
+![logo](/images/Your_own_Swagger_UI_on_Liberty/logo.png)
 
 **Resource filter in maven**
 Add this to your pom.xml, to replace all variables in the html and css
@@ -387,7 +385,7 @@ Add this to your pom.xml, to replace all variables in the html and css
 ```
 
 When browsing to [http://localhost:9080/swaggerui-1.0.0/](http://localhost:9080/swaggerui-1.0.0/) you now have your own swagger UI.
-![screen](images/Your_own_Swagger_UI_on_Liberty/own_swagger.png)
+![screen](/images/Your_own_Swagger_UI_on_Liberty/own_swagger.png)
 
 #  Themes
 You can now customize the CSS and HTML as needed. Another nice library to check out is [swagger-ui-themes](https://github.com/ostranme/swagger-ui-themes)
@@ -410,7 +408,7 @@ Now simply replace the **screen.css** with the theme you want, example ([Muted t
 <link href="webjars/swagger-ui-themes/${swagger.ui.theme.version}/themes/theme-muted.css" media='screen' rel='stylesheet' type='text/css'/>
 ```
 
-![screen2](images/Your_own_Swagger_UI_on_Liberty/own_swagger2.png)
+![screen2](/images/Your_own_Swagger_UI_on_Liberty/own_swagger2.png)
 
 # Reuse
 You can reuse your theme for all your services. Just change the project to a jar in the pom.xml, and the location for your static resource to be classes/META-INF/resources. Also remove the JAX-RS (so in my example Note Service) and just keep the static resource in the jar.

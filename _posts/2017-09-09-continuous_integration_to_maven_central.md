@@ -1,11 +1,8 @@
 ---
-date: 2017-09-09T20:04:40.407Z
+layout: post
 title: Continuous Integration to maven central (for free)
-tags: ["GitHub", "Maven Central", "Open source", "Sonatype OSS", "Travis CI"]
-image: "images/Continuous_Integration_to_maven_central/banner.jpg"
-share: true
-comments: true
-authorlocation: "Centurion, South Africa"
+tags: [GitHub, Maven Central, Open source, Sonatype OSS, Travis CI]
+bigimg: "/images/Continuous_Integration_to_maven_central/banner.jpg"
 aliases:
     - /2017/09/continuous-integration-to-maven-central.html
 ---
@@ -18,7 +15,7 @@ So you have some projects on you PC, coding in your favorite IDE ([Netbeans](htt
 This blog will explain how to get from there via [GitHub](https://github.com/) to build on [Travis CI](https://travis-ci.org/), create a release back into GitHub,
 release to [Sonatype Nexus OSS](https://oss.sonatype.org/) and publish to the [Central repository](https://search.maven.org/), and then send a [slack notification](https://slack.com/).
 
-![arch](images/Continuous_Integration_to_maven_central/Open-source-CI.png)
+![arch](/images/Continuous_Integration_to_maven_central/Open-source-CI.png)
 
 I'll be using one of my own projects as an example: [https://github.com/phillip-kruger/apiee](https://github.com/phillip-kruger/apiee)
 
@@ -26,17 +23,17 @@ I'll be using one of my own projects as an example: [https://github.com/phillip-
 *"GitHub is free to use for public and open source projects"* - [https://github.com/pricing](https://github.com/pricing)
 So just head over to https://github.com/ and sign up. You can then create a new repository by clicking on the +
 
-![github1](images/Continuous_Integration_to_maven_central/github_new_repo.png)
+![github1](/images/Continuous_Integration_to_maven_central/github_new_repo.png)
 
 Remember to add an open source license :
 
-![github1](images/Continuous_Integration_to_maven_central/github_license.png)
+![github1](/images/Continuous_Integration_to_maven_central/github_license.png)
 
 You can now clone the repository and add your code to it.
 
 Pushing code to the upstream will make your code available in the GitHub page:
 
-![github2](images/Continuous_Integration_to_maven_central/github_dashboard.png)
+![github2](/images/Continuous_Integration_to_maven_central/github_dashboard.png)
 
 Add a `README.md` with some information about your project. GitHub also has a built-in wiki ([example](https://github.com/phillip-kruger/apiee/wiki)) to add more documentation about your project.
 
@@ -51,18 +48,18 @@ Add a `README.md` with some information about your project. GitHub also has a bu
 Adding Travis CI to Github is very easy, just go to the the [GitHub marketplace](https://github.com/marketplace),
 select "Continuous integration" and then "Travis CI" (or this direct link: [https://github.com/marketplace/travis-ci](https://github.com/marketplace/travis-ci))
 
-![travis1](images/Continuous_Integration_to_maven_central/github_marketplace_travis.png)
+![travis1](/images/Continuous_Integration_to_maven_central/github_marketplace_travis.png)
 
 Click the Configure access and follow the instructions.
 
 This will add Travis CI as an Installed GitHub App on your account:
 [https://github.com/settings/applications](https://github.com/settings/applications)
-![travis2](images/Continuous_Integration_to_maven_central/github_installed_travis.png)
+![travis2](/images/Continuous_Integration_to_maven_central/github_installed_travis.png)
 
 You can also now log into [Travis CI](https://travis-ci.org/) using your GitHub account. You will then see all your public GitHub projects.
 Simply select the projects you want Travis to build for you:
 
-![travis3](images/Continuous_Integration_to_maven_central/travis_dashboard.png)
+![travis3](/images/Continuous_Integration_to_maven_central/travis_dashboard.png)
 
 Your initial build might fail, as you need a `.travis.yml` file in your project root.
 **In your project root**
@@ -78,16 +75,16 @@ commit and push the change.
 Because you have linked your GitHub to your Travis CI account, Travis will automatically kick off a build if it detects a change,
 you can see the result in your Travis [project page](https://travis-ci.org/phillip-kruger/apiee):
 
-![travis4](images/Continuous_Integration_to_maven_central/travis_build.png)
+![travis4](/images/Continuous_Integration_to_maven_central/travis_build.png)
 
-![travis5](images/Continuous_Integration_to_maven_central/travis_build_passing.png)
+![travis5](/images/Continuous_Integration_to_maven_central/travis_build_passing.png)
 You can now add the "build passing" image to your README.md or wiki page in your GitHub project, example:
 
 ```
 Build status: [![build_status](https://travis-ci.org/phillip-kruger/apiee.svg?branch=master)](https://travis-ci.org/phillip-kruger/apiee)
 ```
 Then it's easy to see the build status in GitHub:
-![travis6](images/Continuous_Integration_to_maven_central/github_build_status.png)
+![travis6](/images/Continuous_Integration_to_maven_central/github_build_status.png)
 
 # Release back into GitHub
 So now Travis built your project on every push. We can now setup Travis to create a release in GitHub for every build.
@@ -162,7 +159,7 @@ Also add a **name** for the tag. In my case I just used the project version. If 
 
 Commit and push, this will kick of a build in Travis and a new release in GitHub after a successful build.
 
-![travis7](images/Continuous_Integration_to_maven_central/github_release.png)
+![travis7](/images/Continuous_Integration_to_maven_central/github_release.png)
 
 All the files as defined in `.travis.yml` will be available for download.
 
@@ -193,7 +190,7 @@ Your Group Id has to be your GitHub profile (reverse domain)
 **Example**, my GitHub Profile is [https://github.com/phillip-kruger](https://github.com/phillip-kruger)
 So my Group Id is **com.github.phillip-kruger**
 
-![travis8](images/Continuous_Integration_to_maven_central/sonatype_jira.png)
+![travis8](/images/Continuous_Integration_to_maven_central/sonatype_jira.png)
 
 Just explain in the description that you want to publish your open source projects to Maven central.
 
@@ -434,12 +431,12 @@ mvn clean install -P release
 You will then see the artifacts in Sonatype OSS, example:
 [https://oss.sonatype.org/#nexus-search;quick%7Eapiee-core](https://oss.sonatype.org/#nexus-search;quick%7Eapiee-core)
 
-![nexus](images/Continuous_Integration_to_maven_central/sonatype_nexus.png)
+![nexus](/images/Continuous_Integration_to_maven_central/sonatype_nexus.png)
 
 It takes a few minutes before you will see it in Maven Central, example:
 [http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22apiee-core%22](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22apiee-core%22)
 
-![nexus2](images/Continuous_Integration_to_maven_central/maven_central.png)
+![nexus2](/images/Continuous_Integration_to_maven_central/maven_central.png)
 
 This also means your artifact can now be included in any `pom.xml` !!
 
@@ -492,7 +489,7 @@ To hide your Sonatype username from Travis, log into Sonatype OSS Nexus and go t
 
 example: [https://oss.sonatype.org/#profile;User%20Token](https://oss.sonatype.org/#profile;User%20Token)
 
-![nexus3](images/Continuous_Integration_to_maven_central/sonatype_nexus_usertoken.png)
+![nexus3](/images/Continuous_Integration_to_maven_central/sonatype_nexus_usertoken.png)
 
 Click on "Access User Token" to get a user token.
 
@@ -502,7 +499,7 @@ This will give you values to use in the `SONATYPE_USERNAME` and `SONATYPE_PASSWO
 In the settings of your Travis CI project add the following environment variables:
 example: [https://travis-ci.org/phillip-kruger/apiee/settings](https://travis-ci.org/phillip-kruger/apiee/settings)
 
-![travis_env_vars](images/Continuous_Integration_to_maven_central/travis_env_vars.png)
+![travis_env_vars](/images/Continuous_Integration_to_maven_central/travis_env_vars.png)
 (We will add the GPG_OWNERTRUST and GPG_SECRET_KEYS later)
 
 **What about the local GPG certificates ?**
@@ -562,12 +559,12 @@ After your setup you can create a channel for build notifications. I called mine
 In your slack menu (on the left) Select the + next to Apps to browse and search for apps.
 Find the travis app and install it.
 
-![slack1](images/Continuous_Integration_to_maven_central/slack_travis_app.png)
-![slack2](images/Continuous_Integration_to_maven_central/slack_travis_app2.png)
+![slack1](/images/Continuous_Integration_to_maven_central/slack_travis_app.png)
+![slack2](/images/Continuous_Integration_to_maven_central/slack_travis_app2.png)
 
 You can then select the channel you created earlier.
 
-![slack3](images/Continuous_Integration_to_maven_central/slack_travis_app_channel.png)
+![slack3](/images/Continuous_Integration_to_maven_central/slack_travis_app_channel.png)
 
 You will then see instructions on how and what to add to your `.travis.yml` file.
 
@@ -580,7 +577,7 @@ notifications:
 
 Commit your change and soon you will get the notification !
 
-![slack4](images/Continuous_Integration_to_maven_central/slack.png)
+![slack4](/images/Continuous_Integration_to_maven_central/slack.png)
 
 That's it. Now when you commit and push your code to GitHub, it will create a release in GitHub, publish to SonaType OSS Nexus and release to Maven Central, before sending you a slack message.
 

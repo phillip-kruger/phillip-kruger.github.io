@@ -1,10 +1,8 @@
 ---
-date: 2015-10-29T20:04:40.407Z
+layout: post
 title: Candle in the wind
-tags: ["JavaOne 2015"]
-image: "images/Candle_in_wind/IMG_20151027_081551.jpg"
-share: true
-authorlocation: "San Francisco, CA, USA"
+tags: [JavaOne 2015]
+bigimg: "/images/Candle_in_wind/IMG_20151027_081551.jpg"
 aliases:
     - /2015/10/candle-in-wind.html
 ---
@@ -22,7 +20,7 @@ Some of the examples included a JCA connector that allows you to connect to the 
 The examples are available on [https://tomitribe.io/projects](https://tomitribe.io/projects)
 
 # How Netflix Thinks of DevOps—Spoiler: It Doesn’t.
-![netflix](images/Candle_in_wind/netflix.jpg)
+![netflix](/images/Candle_in_wind/netflix.jpg)
 Best talk at the conference (so far). [Dianne Marsh](http://diannemarsh.com/) shared some inside info on how Netflix run their shop. Netflix's operating cost is one of the lowest, and that is all due to their culture and their organisational structure. (Very similar to [what I have proposed]({{< relref "Guerrilla_programming.md" >}})...)
 
 Some context: Netflix has
@@ -48,7 +46,7 @@ All of this happen while millions of people watch movies via Netflix! They do no
 
 # Real-World Batch Processing with Java EE
 This talk was on [JSR 352](https://blogs.oracle.com/arungupta/entry/batch_applications_in_java_ee) that is now part of Java EE 7. Not a great talk, dragged on a bit long about the history of batch and never really got into the detail of the JSR. Still good to know that this is available...
-![elton1](images/Candle_in_wind/elton_1.jpg)
+![elton1](/images/Candle_in_wind/elton_1.jpg)
 
 #  Introduction to modular development
 Building on Preparing for JDK 9, this talk went into more detail on the modular changes coming in Java 9.
@@ -63,7 +61,7 @@ This means that public methods do not necessarily mean accessible anymore.
 We went through some of the new tools that will be available to assist with this. Look at jdepend and jlink.
 
 I think this is an awesome change, but it seems there are some mixed feelings from the community about this.
-![elton2](images/Candle_in_wind/elton_2.jpg)
+![elton2](/images/Candle_in_wind/elton_2.jpg)
 
 # EJB 3.2/JPA 2.1 Best Practices with Real-Life Examples
 This talk went through some new things in JPA. (JPA is the abstraction layer that we use to connect to a data source)
@@ -81,7 +79,7 @@ Some new enhancement in **JPQL**. The ON and FUNC keywords.
 The new **Bulk update** via the Criteria API.
 
 Built in support for **stored procedures**.
-![elton3](images/Candle_in_wind/elton_3.jpg)
+![elton3](/images/Candle_in_wind/elton_3.jpg)
 
 # The Java EE 8 Opportunity
 One of the best technical talks, here we went thought the affect that the new language features in Java 8, most notably **default** and **Lambdas**, could have on the Java EE API.
@@ -96,4 +94,4 @@ Some other really cool things that came up in this presentation is the ability t
 ~~~java
 (Serializable & SomeInterface)someObject;
 ~~~
-![elton4](images/Candle_in_wind/elton_4.jpg)
+![elton4](/images/Candle_in_wind/elton_4.jpg)

@@ -1,10 +1,8 @@
 ---
-date: 2016-02-22T20:04:40.407Z
+layout: post
 title: Open by design
-tags: ["IBM Interconnect 2016"]
-image: "images/Open_by_design/20160220_144935.jpg"
-share: true
-authorlocation: "Las Vegas, NV, USA"
+tags: [IBM Interconnect 2016]
+bigimg: "/images/Open_by_design/20160220_144935.jpg"
 aliases:
     - /2016/02/open-by-design.html
 ---
@@ -70,7 +68,7 @@ Very interesting talk on how containers on bare metal are changing the visualiza
 IBM Bluemix has spend a lot of effort getting this right in the cloud.
 
 # Microservices - The good the bad and the ugly
-![microservices](images/Open_by_design/20160221_130722892.jpg)
+![microservices](/images/Open_by_design/20160221_130722892.jpg)
 
 Very basic overview of the microservices landscape. Nothing new really.
 
@@ -96,7 +94,7 @@ Ugly:
 * Transactions
 
 # The efficient API economy
-![api](images/Open_by_design/20160221_134804489.jpg)
+![api](/images/Open_by_design/20160221_134804489.jpg)
 
 This talk showed how API Harmony can help with navigating the API landscape. IBM is crawling all open API's and builds a graph of usable API's for easier discovery.
 
