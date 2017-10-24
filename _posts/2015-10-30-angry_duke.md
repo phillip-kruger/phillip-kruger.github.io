@@ -3,7 +3,7 @@ layout: post
 title: Angry Duke
 tags: [JavaOne 2015]
 bigimg: "/images/Angry_Duke/angry_1.jpg"
-image: "/images/Angry_Duke/angry_1.jpg"
+image: "/images/javaone_logo.jpg"
 aliases:
     - /2015/10/angry-duke.html
 ---

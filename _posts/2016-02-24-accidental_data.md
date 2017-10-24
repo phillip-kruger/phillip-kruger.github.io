@@ -3,7 +3,7 @@ layout: post
 title: Accidental data
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Accidental_data/20160220_194214.jpg"
-image: "/images/Accidental_data/20160220_194214.jpg"
+image: "/images/ibmconnect_logo.png"
 aliases:
     - /2016/02/accidental-data.html
 ---

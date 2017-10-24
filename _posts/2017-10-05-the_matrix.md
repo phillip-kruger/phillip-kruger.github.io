@@ -2,7 +2,7 @@
 layout: post
 title: The Matrix
 tags: [JavaOne 2017]
-image: "/images/The_Matrix/logo.jpg"
+image: "/images/javaone_logo.jpg"
 bigimg: "/images/The_Matrix/banner.jpg"
 ---
 

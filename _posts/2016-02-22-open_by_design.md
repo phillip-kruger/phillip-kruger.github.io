@@ -3,6 +3,7 @@ layout: post
 title: Open by design
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Open_by_design/20160220_144935.jpg"
+image: "/images/ibmconnect_logo.png"
 aliases:
     - /2016/02/open-by-design.html
 ---

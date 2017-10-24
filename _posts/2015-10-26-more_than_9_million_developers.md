@@ -3,6 +3,7 @@ layout: post
 title: More than 9 million developers
 tags: [JavaOne 2015]
 bigimg: "/images/More_than_9_million_developers/session_1.jpg"
+image: "/images/javaone_logo.jpg"
 aliases:
     - /2015/10/more-than-9-million-developers.html
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Creativity has no filter
 tags: [JavaOne 2017]
-image: "/images/Creativity_has_no_filter/logo.jpg"
+image: "/images/javaone_logo.jpg"
 bigimg: "/images/Creativity_has_no_filter/banner.jpg"
 ---
 

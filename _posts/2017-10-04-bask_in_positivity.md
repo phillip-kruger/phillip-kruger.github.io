@@ -2,7 +2,7 @@
 layout: post
 title: Bask in positivity
 tags: [JavaOne 2017]
-image: "/images/Bask_in_positivity/logo.jpg"
+image: "/images/javaone_logo.jpg"
 bigimg: "/images/Bask_in_positivity/banner.jpg"
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: Sleeping is optional
 tags: [JavaOne 2015]
 bigimg: "/images/Sleeping_is_optional/4_swag.jpg"
+image: "/images/javaone_logo.jpg"
 aliases:
     - /2015/10/sleeping-is-optional.html
 ---

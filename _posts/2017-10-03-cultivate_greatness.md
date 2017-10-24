@@ -2,7 +2,7 @@
 layout: post
 title: Cultivate greatness
 tags: [JavaOne 2017]
-image: "/images/Cultivate_greatness/logo.jpg"
+image: "/images/javaone_logo.jpg"
 bigimg: "/images/Cultivate_greatness/banner.jpg"
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: Candle in the wind
 tags: [JavaOne 2015]
 bigimg: "/images/Candle_in_wind/IMG_20151027_081551.jpg"
+image: "/images/javaone_logo.jpg"
 aliases:
     - /2015/10/candle-in-wind.html
 ---

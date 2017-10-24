@@ -3,6 +3,7 @@ layout: post
 title: Rocket man
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Rocket_man/20160224_185720.jpg"
+image: "/images/ibmconnect_logo.png"
 aliases:
     - /2016/02/rocket-man.html
 ---

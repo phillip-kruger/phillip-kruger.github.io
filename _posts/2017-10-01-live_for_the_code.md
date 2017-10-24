@@ -2,7 +2,7 @@
 layout: post
 title: Live for the code
 tags: [JavaOne 2017]
-image: "/images/Live_for_the_code/logo.jpg"
+image: "/images/javaone_logo.jpg"
 bigimg: "/images/Live_for_the_code/banner.jpg"
 ---
 
