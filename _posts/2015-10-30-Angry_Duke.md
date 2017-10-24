@@ -2,8 +2,8 @@
 layout: post
 title: Angry Duke
 tags: [JavaOne 2015]
-bigimg: "images/Angry_Duke/angry_1.jpg"
-image: "images/Angry_Duke/angry_1.jpg"
+bigimg: "/images/Angry_Duke/angry_1.jpg"
+image: "/images/Angry_Duke/angry_1.jpg"
 aliases:
     - /2015/10/angry-duke.html
 ---
@@ -19,7 +19,7 @@ Stream: to define a pipeline of zero or more intermediate operations and a singe
 Because Coherence store entries of a map on multiple servers, doing the above is not that simple (but they did it)
 
 Next they want to look at keeping your stream function up to date in real time ! This sounds awesome - real time operations on huge data sets...
-![angry_2](images/Angry_Duke/angry_2.jpg)
+![angry_2](/images/Angry_Duke/angry_2.jpg)
 
 # Reactive Java EE: Let Me Count the Ways!
 Reactive is one of the new buzz words floating around. This talk demonstrated how Java EE already have all the building blocks to develop reactive programs.
@@ -48,7 +48,7 @@ We then went though example showing:
 * WebSockets
 * And the new Concurrency Utils
 
-![angry_3](images/Angry_Duke/angry_3.jpg)
+![angry_3](/images/Angry_Duke/angry_3.jpg)
 
 #  Java Community Keynote
 
@@ -58,7 +58,7 @@ They had to travel through time to get the clues, and eventually figured out tha
 
 On the Saturday before we started, there was a JavaOne4Kids event where kids could spend the day at the conference and learn about Java.
 
-![angry_4](images/Angry_Duke/angry_4.jpg)
+![angry_4](/images/Angry_Duke/angry_4.jpg)
 
 #  Java 8 in Anger
 
@@ -72,4 +72,4 @@ Very good talk that took us though an 8 step setup of Kubernetes to enable full 
 
 This only work effectively in a stateless system, so we would have to make some code changes, but imagine we can go to production during the day without impacting the client ?
 
-![angry_5](images/Angry_Duke/angry_5.jpg)
+![angry_5](/images/Angry_Duke/angry_5.jpg)

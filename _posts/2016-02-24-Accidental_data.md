@@ -2,8 +2,8 @@
 layout: post
 title: Accidental data
 tags: [IBM Interconnect 2016]
-bigimg: "images/Accidental_data/20160220_194214.jpg"
-image: "images/Accidental_data/20160220_194214.jpg"
+bigimg: "/images/Accidental_data/20160220_194214.jpg"
+image: "/images/Accidental_data/20160220_194214.jpg"
 aliases:
     - /2016/02/accidental-data.html
 ---
@@ -44,7 +44,7 @@ He then went through some use cases and examples for:
 * **Personality** - This example used Watson and public profiles of users to understand more about their personality.
 * **Pulse** - Example of how Watson can understand emotions in a voice and decide the mood of emotional state of the person.
 
-![accidental_data](images/Accidental_data/20160223_100932_HDR.jpg)
+![accidental_data](/images/Accidental_data/20160223_100932_HDR.jpg)
 
 # What is new in IIB
 This talk touched on some of the enhancements in the v10 release of IIB, including upcoming V10.0.0.4 (March 2016)
@@ -56,7 +56,7 @@ This talk touched on some of the enhancements in the v10 release of IIB, includi
 * Callable flow to get from Cloud to on premise (or cloud to cloud)
 * Extreme Scale cache built in and accessible from mapper
 
-![iib](images/Accidental_data/20160223_131555.jpg)
+![iib](/images/Accidental_data/20160223_131555.jpg)
 
 # Traditional WAS vs Liberty (or should you be using Liberty)
 

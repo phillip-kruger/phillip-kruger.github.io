@@ -39,14 +39,14 @@ Just the software engineer.
 It's not that a business analyst, tester etc is not important. In fact, the part they play in creating good software is very important,
 but the bottom line is that they are all just roles. Roles or functions that all good software engineer should be able to perform.
 And all good software engineer can actually perform these roles, they need to be able to do this in order to be good at their profession.
-![one_developer](images/Guerrilla_programming/one_developer.png)
+![one_developer](/images/Guerrilla_programming/one_developer.png)
 
 # Growth
 So when a company grows, as a way to scale, they start to assign specific roles to specific people.
 Some roles can actually be performed by people that can not write software. This is a valid and workable way to scale.
 Now the professional software engineer can focus on the writing of the code (The actual only thing we need at the end)
 and other people start taking care of certain roles.
-![one_team](images/Guerrilla_programming/one_team.png)
+![one_team](/images/Guerrilla_programming/one_team.png)
 
 This approach is not at all unique to the IT industry. Most professions work this way.
 
@@ -64,7 +64,7 @@ should we not focus on changing the way we work to align ourselves with the rest
 
 If your company is small, you kind of work that way by default. But as the company grows,
 the **roles become people**, the **people become teams**, the **teams become 'centers of excellence'**.
-![one_organization](images/Guerrilla_programming/one_organization.png)
+![one_organization](/images/Guerrilla_programming/one_organization.png)
 
 This might make sense on paper - lets centralize all business analysts in the company into one big team.
 Project teams can then draw resources from this pool when doing a project... simple.
@@ -201,7 +201,7 @@ Standardize only on the way in which we publish our use cases for other Guerrill
 If your Guerrilla Teams are small enough, it also allows you to experiment with new technologies on smaller use cases.
 The risk that a certain technology might fail is less as the deliverable is much smaller and easy to be replaced.
 
-![microservices](images/Guerrilla_programming/microservices.jpg)
+![microservices](/images/Guerrilla_programming/microservices.jpg)
 
 # Shared business services
 Centralizing teams around a business concern does not always mean that the business-concern-consumer is your end client.

@@ -1,9 +1,7 @@
-+++
-date = "1978-07-03T22:15:23-04:00"
-title = "About me"
-hidden = true
-menu = "main"
-+++
+---
+layout: page
+title: "About me"
+---
 
 Hey, I’m Phillip. I’m a Systems Architect at MMI Multiply living in {{< flag za >}} [Centurion, South Africa](https://goo.gl/maps/HDZungDMdY42).
 I am a fan of technology, coffee and programming. I love dogs and music. To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
