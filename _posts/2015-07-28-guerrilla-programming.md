@@ -1,10 +1,8 @@
 ---
-date: 2015-07-28T20:04:40.407Z
+layout: post
 title: Guerrilla programming
-tags: ["Agile","Lean","Organizational structure"]
-image: "images/Guerrilla_programming/guerrilla-truck-show.png"
-share: true
-authorlocation: "Centurion, South Africa"
+tags: [Agile,Lean,Organizational structure]
+bigimg: /images/Guerrilla_programming/guerrilla-truck-show.png
 aliases:
     - /p/thinking-out-loud.html
 ---
