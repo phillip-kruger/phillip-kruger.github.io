@@ -3,6 +3,7 @@ layout: post
 title: Monkey methodology
 tags: [Agile, Lean]
 bigimg: "/images/Monkey_methodology/monkeys2.jpg"
+image: "/images/agile_logo.png"
 aliases:
     - /2016/05/monkey-methodology.html
 ---

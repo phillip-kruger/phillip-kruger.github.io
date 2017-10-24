@@ -3,7 +3,7 @@ layout: post
 title: The boundary of mankind
 tags: [SingularityU]
 bigimg: "/images/The_boundary_of_mankind/banner.jpg"
-authorlocation: "Centurion, South Africa"
+image: "/images/singularityu_logo.png"
 aliases:
     - /SingularityU
 ---

@@ -3,6 +3,7 @@ layout: post
 title: Your own Swagger UI on Liberty
 tags: [IBM Websphere Liberty, Java EE, JAX-RS, Project Lombok, REST, Swagger, Webjars]
 bigimg: "/images/Your_own_Swagger_UI_on_Liberty/ibm_swagger.png"
+image: "/images/ibmliberty_logo.png"
 aliases:
     - /2016/05/your-own-swagger-ui-on-liberty.html
 ---
