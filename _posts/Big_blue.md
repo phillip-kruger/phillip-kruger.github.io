@@ -1,0 +1,55 @@
+---
+date: 2016-02-26T20:04:40.407Z
+title: Big blue
+tags: ["IBM Interconnect 2016"]
+image: "images/Big_blue/20160223_183102.jpg"
+share: true
+authorlocation: "Las Vegas, NV, USA"
+aliases:
+    - /2016/02/big-blue.html
+---
+Last (half) day of the conference.
+
+# Simple Microservices with Express.js and Swagger.
+This talk showed how quick and easy you can surface your existing logic via Express.js and swagger.
+
+Design your API with [Swagger](http://swagger.io/) and create the [Express.js](http://expressjs.com/) scaffolding. Using tools like [loopback](http://loopback.io/) connector you can connect to all sorts of backends.
+
+According to the presenter this is much faster than doing it n Java or .Net. In our case, the slowness of delivering software has little to do with the technology and more with how we work.
+
+He also warned that even though this might be quick to market it is not as scalable as you might want.
+Personally I prefer the Liberty approach that surface the swagger doc using the annotations in your code, but this is a nice alternative.
+
+# Java Batch in the IBM WebSphere Application Server Liberty Profile
+Another reason why we need to start looking at Liberty. Good support for the new Batch API Spec ([JSR 352](https://jcp.org/aboutJava/communityprocess/final/jsr352/index.html))
+![batch](images/Big_blue/20160225_093544_HDR.jpg)
+This can be used for use cases like monthly statement runs etc. What is great is that this is now a spec replacing previous propitiatory solutions like IBM Compute Grid.
+
+When using this in Liberty you can also access the entry points via REST. It also has a nice bunch of available listeners that allow you to hook into the process. The process can survive a server restart if you persist the configuration in a DB. Very cool stuff...
+
+# Running in Production: IBM WebSphere Liberty Monitoring and Analytics
+If you still wonder if we should be using Liberty, this should convince you. The awesome default monitoring support in Liberty might mean that you do not need your 3rd Party monitoring tool anymore. In our case New Relic.
+
+Adding monitor-1.0 feature to your Liberty gives you basic monitoring. They do this via MX Beans and that means you can use this in external consoles like JConsole.
+
+Inside Liberty Admin Center you can monitor
+
+* JVM
+* Servlets
+* Threads
+* JAX-RS Endpoints
+* Sessions
+* Connections
+* SIP
+
+Another feature that you can add, requestTiming-1.0, will highlight slow or hung requests with inside info into what is making this request slow.
+
+Very very cool !!
+
+![admin](images/Big_blue/20160225_110608948.jpg)
+
+Lastly, the logstashCollector-1.0 will integrate with your local, or a hosted, [ELK](https://www.elastic.co/webinars/introduction-elk-stack) stack pushing more than just the log files into ELK. Now suddenly I am interested in ELK !!
+
+This feature pushes Liberty to the top of my list !! I might just start liking the [big blue](https://en.wikipedia.org/wiki/IBM)... :)
+
+Now for the long flight home...

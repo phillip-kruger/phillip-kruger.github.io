@@ -1,0 +1,34 @@
+---
+date: 2015-10-25T20:04:40.407Z
+title: 29 Hours Later...
+tags: ["JavaOne 2015"]
+image: "images/29_Hours_Later/alcatraz.jpg"
+share: true
+comments: true
+author: "Phillip Krüger"
+authorwebsite: "https://www.phillip-kruger.com"
+authorlocation: "San Francisco, CA, USA"
+aliases:
+    - /2015/10/29-hours-later.html
+---
+Centurion -> JHB International Airport -> Dubai -> San Francisco international Airport -> Hotel
+
+29 hours !
+
+Our flight from Dubai to San Francisco went over the North Pole. Apparently it's the shortest route.
+Technically, the North Pole, fall under all time zones currently followed by the rest of the world. This is because the longitude lines that are used to define time zones all meet at the two poles.
+So at some point during the flight we were in all timezones at ones !! It was very confusing !
+
+I approached this flight with a plan to set my watch on San Francisco time at JHB Airport already and start my sleeping patterns according to that. Clever.
+Matso had no plan - What a rookie !
+
+But he ended up executing my plan better than I could. So now I am awake at 4 in the morning!
+
+Registrations for the conference only opened tonight, so we had the day to explore San Francisco.
+We took a Alcatraz cruise and explore the island.
+After that we had lunch at a sports bar and watched the heart breaking semi-final.
+![semi-final](images/29_Hours_Later/semifinal.jpg)
+And then we did a quick hop-on-hop-off city tour.
+![golden_gate](images/29_Hours_Later/golden_gate.jpg)
+Tomorrow the [conference](https://events.rainfocus.com/oow15/catalog/oracle.jsp?event=javaone&search.event=javaoneEvent) starts in full swing. I will keep you updated with all the cool stuff we learn :)
+![no_one](images/29_Hours_Later/no_one.jpg)
