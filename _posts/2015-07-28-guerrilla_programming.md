@@ -3,7 +3,7 @@ layout: post
 title: Guerrilla programming
 tags: [Agilee,Lean,Organizational structure]
 bigimg: /images/Guerrilla_programming/guerrilla-truck-show.png
-image: /images/Guerrilla_programming/guerrilla-truck-show.png
+image: /images/Guerrilla_programming/logo.png
 aliases:
     - /p/thinking-out-loud.html
 ---
