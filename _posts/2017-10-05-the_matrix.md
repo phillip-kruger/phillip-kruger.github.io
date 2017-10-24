@@ -2,8 +2,10 @@
 layout: post
 title: The Matrix
 tags: [JavaOne 2017]
+image: "/images/The_Matrix/logo.jpg"
 bigimg: "/images/The_Matrix/banner.jpg"
 ---
+
 # Java Community Keynote
 The last day of the conference started, as usual, with the Java Community Keynote. Some of the highlights:
 
