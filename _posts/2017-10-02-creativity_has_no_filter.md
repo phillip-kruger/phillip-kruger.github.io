@@ -2,8 +2,10 @@
 layout: post
 title: Creativity has no filter
 tags: [JavaOne 2017]
+image: "/images/Creativity_has_no_filter/logo.jpg"
 bigimg: "/images/Creativity_has_no_filter/banner.jpg"
 ---
+
 # Baking a Java EE 8 Micro Pi
 
 ![](/images/Creativity_has_no_filter/javaeepi.jpg)

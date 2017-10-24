@@ -2,8 +2,10 @@
 layout: post
 title: Live for the code
 tags: [JavaOne 2017]
+image: "/images/Live_for_the_code/logo.jpg"
 bigimg: "/images/Live_for_the_code/banner.jpg"
 ---
+
 # Meet Apache Netbeans
 
 We had a sneak peak at some of the Apache Netbeans features last night with the informal Netbeans get together at the [thirsty bear](http://thirstybear.com/), when [Geertjan Wielenga](https://twitter.com/GeertjanW) gave us a quick demo of (the very impressive) [Oracle JET](http://www.oracle.com/webfolder/technetwork/jet/index.html).

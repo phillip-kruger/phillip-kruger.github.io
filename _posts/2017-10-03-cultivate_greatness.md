@@ -2,8 +2,10 @@
 layout: post
 title: Cultivate greatness
 tags: [JavaOne 2017]
+image: "/images/Cultivate_greatness/logo.jpg"
 bigimg: "/images/Cultivate_greatness/banner.jpg"
 ---
+
 # Demystifying Microservices for Java EE Developers
 
 ![](/images/Cultivate_greatness/mqtt.jpg)
