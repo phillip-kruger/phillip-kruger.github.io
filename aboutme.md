@@ -143,8 +143,5 @@ and more.
 * {{< flag us >}} [JavaOne 2011, San Francisco, USA](https://www.oracle.com/javaone/index.html)
 * {{< flag us >}} [Oracle Open World 2007, San Francisco, USA](https://www.oracle.com/openworld/index.html)
 
-{{< figure src="/images/grand_canyon.jpg">}}
 
-# Send me a message
-
-{{< contactme >}}
+![](/images/grand_canyon.jpg)
