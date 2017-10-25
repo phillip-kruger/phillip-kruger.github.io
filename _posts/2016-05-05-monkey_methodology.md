@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Monkey methodology
 tags: [Agile, Lean]
 bigimg: "/images/Monkey_methodology/monkeys2.jpg"

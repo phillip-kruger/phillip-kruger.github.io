@@ -1,12 +1,11 @@
 ---
-layout: post
 title: Guerrilla programming
 tags: [Agilee,Lean,Organizational structure]
 bigimg: /images/Guerrilla_programming/guerrilla-truck-show.png
 image: /images/Guerrilla_programming/logo.png
-aliases:
-    - /p/thinking-out-loud.html
+alias: [/p/thinking-out-loud.html, /guerrillaprogramming.html]
 ---
+
 It's been one year since I have re-joined the corporate IT industry, where I started my IT career.
 When you come back to a big corporate after 7 years in a small start-up, you look differently at a lot of things,
 and you see things that you did not notice previously. (see the [wet monkey theory](http://24x7interestingfacts.blogspot.com/2011/07/five-monkeys-theory-wet-monkey-theory.html))
@@ -39,6 +38,7 @@ Just the software engineer.
 It's not that a business analyst, tester etc is not important. In fact, the part they play in creating good software is very important,
 but the bottom line is that they are all just roles. Roles or functions that all good software engineer should be able to perform.
 And all good software engineer can actually perform these roles, they need to be able to do this in order to be good at their profession.
+
 ![one_developer](/images/Guerrilla_programming/one_developer.png)
 
 # Growth
@@ -46,6 +46,7 @@ So when a company grows, as a way to scale, they start to assign specific roles 
 Some roles can actually be performed by people that can not write software. This is a valid and workable way to scale.
 Now the professional software engineer can focus on the writing of the code (The actual only thing we need at the end)
 and other people start taking care of certain roles.
+
 ![one_team](/images/Guerrilla_programming/one_team.png)
 
 This approach is not at all unique to the IT industry. Most professions work this way.
@@ -64,6 +65,7 @@ should we not focus on changing the way we work to align ourselves with the rest
 
 If your company is small, you kind of work that way by default. But as the company grows,
 the **roles become people**, the **people become teams**, the **teams become 'centers of excellence'**.
+
 ![one_organization](/images/Guerrilla_programming/one_organization.png)
 
 This might make sense on paper - lets centralize all business analysts in the company into one big team.

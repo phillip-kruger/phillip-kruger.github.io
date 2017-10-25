@@ -1,5 +1,4 @@
 ---
-layout: post
 title: It's cold in the shade
 tags: [IBM Interconnect 2016]
 bigimg: "/images/It_cold_in_shade/20160219_175340%2B%25281%2529.jpg"

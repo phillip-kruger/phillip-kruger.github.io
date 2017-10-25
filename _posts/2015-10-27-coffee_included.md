@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Coffee included
 tags: [JavaOne 2015]
 bigimg: "/images/Coffee_included/day_2_b.jpg"

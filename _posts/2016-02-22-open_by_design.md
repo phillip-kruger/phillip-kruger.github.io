@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Open by design
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Open_by_design/20160220_144935.jpg"

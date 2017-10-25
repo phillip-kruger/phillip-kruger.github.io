@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Continuous Integration to maven central (for free)
 tags: [GitHub, Maven Central, Open source, Sonatype OSS, Travis CI]
 bigimg: "/images/Continuous_Integration_to_maven_central/banner.jpg"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Rocket man
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Rocket_man/20160224_185720.jpg"

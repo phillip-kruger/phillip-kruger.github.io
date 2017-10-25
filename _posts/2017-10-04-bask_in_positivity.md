@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Bask in positivity
 tags: [JavaOne 2017]
 image: "/images/javaone_logo.jpg"

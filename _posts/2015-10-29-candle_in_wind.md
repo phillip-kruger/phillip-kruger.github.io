@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Candle in the wind
 tags: [JavaOne 2015]
 bigimg: "/images/Candle_in_wind/IMG_20151027_081551.jpg"

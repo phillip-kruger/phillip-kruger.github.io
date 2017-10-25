@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Angry Duke
 tags: [JavaOne 2015]
 bigimg: "/images/Angry_Duke/angry_1.jpg"

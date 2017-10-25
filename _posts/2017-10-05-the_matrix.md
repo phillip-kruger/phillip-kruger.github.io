@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The Matrix
 tags: [JavaOne 2017]
 image: "/images/javaone_logo.jpg"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Sleeping is optional
 tags: [JavaOne 2015]
 bigimg: "/images/Sleeping_is_optional/4_swag.jpg"

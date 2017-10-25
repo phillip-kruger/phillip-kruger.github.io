@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Creativity has no filter
 tags: [JavaOne 2017]
 image: "/images/javaone_logo.jpg"
