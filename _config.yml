@@ -114,11 +114,6 @@ excerpt_length: 50
 # and RSS feed title
 title-separator: "-"
 
-
-tag_page_layout: tag_page
-tag_page_dir: tag
-tag_permalink_style: pretty
-
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
@@ -150,7 +145,7 @@ defaults:
       show-avatar: true
 
 # Use tags pages (not recommended if you are deploying via GitHub pages, only set to true if deploying locally with ruby)
-link-tags: true
+link-tags: false
 
 # Exclude these files from production site
 exclude:
@@ -172,6 +167,7 @@ prose:
     - LICENSE
     - feed.xml
     - _config.yml
+    - /nbproject
     - /_layouts
     - /_includes
     - /css
@@ -218,7 +214,6 @@ prose:
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-tagging
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
