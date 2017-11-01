@@ -3,8 +3,8 @@ title: Your own Swagger UI on Liberty
 tags: [IBM Websphere Liberty, Java EE, JAX-RS, Project Lombok, REST, Swagger, Webjars]
 bigimg: "/images/Your_own_Swagger_UI_on_Liberty/ibm_swagger.png"
 image: "/images/ibmliberty_logo.png"
-aliases:
-    - /2016/05/your-own-swagger-ui-on-liberty.html
+redirect_from:
+  - "/2016/05/your-own-swagger-ui-on-liberty.html"
 ---
 [IBM Websphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/) comes with great out of the box support for [Swagger](http://swagger.io/), including their own branded [Swagger UI](http://swagger.io/swagger-ui/). You might, however, want to create your own branded UI.
 (If you are not using Liberty, check out [Apiee](http://www.phillip-kruger.com/2017/06/apiee-easy-way-to-get-swagger-on-java-ee.html) for other options)

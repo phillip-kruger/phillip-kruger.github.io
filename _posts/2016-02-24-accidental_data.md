@@ -3,8 +3,8 @@ title: Accidental data
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Accidental_data/20160220_194214.jpg"
 image: "/images/ibmconnect_logo.png"
-aliases:
-    - /2016/02/accidental-data.html
+redirect_from:
+  - "/2016/02/accidental-data.html"
 ---
 # Cultures, Practices and Tools that Support a DevOps Approach: An Open Conversation
 This panel discussion made up of some industry experts shared some insights into creating a DevOps work environment.

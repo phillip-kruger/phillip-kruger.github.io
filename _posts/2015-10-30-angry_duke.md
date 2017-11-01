@@ -3,8 +3,8 @@ title: Angry Duke
 tags: [JavaOne 2015]
 bigimg: "/images/Angry_Duke/angry_1.jpg"
 image: "/images/javaone_logo.jpg"
-aliases:
-    - /2015/10/angry-duke.html
+redirect_from:
+  - "/2015/10/angry-duke.html"
 ---
 Last day of the conference. Photos are from the Java Community Keynote.
 

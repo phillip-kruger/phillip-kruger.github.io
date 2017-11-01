@@ -220,10 +220,13 @@ This is a full Java EE 7 and Microprofile server that is open source with no res
 Then I made some new friends at #PartyOne2017 !!
 
 ![](/images/Cultivate_greatness/p1.jpg)
+
 The view
 
 ![](/images/Cultivate_greatness/p2.jpg)
+
 With [Stephen Millidge](https://twitter.com/l33tj4v4), [Mike Croft](https://twitter.com/croft) from Payara and [David Blevins](https://twitter.com/dblevins) from Tomitribe.
 
 ![](/images/Cultivate_greatness/p3.jpg)
+
 With [David Heffelfinger](https://twitter.com/ensode)

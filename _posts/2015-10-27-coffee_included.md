@@ -3,8 +3,8 @@ title: Coffee included
 tags: [JavaOne 2015]
 bigimg: "/images/Coffee_included/day_2_b.jpg"
 image: "/images/javaone_logo.jpg"
-aliases:
-    - /2015/10/coffee-included.html
+redirect_from:
+  - "/2015/10/coffee-included.html"
 ---
 Our day started with a free coffee from Duke's Cafe:
 

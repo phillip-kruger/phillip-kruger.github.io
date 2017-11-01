@@ -3,8 +3,8 @@ title: The boundary of mankind
 tags: [SingularityU]
 bigimg: "/images/The_boundary_of_mankind/banner.jpg"
 image: "/images/singularityu_logo.png"
-aliases:
-    - /SingularityU
+redirect_from:
+  - "/SingularityU"
 ---
 So it might not be the official definition of Singularity University, but in my head it's a showcase of where we are as humans.
 The boundary of mankind. And it's mind blowing!

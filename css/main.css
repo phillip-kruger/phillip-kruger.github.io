@@ -129,7 +129,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #404040;
+  color: white;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -305,6 +305,13 @@ footer .theme-by {
   text-align: center;
   margin: 10px 0 0;
 }
+footer .copyright a {
+      color: #777777;
+}
+ 
+footer .theme-by a {
+      color: #777777;
+}
 
 @media only screen and (min-width: 768px) {
   footer {
@@ -316,6 +323,13 @@ footer .theme-by {
   footer .copyright {
     font-size: 16px;
   }
+  
+  footer .copyright a {
+      color: #777777;
+  }
+  footer .theme-by a {
+      color: #777777;
+}
 }
 
 /* --- Post preview --- */

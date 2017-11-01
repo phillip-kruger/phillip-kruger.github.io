@@ -3,8 +3,8 @@ title: Rocket man
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Rocket_man/20160224_185720.jpg"
 image: "/images/ibmconnect_logo.png"
-aliases:
-    - /2016/02/rocket-man.html
+redirect_from:
+  - "/2016/02/rocket-man.html"
 ---
 The 4th day of the conference was a short one, as the [Elton John](https://www.youtube.com/watch?v=uNNl3C0qvKg) concert started at 6, all the sessions ended at 5:30ish.
 

@@ -3,8 +3,9 @@ title: Monkey methodology
 tags: [Agile, Lean]
 bigimg: "/images/Monkey_methodology/monkeys2.jpg"
 image: "/images/agile_logo.png"
-aliases:
-    - /2016/05/monkey-methodology.html
+redirect_from:
+  - "/2016/05/monkey-methodology.html"
+  - "/monkey-methodology"
 ---
 The PM becomes a scrum master.
 
@@ -113,7 +114,7 @@ and
 > *"The best architectures, requirements, and designs*
 > *emerge from self-organizing teams"*
 
-Very important to give them the environment and freedom to get the job done. (see [Guerrilla programming]({{< relref "Guerrilla_programming.md" >}}))
+Very important to give them the environment and freedom to get the job done. (see [Guerrilla programming]({% post_url 2015-07-28-guerrilla_programming %}))
 
 > *"Continuous attention to technical excellence*
 > *and good design enhances agility."*

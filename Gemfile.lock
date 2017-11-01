@@ -121,6 +121,8 @@ GEM
     jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
     jekyll-swiss (0.4.0)
+    jekyll-tagging (1.1.0)
+      nuggets
     jekyll-theme-architect (0.1.0)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -186,6 +188,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     nokogiri (1.8.1-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    nuggets (1.5.0)
     octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.0)
@@ -219,6 +222,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 163)
   jekyll-paginate
+  jekyll-redirect-from
+  jekyll-tagging
 
 BUNDLED WITH
    1.15.4

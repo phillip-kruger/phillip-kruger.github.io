@@ -3,8 +3,8 @@ title: Candle in the wind
 tags: [JavaOne 2015]
 bigimg: "/images/Candle_in_wind/IMG_20151027_081551.jpg"
 image: "/images/javaone_logo.jpg"
-aliases:
-    - /2015/10/candle-in-wind.html
+redirect_from:
+  - "/2015/10/candle-in-wind.html"
 ---
 *Some photos from the [Oracle appreciation event](https://www.oracle.com/openworld/appreciation-event.html). There was a guy there going on about some candle in the wind? That does not sound sustainable, but anyway...*
 
@@ -21,7 +21,7 @@ The examples are available on [https://tomitribe.io/projects](https://tomitribe.
 
 # How Netflix Thinks of DevOps—Spoiler: It Doesn’t.
 ![netflix](/images/Candle_in_wind/netflix.jpg)
-Best talk at the conference (so far). [Dianne Marsh](http://diannemarsh.com/) shared some inside info on how Netflix run their shop. Netflix's operating cost is one of the lowest, and that is all due to their culture and their organisational structure. (Very similar to [what I have proposed]({{< relref "Guerrilla_programming.md" >}})...)
+Best talk at the conference (so far). [Dianne Marsh](http://diannemarsh.com/) shared some inside info on how Netflix run their shop. Netflix's operating cost is one of the lowest, and that is all due to their culture and their organisational structure. (Very similar to [what I have proposed]({% post_url 2015-07-28-guerrilla_programming %})...)
 
 Some context: Netflix has
 

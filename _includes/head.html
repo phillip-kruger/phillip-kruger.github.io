@@ -117,4 +117,9 @@
   <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}
 
+  {% if site.tags != "" %}
+  {% include collecttags.html %}
+  {% endif %}
+
+
 </head>

@@ -1,9 +1,11 @@
 ---
 title: Guerrilla programming
-tags: [Agilee,Lean,Organizational structure]
+tags: [Agile,Lean,Organizational structure]
 bigimg: /images/Guerrilla_programming/guerrilla-truck-show.png
 image: /images/Guerrilla_programming/logo.png
-alias: [/p/thinking-out-loud.html, /guerrillaprogramming.html]
+redirect_from:
+  - "/p/thinking-out-loud.html"
+  - "/guerrilla-programming"
 ---
 
 It's been one year since I have re-joined the corporate IT industry, where I started my IT career.

@@ -3,8 +3,8 @@ title: Continuous Integration to maven central (for free)
 tags: [GitHub, Maven Central, Open source, Sonatype OSS, Travis CI]
 bigimg: "/images/Continuous_Integration_to_maven_central/banner.jpg"
 image: "/images/mavencentral_logo.jpg"
-aliases:
-    - /2017/09/continuous-integration-to-maven-central.html
+redirect_from:
+  - "/2017/09/continuous-integration-to-maven-central.html"
 ---
 If you, like me, have some small open source projects or libraries, that you want to release to [maven central](https://search.maven.org/),
 and you do not want to host your own CI environment, then this blog post might help. I mostly wrote it for myself (to remember)

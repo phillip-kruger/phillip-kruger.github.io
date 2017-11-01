@@ -3,8 +3,8 @@ title: Open by design
 tags: [IBM Interconnect 2016]
 bigimg: "/images/Open_by_design/20160220_144935.jpg"
 image: "/images/ibmconnect_logo.png"
-aliases:
-    - /2016/02/open-by-design.html
+redirect_from:
+  - "/2016/02/open-by-design.html"
 ---
 Day 1 of [IBM Interconnect 2016](http://www.ibm.com/cloud-computing/us/en/interconnect/) kicked off with a bang. Back to back sessions from the Research Lab Team and ending with the [Open Tech Summit](http://www.ibm.com/cloud-computing/us/en/interconnect/agenda/schedule/specialevents/)
 
