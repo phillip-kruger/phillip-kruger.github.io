@@ -5,7 +5,7 @@ bigimg: "/images/google.jpg"
 permalink: /about
 ---
 
-Hey, I’m Phillip. I’m a Systems Architect at MMI Multiply living in [Centurion, South Africa](https://goo.gl/maps/HDZungDMdY42).
+Hey, I’m Phillip. I’m a Systems Architect living in [Centurion, South Africa](https://goo.gl/maps/HDZungDMdY42).
 I am a fan of technology, coffee and programming. I love dogs and music. To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
 I was lucky enough to marry my best friend, [Charmaine](https://www.charmaine-kruger.com). She is also a geek :)
 
