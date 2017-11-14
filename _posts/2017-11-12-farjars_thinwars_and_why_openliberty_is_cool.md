@@ -400,8 +400,8 @@ Maybe it's possible to do that with the other application servers, but OpenLiber
 ## More info
 
 Also read this great blogs from [Pavel Pscheidl](https://twitter.com/PavelPscheidl)
-* http://www.pavel.cool/javaee/java-ee-fatjars-docker/
-* http://www.pavel.cool/javaee/ee4j/openliberty-jaxrs/
+* [Building, packaging and distributing Java EE applications in 2017](http://www.pavel.cool/javaee/java-ee-fatjars-docker/)
+* [OpenLiberty.io: Simple guide](http://www.pavel.cool/javaee/ee4j/openliberty-jaxrs/)
 
 and watch this video from [Adam Bien](https://twitter.com/AdamBien)
-* https://www.youtube.com/watch?v=5N4EUDhrkec
+* [Thin WARs, Java EE 7, Docker and Productivity](https://www.youtube.com/watch?v=5N4EUDhrkec)
