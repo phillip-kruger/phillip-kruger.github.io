@@ -13,18 +13,18 @@ Building a Fatjar (or Uberjar) that contains everything you need to run you appl
 java -jar myapp.jar 
 ```
 
-and of you go. No Application server. No classpath. 
+and off you go. No Application server. No classpath. 
 
-This approach has been popularised by the microservices architectural style and frameworks like [Springboot](https://projects.spring.io/spring-boot/)
+This approach has been popularised by the microservices architectural style and frameworks like [Springboot](https://projects.spring.io/spring-boot/).
 
 *"In short, the [microservice architectural style](https://martinfowler.com/articles/microservices.html) is an approach to developing a **single application** 
 as a suite of **small services**, each running in its **own process** and communicating with lightweight mechanisms, often an HTTP resource API. 
-These services are built around business capabilities and **independently deployable** by fully automated deployment machinery"*
+These services are built around business capabilities and **independently deployable** by fully automated deployment machinery"*.
 
 Having a bunch of executable jar files tick all the boxes above. 
 
 # Java EE.
-The fatjar concept has also been available in Java EE for a while now. All the lightweight application servers has a "Micro" option:
+The fatjar concept has also been available in Java EE for a while now. All the lightweight application servers have a "Micro" option:
 
 * [WildFly Swarm](http://wildfly-swarm.io/)
 * [Payara Micro](https://www.payara.fish/payara_micro)
@@ -32,26 +32,25 @@ The fatjar concept has also been available in Java EE for a while now. All the l
 * [KumuluzEE](https://ee.kumuluz.com/)
 * [Meecrowave](http://openwebbeans.apache.org/meecrowave/index.html)
 
-As mentioned, there are many pros to having a fatjar deployment. However, there are some cons as well.
+There are many pros to having a fatjar deployment. However, there are some cons as well.
 
 * You make this choice at development time (and it's actually a deployment time choice). I like to separate my development model from my deployment model.
 * This gives you a sub-optimal development cycle. You need to build a fatjar, then stop the previous version, most likely with a kill, then do a start again. 
 The turnaround from "code change" to "code running" gets annoyingly long after a while. One of the benefits of deploying a thin war to a running application server is the quick turnaround.
-(Adam Bien explain it better in his video "[Thin WARs, Java EE 7, Docker and Productivity](https://www.youtube.com/watch?v=5N4EUDhrkec)")
-* Not having a classpath is actually a pro and a con. Even though one of the advertised advantages of fatjars is not having an application server, you actually still have an application server.
-It's just embedded. Having only one jar file means your application and the embedded application server has the same dependencies. You might run into issues where your application uses
+* Not having a classpath is actually a pro and a con. Even though one of the advertised advantages of fatjars is not having an application server, you actually still have an application server,
+it's just embedded. Having only one jar file, means your application and the embedded application server have the same dependencies. You might run into issues where your application uses
 another version of a dependency than the embedded server. This can cause some nice hidden bugs. Having the ability to isolate the application server classpath from you application is actually a good thing.
 Java 9 might solve this, however most application servers are still running on Java 8. 
 
 # Docker.
-Docker has taken the microservices approach a level deeper and allow you to isolate on OS level. This means building separated jar files becomes less relevant as you will be building 
-separated Docker images. 
+Docker has taken the microservices approach a level deeper and allow you to isolate on OS level. This means, building separate jar files become less relevant as you will be building 
+separate Docker images. 
 
 Building a fat jar to be deployed as a Docker image is actually slower and heavier than a thin war. You typically layer you Docker images:
 
 ![](/images/Fatjars_Thinwars_and_why_OpenLiberty_is_cool/docker_layering.png)
 
-(above: your final layer in the fatjar option is much heavier than the thinwar option)
+(above: your final layer in the fatjar option is much heavier than the thinwar option, as it includes the embedded application server)
 
 # OpenLiberty is cool !
 
@@ -59,20 +58,20 @@ Traditional Websphere is big, slow, expensive and difficult to install. Not some
 IBM is a fairly late entry to the lightweight application server solutions with [Websphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/), 
 of which the core has been open-sourced recently under [OpenLiberty](https://openliberty.io/).
 
-But this late entry might be the reason why have done certain things right and very clean. The way that you can only load the parts that you need with features, 
-and how you can extend the server with your own features, is awesome. And even though underlying other application server are also doing some modularity with OSGi (or JBoss Modules), 
-it's just easier with Liberty. Including [Microprofile](https://microprofile.io/) is just another feature. Other application servers has added MicroProfile to their fatjar ("Micro") distributions,
+But this late entry might be the reason why they have done certain things right and very clean. The way that you can only load the parts that you need with features, 
+and how you can extend the server with your own features, is awesome. Even though other application servers are also doing some modularity with OSGi (or JBoss Modules), 
+it's just easier with Liberty. For Liberty, including [Microprofile](https://microprofile.io/) is just another feature. Other application servers have added MicroProfile to their fatjar ("Micro") distributions,
 and even though I believe it's possible to also add it to the full application server release, it's not easy to do.
 
 The other cool thing is how you can very easily decide the deployment model only at deploy time. So you can have the best of all worlds.
-You can develop against a full application server with the thinwar model (quick turnaround).
-When building you can assemble a fatjar, thinwar, docker image or all of them. What you develop against stays the same.
+You can develop against a full application server with the thinwar model to get a quick turnaround.
+When building, you can assemble a fatjar, thinwar, docker image or all of them. What you develop against stays the same.
 
 ## OpenLiberty with MicroProfile example.
 
-I have create a simple application to demonstrate this deployment options. (Code is available in [GitHub](https://github.com/phillip-kruger/quote-service))
+I have created a simple application to demonstrate these deployment options. (Code is available in [GitHub](https://github.com/phillip-kruger/quote-service))
 
-I did not want to build a basic "Hello world", as I want to include some of the MicroProfile features, so this is a "Quote of the Day" app. 
+I did not want to build a basic "Hello world", as I wanted to include some of the MicroProfile features, so this is a "Quote of the Day" app. 
 It uses a factory to load a quote provider (there is only one for now). The current provider gets and caches a quote from [forismatic.com](http://forismatic.com/en/api/). 
 I use the [MicroProfile Configuration API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_microprofile_overview.html) 
 to configure things like the HTTP Proxy, the URL and the provider to load. I use the [MicroProfile Fault Tolerance API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.liberty.autogen.beta.doc/ae/rwlp_feature_mpFaultTolerance-1.0.html) 
@@ -80,8 +79,8 @@ to make sure we survive when the provider source is not available.
 
 ### Configuring OpenLiberty
 Configuration on OpenLiberty is also very clean. This makes it easy to include the configuration in your project. 
-Using maven resource filtering you can also extract certain variables to your build. 
-Here the important parts of my `server.xml` (you can see the full one in [github](https://github.com/phillip-kruger/quote-service/blob/master/src/main/liberty/config/server.xml))
+Using maven resource filtering, you can also extract certain variables to your build. 
+Below the important parts of my `server.xml` (you can see the full one in [github](https://github.com/phillip-kruger/quote-service/blob/master/src/main/liberty/config/server.xml))
 
 **src/main/liberty/config/server.xml**
 
@@ -111,7 +110,7 @@ The `${httpPort}` and `${httpsPort}` will actually come from
 [bootstrap.properties](https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_inst_bootstrap.html) 
 that we create with the [liberty maven plugin](https://github.com/WASdev/ci.maven).
 
-All variables in the `server.xml`, including `${project.build.directory}` and `${project.build.finalName}` will be replace when we build with this resource filtering in the pom.xml:
+All variables in the `server.xml`, including `${project.build.directory}` and `${project.build.finalName}` will be replaced when we build with this resource filtering in the pom.xml:
 
 ```xml
 <build>
@@ -128,14 +127,14 @@ All variables in the `server.xml`, including `${project.build.directory}` and `$
     </resources>
 </build>
 ```
-(You can see the full pom.xml in [github](https://github.com/phillip-kruger/quote-service/blob/master/pom.xml))
+(You can see the full `pom.xml` in [github](https://github.com/phillip-kruger/quote-service/blob/master/pom.xml))
 
 So when we do a `mvn clean install` the `server.xml` will be copied to the target directory with the variables replaced.
 
 ### Deployment options
-I am using [maven profiles](http://maven.apache.org/guides/introduction/introduction-to-profiles.html) to allow you to select, at build time, what deployment you want:
+I am using [maven profiles](http://maven.apache.org/guides/introduction/introduction-to-profiles.html) to allow me to select, at build time, which deployment option I want:
 
-In the `<build>` of your [pom.xml]((https://github.com/phillip-kruger/quote-service/blob/master/pom.xml))
+In the `<build>` of [pom.xml]((https://github.com/phillip-kruger/quote-service/blob/master/pom.xml))
 
 ```xml
 <plugins>
@@ -158,9 +157,9 @@ In the `<build>` of your [pom.xml]((https://github.com/phillip-kruger/quote-serv
 
 #### On the fly option
 
-This option follows the same development cycle than a fatjar cycle (although it does note create a jar file).
-If you do a `mvn clean install -Pfatjar` it will install, configure (from your `server.xml`) and start a server in the foreground, in other words the mvn process does not finish
-as the server start as part of the mvn process. To stop the server you need to `ctrl-c` the process. 
+This option follows the same development cycle than a fatjar cycle (although it does not create a jar file).
+If you do a `mvn clean install -Pfatjar`, it will install, configure (from `server.xml`) and start a server in the foreground. In other words, the mvn process does not finish,
+as the server start is part of the mvn process. To stop the server you need to `ctrl-c` the process. 
 
 ```xml
     <profile>
@@ -213,7 +212,7 @@ Of course using an IDE like Netbeans (or any other IDE) this is actually just a 
 With this option we want to install, configure and start the server, and then deploy a thin war continuously as we write code. 
 We still install and configure the server from scratch every time we start the server, just not on every deploy.
 
-`mvn clean install -Pstart-liberty` will install, configure (from your `server.xml`) and start a liberty server in `/tmp` folder:
+`mvn clean install -Pstart-liberty` will install, configure (from `server.xml`) and start a liberty server in `/tmp` folder:
 
 ```xml
     <profile>
@@ -353,11 +352,11 @@ It's very easy to create a fatjar distribution with `mvn clean install -Ppackage
 In my target directory I now have an executable (fat)jar file that I can start with:
 `java -jar quote-service.jar`
 
-In all the above mentioned `profiles` above you can test the example app with:
+In all the above mentioned `profiles` you can test the example app with:
 
 `mvn -Dtest=com.github.phillipkruger.quoteservice.QuoteApiIT surefire:test`
 
-And that you give you a quote of the day:
+And that should give you a quote of the day:
 
 ```json
 {
@@ -368,7 +367,7 @@ And that you give you a quote of the day:
 
 ### Fine-tuning the memory footprint.
 
-To start off I just used the umbrella `javaee-7.0` and `microProfile-1.2` features, even though my application only use a subset of the specifications.
+To start off I used the umbrella `javaee-7.0` and `microProfile-1.2` features, even though my application only uses a subset of these specifications.
 
 Using `jconsole` I measured the memory footprint (after a GC) of the running server: 
 
@@ -392,7 +391,13 @@ Again using `jconsole` I measured the memory footprint (after a GC) of the runni
 
 Ideally you would also fine-tune the `pom.xml` to only include the specification you use.
 
-### More info
+## Conclusion
+
+We can argue whether it's better to do fatjars vs thinwars and the pros and cons of having an application server, or not. 
+However, not having to make this decision when we start developing (ie. download the micro distribution or the full distribution) but only when we build, allows for more options.
+Maybe it's possible to do that with the other application servers, but OpenLiberty made it easy.
+
+## More info
 
 Also read this great blogs from [Pavel Pscheidl](https://twitter.com/PavelPscheidl)
 * http://www.pavel.cool/javaee/java-ee-fatjars-docker/
