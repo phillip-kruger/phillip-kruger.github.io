@@ -7,7 +7,7 @@ bigimg: "/images/Fatjars_Thinwars_and_why_OpenLiberty_is_cool/banner.jpg"
 
 # Fatjars.
 
-Building a Fatjar (or Uberjar) that contains everything you need to run you application nicely packaged together means you can just do:
+Building a Fatjar (or Uberjar) that contains everything you need to run your application nicely packaged together means you can just do:
 
 ```bash
 java -jar myapp.jar 
