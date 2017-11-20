@@ -3,6 +3,8 @@ title: Fatjars, Thinwars and why OpenLiberty is cool.
 tags: [Java EE, OpenLiberty]
 image: "/images/openliberty.jpg"
 bigimg: "/images/Fatjars_Thinwars_and_why_OpenLiberty_is_cool/banner.jpg"
+redirect_from:
+  - "/post/farjars_thinwars_and_why_openliberty_is_cool/"
 ---
 
 # Fatjars.
