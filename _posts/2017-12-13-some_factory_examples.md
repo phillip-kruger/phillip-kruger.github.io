@@ -4,7 +4,7 @@ tags: [Java EE, OpenLiberty, Payara Micro, Wildfly Swarm, CDI, EJB, SPI]
 bigimg: "/images/Some_factory_examples/banner.jpg"
 ---
 
-Every now and then I find myself scratching though some of my old code to find that example "where I did that factory like thing".
+Every now and then I find myself scratching through some of my old code to find that example "where I did that factory like thing".
 
 When this happened again last week I decided to just find all examples and create an [example project](https://github.com/phillip-kruger/factories-example) and blog post about it. 
 
@@ -24,13 +24,13 @@ This example app is a very simple "Hello World" that you can pass in a name and 
 
 ![example_app](https://github.com/phillip-kruger/factories-example/raw/master/HighLevel.png "Example App")
 
-The `Greeting Service` get a instance of the `Greeting Factory`. It can then ask the factory for a `Greeting` (interface) by name, and the factory will return the correct implementation.
+The `Greeting Service` gets an instance of the `Greeting Factory`. It can then ask the factory for a `Greeting` (interface) by name, and the factory will return the correct implementation.
 
 There are 3 concrete implementations:
 
-* `English` will greet "Good day <name>."
-* `Afrikaans` will greet "Goeie dag <name>." (see [https://www.youtube.com/watch?v=CtxB4sbV0pA])
-* `Bugs Bunny` will greet "Eeee, what's up <name> ?" (see [https://www.youtube.com/watch?v=UeVtZjGII-I])
+* `English` will greet "Good day *name*."
+* `Afrikaans` will greet "Goeie dag *name*." (see [https://www.youtube.com/watch?v=CtxB4sbV0pA])
+* `Bugs Bunny` will greet "Eeee, what's up *name* ?" (see [https://www.youtube.com/watch?v=UeVtZjGII-I])
 
 All the [source code](https://github.com/phillip-kruger/factories-example) for this blog is available in Github:
 
@@ -46,7 +46,7 @@ The [Greeting](https://github.com/phillip-kruger/factories-example/blob/master/v
     }
 ```
 
-<hl/>
+<hr/>
 
 # Vanilla 
 
@@ -83,9 +83,10 @@ An example of a concrete implementation, English:
     }
 ```
 
-## Run the example:
+### Run the example:
 
-In the vanilla folder:
+In the **vanilla** folder:
+
 ```bash
     mvn clean install
 ```
@@ -106,26 +107,27 @@ You can also run this outside of maven:
     SEVERE: 
     Eeee, what's up World ?
 ```
-## Also see
 
-* [https://alvinalexander.com/java/java-factory-pattern-example]
+### Also see
 
-<hl/>
+* [https://alvinalexander.com/java/java-factory-pattern-example](https://alvinalexander.com/java/java-factory-pattern-example)
+
+<hr/>
 
 # Service provider interface (SPI)
 
-The above example means I can very easy add another implementation, and update the if statement to return that implementation when asked.
+The above example means I can very easily add another implementation, and update the if statement to return that implementation when asked.
 
 However, it's that if-statement that we want to improve. We want to get to a point where I can add new implementations without having to modify existing code. 
 All I want to do is add the new implementation.
 
-SPI is part of Java SE and is an API that allow you to build plug-able extentions.
+[SPI](https://en.wikipedia.org/wiki/Service_provider_interface) is part of Java SE and is an API that allows you to build plug-able extentions.
 
-## Breaking the application up into modules.
+### Breaking the application up into modules.
 
 The first thing we are going to do is to [break the application up into modules](https://github.com/phillip-kruger/factories-example/blob/master/spi/pom.xml):
 
-* API - This will contain the Greeting interface (our contact)
+* API - This will contain the Greeting interface (our contract)
 * Engine - This will contain the Service and Factory (and the default English implementation)
 * Other implementations - All other implementations become their own module (So one for Afrikaans and one for Bugs Bunny etc.)
 
@@ -154,9 +156,9 @@ This already means I can add a new implementation by just creating a new module,
     </dependencies>
 ```
 
-## The mapping file
+### The mapping file
 
-The concrete implementations needs to register their `Greeting` class as a implementation by adding a file in `/src/main/resources/META-INF/services/` called 
+The concrete implementations need to register their `Greeting` class as a implementation by adding a file in `/src/main/resources/META-INF/services/` called 
 `com.github.phillipkruger.factory.api.Greeting` (The fully qualified name of the interface)
 
 And the contents of the file is the name of the implementation, example Bugs Bunny:
@@ -165,7 +167,7 @@ And the contents of the file is the name of the implementation, example Bugs Bun
     com.github.phillipkruger.factory.impl.BugsBunny
 ```
 
-## The factory
+### The factory
 
 The factory now needs to get all instances of Greetings:
 
@@ -178,11 +180,12 @@ The factory now needs to get all instances of Greetings:
     }
 ```
 
-Now we got rid of the if-statement in the factory.
+Now we got rid of the `if-statement` in the factory.
 
-## Run the example:
+### Run the example:
 
-In the spi folder:
+In the **spi** folder:
+
 ```bash
     mvn clean install
 ```
@@ -203,11 +206,12 @@ You can also run this outside of maven:
     SEVERE: 
     Goeie dag Johny.
 ```
-## Also see
 
-* [https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html]
+### Also see
 
-<hl/>
+* [https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html](https://docs.oracle.com/javase/tutorial/sound/SPI-intro.html)
+
+<hr/>
 
 # Contexts and Dependency Injection (CDI)
 
@@ -223,6 +227,7 @@ as part of the API called `GreetingProvider`:
         String value();
     }
 ```
+Where the `value` is the name of the implementation.
 
 And a [literal implementation](https://github.com/phillip-kruger/factories-example/blob/master/cdi/cdi-api/src/main/java/com/github/phillipkruger/factory/api/GreetingProviderLiteral.java) for the above:
 
@@ -239,7 +244,7 @@ And a [literal implementation](https://github.com/phillip-kruger/factories-examp
     }
 ```
 
-This will allow up to annotate any concrete implementation (that is now a Request scoped CDI Bean) with `@GreetingProvider`, example English:
+This will allow us to annotate any concrete implementation (that is now a Request scoped CDI Bean) with `@GreetingProvider`, example English:
 
 ```java
     @GreetingProvider("English")
@@ -279,11 +284,12 @@ The factory change to find all `@GreetingProvider` classes:
     }
 ```
 
-So now we do not need the SPI mapping file anymore, there is not if-statement in the factory, but we still have to update the dependencies to include all implementations we want.
+So now we do not need the SPI mapping file anymore, there is no `if-statement` in the factory, but we still have to update the dependencies to include all implementations we want.
 
-## Run the example:
+### Run the example:
 
-In the cdi folder:
+In the **cdi** folder:
+
 ```bash
     mvn clean install
 ```
@@ -304,17 +310,18 @@ You can also run this outside of maven:
     SEVERE: 
     Eeee, what's up Charmaine ?
 ```
-## Also see
 
-* [http://www.mastertheboss.com/jboss-frameworks/cdi/building-a-cdi-2-standalone-java-application]
-* [http://www.adam-bien.com/roller/abien/entry/injecting_classes_in_java_se]
+### Also see
 
-<hl/>
+* [http://www.mastertheboss.com/jboss-frameworks/cdi/building-a-cdi-2-standalone-java-application](http://www.mastertheboss.com/jboss-frameworks/cdi/building-a-cdi-2-standalone-java-application)
+* [http://www.adam-bien.com/roller/abien/entry/injecting_classes_in_java_se](http://www.adam-bien.com/roller/abien/entry/injecting_classes_in_java_se)
+
+<hr/>
 
 # CDI on Java EE
 
-We can of course also use CDI to create the solution on an Application Server. We will now make the entry point a REST service (rather than a main method) so we need to create 
-add a `ApplicationConfig` to enable JAX-RS:
+We can also use CDI to create the solution on an Application Server. We will now make the entry point a REST service (rather than a main method) so we need to create and 
+add an `ApplicationConfig` to enable JAX-RS:
 
 ```java
     @ApplicationPath("/api")
@@ -322,7 +329,7 @@ add a `ApplicationConfig` to enable JAX-RS:
     }
 ``` 
 
-The `GreetingService` now become a REST Resource that allow you to do a `GET` passing the name as a `PathParam` and optional ways as `QueryParam`:
+The `GreetingService` now becomes a REST Resource that allows you to do a `GET` passing the name as a `PathParam` and optional ways to greet as `QueryParam`:
 
 ```java
     @Path("/")
@@ -340,19 +347,20 @@ The `GreetingService` now become a REST Resource that allow you to do a `GET` pa
     }
 ```
 
-The factory and annotated `RequestScoped` CDI Bean implementations stays exactly the same as the CDI on Java SE example.
+The factory and annotated `RequestScoped` CDI Bean implementations stay exactly the same as the CDI on Java SE example.
 
-## Run the example:
+### Run the example:
 
-This example can run on 3 different application servers (just to show the portability of Java EE)
+This example can run on 3 different application servers (just to keep ourselves honest)
 
 * [Wildfly Swarm](http://wildfly-swarm.io/)
 * [Open Liberty](https://openliberty.io/)
 * [Payara Micro](https://www.payara.fish/payara_micro)
 
-(You **do not** have to download, install or configure anything, the maven script will do that)
+(You **do not** have to download, install or configure anything, the maven build will do that)
 
-In the javaee-cdi folder:
+In the **javaee-cdi** folder:
+
 ```bash
     mvn clean install -P wildfly
 ```
@@ -369,12 +377,13 @@ or
     mvn clean install -P payara
 ```
 
-In all 3 cases maven will 
+In all 3 cases maven will:
+
 * start the application server with the app deployed
 * hit 2 REST Url's:
 ** http://localhost:8080/javaee-cdi-engine/api (This list all implementations)
 ** http://localhost:8080/javaee-cdi-engine/api/Phillip (This says hello to Phillip with all implementations)
-* shutdown the application server (except payara)
+* shutdown the application server (except Payara)
 
 So in the log you will see (something like):
 
@@ -389,20 +398,22 @@ So in the log you will see (something like):
 ===============================================
 ```
 
-If you run payara, the server does not shutdown, so you can also manually test the factory:
+If you run Payara, the server does not shutdown, so you can also manually test the factory:
 
 ```bash
     wget -qO- http://localhost:8080/javaee-cdi-engine/api/Donald?way=BugsBunny
     ["Eeee, what's up Donald ?"]
 ```
 
-<hl/>
+<hr/>
 
 # EJB on Java EE
 
-Just to complete the examples, here is how you can do this with EJB's on Java EE (so no CDI - and thus also not custom annotation)
+Just to complete the examples, here is how you can do this with EJB's on Java EE (so no CDI - and thus also no custom annotation)
 
-The `GreetingService` stays the same as the Java EE CDI example, so we still have a REST entry point. The concrete implementations now change to become EJB, example English:
+We just use JNDI to lookup a named EJB.
+
+The `GreetingService` stays the same as the Java EE CDI example, so we still have a REST entry point. The concrete implementations now change to become EJBs, example English:
 
 ```java
     @Stateless
@@ -478,25 +489,24 @@ The factory now does a JNDI lookup based on the bean name:
 
 ```
 
-## Run the example:
+### Run the example:
 
-Simular to the Java EE CDI example, this runs on [Wildfly Swarm](http://wildfly-swarm.io/), [Open Liberty](https://openliberty.io/) and [Payara Micro](https://www.payara.fish/payara_micro)
+Similar to the Java EE CDI example, this runs on [Wildfly Swarm](http://wildfly-swarm.io/), [Open Liberty](https://openliberty.io/) and [Payara Micro](https://www.payara.fish/payara_micro)
 
-Example:
-
-In the javaee-ejb folder:
+In the **javaee-ejb** folder:
 
 ```bash
     mvn clean install -P wildfly
 ```
 (or -P liberty or -P payara)
 
-In all 3 cases maven will 
+In all 3 cases maven will:
+
 * start the application server with the app deployed
 * hit 2 REST Url's:
 ** http://localhost:8080/javaee-ejb-engine/api (This list all implementations)
 ** http://localhost:8080/javaee-ejb-engine/api/Phillip (This says hello to Phillip with all implementations)
-* shutdown the application server (except payara)
+* shutdown the application server (except Payara)
 
 So in the log you will see (something like):
 
@@ -511,14 +521,14 @@ So in the log you will see (something like):
 ===============================================
 ```
 
-If you run payara, the server does not shutdown, so you can also manually test the factory:
+If you run Payara, the server does not shutdown, so you can also manually test the factory:
 
 ```bash
     wget -qO- http://localhost:8080/javaee-ejb-engine/api/Barney?way=Afrikaans
     ["Goeie dag Barney."]
 ```
 
-<hl/>
+<hr/>
 
 # Dynamic SPI
 
@@ -527,7 +537,7 @@ the new dependency.
 
 Next let's see how to load the new implementation dynamically (so no need to update the dependency).
 
-The implementations are exactly like the SPI example, including the mapping file, but now we can remove the modules as dependencies in the pom.xml:
+The implementations are exactly like the Java SE SPI example, including the mapping file, but now we can remove the modules as dependencies in the pom.xml:
 
 ```xml
     <dependencies>
@@ -606,14 +616,15 @@ And the factory looks like this:
     }
 ```
 
-Basically, the factory will still use SPI `ServiceLoader` to load the available greetings, but we pass a custom classloader in. 
-We look for any jar file in plugins folder and load those with `URLClassloader`.
+Basically, the factory will still use SPI's `ServiceLoader` to load the available greetings, but we pass a custom ClassLoader in. 
+We look for any jar file in the `plugins` folder and load those with `URLClassloader`.
 
 This means I can now just create a new implementation module and drop the file in the `plugins` folder. Nice and plug-able.
 
-## Run the example:
+### Run the example:
 
-In the dynamic-spi folder:
+In the **dynamic-spi** folder:
+
 ```bash
     mvn clean install
 ```
@@ -635,7 +646,7 @@ You can also run this outside of maven:
     Eeee, what's up Madonna ?
 ```
 
-<hl/>
+<hr/>
 
 # Dynamic SPI on Java EE
 
@@ -643,7 +654,7 @@ Now whether this is a good idea is a different discussion, but just to show that
 This means I can add new implementation to a running server. So not only can I add a new implementation without touching the code or the dependencies, but I can also enable this new 
 implementation without having to restart the application. 
 
-The implementations looks exactly like the SPI example, the `pom.xml` does not contain any implementation modules, and we now have a new class to load the module in the plugins folder:
+The implementations look exactly like the Java SE SPI example, the `pom.xml` does not contain any implementation modules, and we now have a new class to load the module in the `plugins` folder:
 
 It's an Application Scoped CDI Bean (so singleton) that loads modules on startup. The modules can also be reloaded with REST:
 
@@ -715,7 +726,7 @@ It's an Application Scoped CDI Bean (so singleton) that loads modules on startup
     }
 ```
 
-All the loaded `Greetings` is available in a Map<String,Greeting> that can be injected into the factory:
+All the loaded `Greetings` are available in a Map<String,Greeting> that can be injected into the factory:
 
 ```java
     @RequestScoped
@@ -729,25 +740,25 @@ All the loaded `Greetings` is available in a Map<String,Greeting> that can be in
     }
 ```
 
-## Run the example:
+### Run the example:
 
-Simular to the Java EE CDI and EJB example, this runs on [Wildfly Swarm](http://wildfly-swarm.io/), [Open Liberty](https://openliberty.io/) and [Payara Micro](https://www.payara.fish/payara_micro)
+Similar to the Java EE CDI and EJB example, this runs on [Wildfly Swarm](http://wildfly-swarm.io/), [Open Liberty](https://openliberty.io/) and [Payara Micro](https://www.payara.fish/payara_micro)
 
-Example:
-
-In the javaee-spi folder:
+In the **javaee-spi** folder:
 
 ```bash
     mvn clean install -P wildfly
 ```
+
 (or -P liberty or -P payara)
 
-In all 3 cases maven will 
+In all 3 cases maven will:
+
 * start the application server with the app deployed
 * hit 2 REST Url's:
 ** http://localhost:8080/javaee-spi-engine/api (This list all implementations)
 ** http://localhost:8080/javaee-spi-engine/api/Phillip (This says hello to Phillip with all implementations)
-* shutdown the application server (except payara)
+* shutdown the application server (except Payara)
 
 So in the log you will see (something like):
 
@@ -762,31 +773,31 @@ So in the log you will see (something like):
 ===============================================
 ```
 
-If you run payara, the server does not shutdown, so you can also manually test the factory:
+If you run Payara, the server does not shutdown, so you can also manually test the factory:
 
 ```bash
     wget -qO- http://localhost:8080/javaee-spi-engine/api/Frans?way=Afrikaans
     ["Goeie dag Frans."]
 ```
 
-Currently in the plugins folder we have:
+Currently in the `plugins` folder we have:
 
 ```bash
     ls javaee-spi-engine/plugins/
     javaee-spi-impl-afrikaans-1.0.0-SNAPSHOT.jar  javaee-spi-impl-bugsbunny-1.0.0-SNAPSHOT.jar
 ```
 
-That was copied there when we build those implementations.
+That was copied there when we built those implementations.
 
 Now, let's leave the server running, and add a new way to greet you called **Ali G.**
-(see [https://www.youtube.com/watch?v=b00lc92lExw])
+(see [https://www.youtube.com/watch?v=b00lc92lExw](https://www.youtube.com/watch?v=b00lc92lExw))
 
 ```bash
     cd javaee-spi-impl-alig
     mvn clean install -P plugin
 ```
 
-This will copy the Ali G example to the plugin folder.
+This will copy the Ali G example to the `plugins` folder.
 
 Now let's greet Frans again:
 
@@ -794,4 +805,3 @@ Now let's greet Frans again:
     wget -qO- http://localhost:8080/javaee-spi-engine/api/Frans?way=AliG
     ["Booyakasha Frans !"]
 ```
-
