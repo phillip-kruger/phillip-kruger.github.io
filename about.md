@@ -9,7 +9,7 @@ Hey, I’m Phillip. I’m a Systems Architect living in [Centurion, South Africa
 I am a fan of technology, coffee and programming. I love dogs and [music](https://play.google.com/music/playlist/AMaBXyk7iwAKaDxB5EdeIAaCE3PtbkaF1qC190EPSM9YB6QkWknsYzqy9E0oQks-FeiDThUCOMtUDNS614oveyFrFOzxqcKqKQ%3D%3D). To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
 I was lucky enough to marry my best friend, [Charmaine](https://www.charmaine-kruger.com). She is also a geek :)
 
-![Charmaine](/images/ek_en_c.jpg)
+![Charmaine](/images/ek_en_charmaine2.jpg)
 
 I am an [INTJ](https://en.wikipedia.org/wiki/INTJ) [Myers-Briggs psychological type](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
 and have the following [strengths](https://www.gallupstrengthscenter.com/):
