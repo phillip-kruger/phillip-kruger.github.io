@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About me"
-bigimg: "/images/google.jpg"
+bigimg: "/images/grand_canyon.jpg"
 permalink: /about
 ---
 
@@ -145,7 +145,7 @@ and more.
 * [Oracle Open World 2007, San Francisco, USA](https://www.oracle.com/openworld/index.html)
 
 
-![](/images/grand_canyon.jpg)
+![](/images/google.jpg)
 
 
 {% comment %}
