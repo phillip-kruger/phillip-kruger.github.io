@@ -80,8 +80,12 @@ Here are some of my published blog articles:
 * [Google might be wrong](https://memeburn.com/2012/11/why-google-might-just-be-wrong-about-responsive-design-in-africa/)
 
 <a href="https://www.javacodegeeks.com/">
-    <img title="Java Code Geeks" src="https://cdn.javacodegeeks.com/wp-content/uploads/2012/12/JavaCodeGeek_Badge.png" alt="Java Code Geeks"/>
+    <img title="Java Code Geeks" src="https://cdn.javacodegeeks.com/wp-content/uploads/2012/12/JavaCodeGeek_Badge.png" alt="Java Code Geeks" height="120" width="120"/>
 </a>
+<a href="https://dzone.com/">
+    <img title="DZone" src="https://dzone.com/themes/dz20/images/dz-logo-v.svg" alt="DZone" height="120" width="120"/>
+</a>
+
 
 ## <i class="fa fa-database" aria-hidden="true"></i> Infrastructure
 I enjoy setting up and automating the environments that my systems need to run.
