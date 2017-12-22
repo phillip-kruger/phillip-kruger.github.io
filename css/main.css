@@ -502,7 +502,16 @@ footer .theme-by a {
   margin-top: 0;
   font-size: 35px;
 }
-.intro-header .page-heading .page-subheading,
+.page-heading {
+    font-size: 27px;
+    line-height: 1.1;
+    display: block;
+    font-family: 'Rock Salt', cursive;
+    font-weight: 300;
+    margin: 10px 0 0;
+}
+
+.intro-header .page-subheading,
 .intro-header .post-heading .post-subheading {
   font-size: 27px;
   line-height: 1.1;
