@@ -26,7 +26,7 @@ ranging from banking, insurance, rewards programs, retail and mobile. I have ext
 and prefer to be active in all parts of the SDLC. From conceptualizing to running in production.
 I have a passion for **clean code** and **evolutionary architecture**. I love Java, Linux and Open source.
 
-<a href='http://cv.phillip-kruger.com' class='ui primary basic button' target='_blank'>
+<a href='cv.html' class='ui primary basic button' target='_blank'>
     <i class="fa fa-university" aria-hidden="true"></i> See my full CV
 </a>
 
