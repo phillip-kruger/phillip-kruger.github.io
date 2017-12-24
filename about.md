@@ -72,6 +72,7 @@ I enjoy talking and debating about technical concerns. I blog about technical to
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 Here are some of my published blog articles:
 
+* [Some factory examples](https://www.javacodegeeks.com/2017/12/some-factory-examples.html)
 * [Continuous integration to maven central](https://dzone.com/articles/continuous-integration-to-maven-central-for-free)
 * [Apiee - An easy way to get Swagger on Java](https://dzone.com/articles/apiee-an-easy-way-to-get-swagger-on-java-ee)
 * [Websocket example and the birth of Stompee](https://dzone.com/articles/websockets-example-and-the-birth-of-stompee)
