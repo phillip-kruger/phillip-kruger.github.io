@@ -74,9 +74,9 @@ When building, you can assemble a fatjar, thinwar, docker image or all of them. 
 I have created a simple application to demonstrate these deployment options. (Code is available in [GitHub](https://github.com/phillip-kruger/quote-service))
 
 I did not want to build a basic "Hello world", as I wanted to include some of the MicroProfile features, so this is a "Quote of the Day" app. 
-It uses a factory to load a quote provider (there is only one for now). The current provider gets and caches a quote from [forismatic.com](http://forismatic.com/en/api/). 
+It uses a factory to load a quote provider (there is only one for now). The current provider gets a quote from [forismatic.com](http://forismatic.com/en/api/). 
 I use the [MicroProfile Configuration API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_microprofile_overview.html) 
-to configure things like the HTTP Proxy, the URL and the provider to load. I use the [MicroProfile Fault Tolerance API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.liberty.autogen.beta.doc/ae/rwlp_feature_mpFaultTolerance-1.0.html) 
+to configure things like the URL and the provider to load. I use the [MicroProfile Fault Tolerance API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.liberty.autogen.beta.doc/ae/rwlp_feature_mpFaultTolerance-1.0.html) 
 to make sure we survive when the provider source is not available.
 
 ### Configuring OpenLiberty

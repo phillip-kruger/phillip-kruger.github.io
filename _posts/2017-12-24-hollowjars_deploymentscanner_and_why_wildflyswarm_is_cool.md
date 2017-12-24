@@ -8,27 +8,28 @@ bigimg: "/images/Hollowjars_DeploymentScanner_and_why_WildflySwarm_is_cool/banne
 In a [previous post](/post/fatjars_thinwars_and_why_openliberty_is_cool/) I described how you can use [OpenLiberty](https://openliberty.io/) and [maven](https://maven.apache.org/index.html)
 to start the server, either as a standalone, or as part of the maven build, and how to create a fatjar package.
 
-In this post I am looking how to do this with Wildfly swarm. I could not get MicroProfile running Wildfly full, so this is not working the same as the OpenLiberty example.
+In this post, I am looking at how to do this with Wildfly swarm. I'm still trying to get [MicroProfile](https://microprofile.io/) running on [Wildfly full](http://wildfly.org/), so for now, this example works differently than the OpenLiberty example.
 
-I am using the same example project, with more maven profiles to run the different deployment options.
+I am using the same [example project](https://github.com/phillip-kruger/quote-service), with more maven profiles to run the different deployment options.
 
 (see [https://github.com/phillip-kruger/javaee-servers-parent](https://github.com/phillip-kruger/javaee-servers-parent))
  
 # Example project
 
-I did not want to build a basic "Hello world", as I wanted to include some of the MicroProfile features, so this is a "Quote of the Day" app. 
-It uses a factory to load a quote provider (there is only one for now). The current provider gets and caches a quote from [forismatic.com](http://forismatic.com/en/api/). 
+I wanted to include some of the MicroProfile features, so this is a "Quote of the Day" app, instead of a basic "Hello world".
+My app uses a factory to load a quote provider (there is only one for now). The current provider gets a quote from [forismatic.com](http://forismatic.com/en/api/). 
 I use the [MicroProfile Configuration API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_microprofile_overview.html) 
-to configure things like the HTTP Proxy, the URL and the provider to load. I use the [MicroProfile Fault Tolerance API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.liberty.autogen.beta.doc/ae/rwlp_feature_mpFaultTolerance-1.0.html) 
+to configure things like the URL and the provider to load. I use the [MicroProfile Fault Tolerance API](https://www.ibm.com/support/knowledgecenter/en/was_beta_liberty/com.ibm.websphere.liberty.autogen.beta.doc/ae/rwlp_feature_mpFaultTolerance-1.0.html) 
 to make sure we survive when the provider source is not available.
 
-[https://github.com/phillip-kruger/quote-service](https://github.com/phillip-kruger/quote-service)
+You can get the full example project here: [https://github.com/phillip-kruger/quote-service](https://github.com/phillip-kruger/quote-service)
 
 # Running as part of the maven build
 
-You can use the `wildfly-swarm-plugin` to run (`mvn wildfly-swarm:run`) a wildfly swarm instance as part of the build. This plugin will do "fraction detection", meaning it will look at what parts of the application server you need
-and only create a deployment with those fractions included. So you can still include the umbrella API's in your dependencies and code against those, but come deployment time, you will get 
-a right size distribution. Cool !
+You can use the [wildfly-swarm-plugin](https://wildfly-swarm.gitbooks.io/wildfly-swarm-users-guide/content/getting-started/tooling/maven-plugin.html) to run (`mvn wildfly-swarm:run`) a wildfly swarm instance as part of the build. 
+This plugin will do "fraction detection", meaning it will look at what parts of the application server you need
+and only create a deployment with those fractions included. So you can still include the umbrella API's in your dependencies and code against those, but at deployment time, you will get 
+the right size distribution. Cool !
 
 ```xml
     <dependencies>
@@ -50,8 +51,8 @@ a right size distribution. Cool !
     </dependencies>
 ```
 
-I could not get filter resource to work using the run target. Seems like the plugin use the original source file before filter. I always use filtering when including HTML files that 
-reference [webjars](https://www.webjars.org/), so this did not work for me. 
+I always use filtering when including HTML files that 
+reference [webjars](https://www.webjars.org/), but it seems like the plugin uses the original source file before filter applies, so I had to find an alternative. 
 
 ```xml
     <plugin>
@@ -73,11 +74,11 @@ reference [webjars](https://www.webjars.org/), so this did not work for me.
     </plugin>
 ```
 
-In this example I am using Semantic UI to build a webpage that display the quote of the day:
+In this example I am using [Semantic UI](https://semantic-ui.com/) to build a webpage that displays the quote of the day:
 
 ![](/images/Hollowjars_DeploymentScanner_and_why_WildflySwarm_is_cool/semanticui.png)
 
-I use the maven properties for the versions of the CSS and JS in the HTML, and need to replace then with the real value when we build:
+I use the maven properties for the versions of the CSS and JS in the HTML, and need to replace them with the real value when we build:
 
 ```html
     <link rel="stylesheet" type="text/css" href="webjars/semantic-ui/${semantic-ui.version}/dist/semantic.min.css">
@@ -167,13 +168,13 @@ Wildfly swarm allows you to create a hollowjar. (see [this article](https://deve
 java -jar myapp-hollow-swarm.jar myapp.war
 ```
 
-So if we can get a way to reload the app part, I can have the same development model as with a full application  (hot deploy)
+So if we can get a way to reload the app part, we can have the same development model as with a full application (hot deploy).
 
 # Deployment scanner
 
 Wildfly swarm has a fraction called [deployment scanner](http://docs.wildfly-swarm.io/2017.12.1/#_deployment_scanner), that you can include in your distribution (fat or hollow).
 
-The fraction detection will not auto detect this (as there is no reference to this in the code). Luckily you can define additional fraction in maven:
+The fraction detection will not auto detect this (as there is no reference to this in the code). Luckily you can define additional fractions in maven:
 
 ```xml
     <plugin>
