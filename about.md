@@ -59,7 +59,7 @@ I have extensive experience in [Enterprise Java](https://en.wikipedia.org/wiki/J
 [Lombok](https://projectlombok.org/)
 and much more.
 
-I am also a contributor to [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/)
+I am also a contributor to [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
 
 ## <i class="fa fa-linux" aria-hidden="true"></i> Linux
 I have been running [Linux](https://en.wikipedia.org/wiki/Linux) on my Personal PC since 1999, starting with [Mandrake](https://en.wikipedia.org/wiki/Mandriva_Linux)
