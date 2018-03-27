@@ -149,6 +149,7 @@ and more.
 
 # Conferences I attended
 
+* [DevConf ZA 2018, Johannesburg, South Africa](https://www.devconf.co.za/)
 * [JavaOne 2017, San Francisco, USA](https://www.oracle.com/javaone/index.html)
 * [SingularityU 2017, Midrand, South Africa](https://singularityusouthafricasummit.org/)
 * [IBM Interconnect 2016, Las Vegas, USA](https://www.ibm.com/cloud-computing/us/en/interconnect/)
