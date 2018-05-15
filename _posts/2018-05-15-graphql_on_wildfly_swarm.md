@@ -1,7 +1,7 @@
 ---
 title: GraphQL on Wildfly swarm
 tags: [Java EE, Wildfly swarm, GraphQL]
-image: "/images/wildfly_swarm.png"
+image: "/images/graphql.png"
 bigimg: "/images/GraphQL_on_WildflySwarm/banner.jpg"
 ---
 
