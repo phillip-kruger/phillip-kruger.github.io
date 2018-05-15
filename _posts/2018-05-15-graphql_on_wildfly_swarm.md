@@ -22,7 +22,7 @@ So in this blog post I explain how you can add GraphQL to you existing [JAX-RS](
 
 The example project is available in [Github](https://github.com/phillip-kruger/membership), and very easy to get started
 
-``` bash
+```bash
 git clone https://github.com/phillip-kruger/membership.git
 cd membership
 mvn clean install
@@ -53,8 +53,7 @@ The only java classes I added to expose my existing JAX-RS as GraphQL:
 
 Using the annotations from [graphQL-spqr](https://github.com/leangen/GraphQL-SPQR), the `MembershipGraphQLApi` class really just describe the service and wrap the existing `@Stateless` service:
 
-``` java
-
+```java
     @RequestScoped
     public class MembershipGraphQLApi {
     
@@ -88,8 +87,7 @@ You can test some queries using [http://localhost:8080/membership/rest/openapi-u
 
 This will return:
 
-``` graphql
-
+```JSON
     [
       {
         "membershipId": 1,
@@ -138,7 +136,6 @@ This will return:
         "type": "FREE"
       }
     ]
-
 ```
 
 **Example** - Getting a certain membership (1):
@@ -147,8 +144,7 @@ This will return:
 
 This will return:
 
-``` graphql
-
+```JSON
     {
       "membershipId": 1,
       "owner": {
@@ -176,7 +172,6 @@ So let's see if GraphQL delivers on the "No more Over- and Under Fetching" promi
 ### Get all memberships and all fields (so the same as the REST get all)
 
 ```graphql
-
     query Memberships {
         memberships{
             ...fullMembership
@@ -202,8 +197,7 @@ This will return all values, however, it's now easy to define what fields should
 
 ### Get all memberships but only include the id field
 
-``` graphql
-
+```graphql
     query Memberships {
         memberships{
             ...membershipIdentifiers
@@ -213,13 +207,11 @@ This will return all values, however, it's now easy to define what fields should
     fragment membershipIdentifiers on Membership {
         membershipId
     }
-
 ```
 
 The resulting payload is now much smaller:
 
-``` graphql
-
+```JSON
     {
       "data": {
         "memberships": [
@@ -238,13 +230,11 @@ The resulting payload is now much smaller:
         ]
       }
     }
-
 ```
 
 ### Now let's get only specific types of memberships (so get all FREE memberships)
 
-``` graphql
-
+```graphql
     query FilteredMemberships {
         memberships(filter:{
             type:FREE
@@ -272,8 +262,7 @@ This will return just the free memberships. Cool !
 
 ### Or even better, all members that's surname starts with "Kru"
 
-``` graphql
-
+```graphql
     query FilteredMemberships {
         memberships(filter:{
             surnameContains: "Kru"
@@ -299,8 +288,7 @@ This will return just the free memberships. Cool !
 
 Great !! We found two people:
 
-``` graphql
-
+```JSON
     {
       "data": {
         "memberships": [
@@ -331,13 +319,11 @@ Great !! We found two people:
         ]
       }
     }
-
 ```
 
 ### Getting a certain membership, using a variable on the client:
 
-``` graphql
-
+```graphql
     query Membership($id:Int!) {
         membership(membershipId:$id){
             ...fullMembership
@@ -361,16 +347,13 @@ Great !! We found two people:
 
 **The variable:**
 
-``` graphql
-
+```JSON
     {"id":1}
-
 ```
 
 ### Include fields on a certain condition:
 
-``` graphql
-
+```graphql
     query Membership($id:Int!,$withOwner: Boolean!) {
         membership(membershipId:$id){
             ...fullMembership
@@ -390,20 +373,17 @@ Great !! We found two people:
         names
         surname  
     }
-
 ```
 
 **The variable:**
 
-``` graphql
-
+```JSON
     {"id":1,"withOwner": false}
-
 ```
 
 this will exclude the owner (true to include):
 
-``` graphql
+```JSON
     {
       "data": {
         "membership": {
@@ -418,7 +398,7 @@ this will exclude the owner (true to include):
 
 Let's use the get all query, but paginate.
 
-``` graphql
+```graphql
     query Memberships($itemsPerPage:Int!,$pageNumber:Int!) {
         memberships(
             first:$itemsPerPage,
@@ -435,10 +415,8 @@ Let's use the get all query, but paginate.
 
 **The variable:**
 
-``` graphql
-
+```JSON
     {"itemsPerPage": 2,"pageNumber": 1}
-
 ```
 
 This will return the first 2 results, and then you can page by increasing the "pageNumber" value.
@@ -447,32 +425,29 @@ This will return the first 2 results, and then you can page by increasing the "p
 
 #### Create
 
-``` graphql
-
+```graphql
     mutation CreateMember {
         createMembership(membership: {type:FULL,owner: {names: "James",surname:"Small"}}) {
             membershipId
         }
     }
-
 ```
 
 This will create the new membership and return the id.
 
 #### Update
 
-``` graphql
-
+```graphql
     mutation EditMember($membership: MembershipInput!) {
         createMembership(membership:$membership) {
             membershipId
         }
     }
+```
 
 **The variable:**
 
-``` graphql
-
+```JSON
     {
         "membership": {
           "membershipId": 2,
@@ -486,29 +461,24 @@ This will create the new membership and return the id.
             "type": "FULL"
         }
     }
-
 ```
 
 (added a umlaut on the u of Kruger, now it should be "Krüger")
 
 #### Delete
 
-``` graphql
-
+```graphql
     mutation DeleteMembership($id:Int!){
         deleteMembership(membershipId:$id){
           membershipId
         }
     }
-
 ```
 
 **The variable:**
 
-``` graphql
-
+```JSON
 {"id":1}
-
 ```
 
 This will delete membership 1.
@@ -520,20 +490,17 @@ a ConstraintViolationException (that is thrown when the bean validation fails) a
 
 So let's try and create a member with a surname of just one letter.
 
-``` graphql
-
+```graphql
     mutation CreateMember($membership: MembershipInput!) {
         createMembership(membership:$membership) {
             membershipId
         }
     }
-
 ```
 
 **The variable:**
 
-``` graphql
-
+```JSON
     {
          "membership": {
              "owner": {
@@ -542,14 +509,12 @@ So let's try and create a member with a surname of just one letter.
              },
              "type": "FULL"
          }
-     }  
-
+     }
 ```
 
 This will return the bean validation error message:
 
-``` graphql
-
+```JSON
     {
       "data": {
         "createMembership": null
@@ -562,25 +527,21 @@ This will return the bean validation error message:
         }
       ]
     }
-
-````
+```
 
 If you look at the Person POJO:
 
-``` java
-
+```java
     @NotNull(message = "Surname can not be empty") 
     @Size(min=2, message = "Surname '${validatedValue}' is too short, minimum {min} characters")
     private String surname;
-
 ```
 
 ### Introspection
 
 The other nice thing about GraphQL is that it has a Schema & Type System that you can query:
 
-``` graphql
-
+```graphql
     {
         __schema {
             queryType {
@@ -603,15 +564,13 @@ The other nice thing about GraphQL is that it has a Schema & Type System that yo
             }
         }
     }
-
 ```
 
 Above will describe the queries and mutations available on this endpoint.
 
 You can also describe you Models:
 
-``` graphql
-
+```graphql
     {
         __type(name: "Membership") {
             name
@@ -624,7 +583,6 @@ You can also describe you Models:
             }
         }
     }
-
 ```
 
 ## Summary
