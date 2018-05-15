@@ -22,7 +22,7 @@ So in this blog post I explain how you can add GraphQL to you existing [JAX-RS](
 
 The example project is available in [Github](https://github.com/phillip-kruger/membership), and very easy to get started
 
-```bash
+``` bash
 git clone https://github.com/phillip-kruger/membership.git
 cd membership
 mvn clean install
@@ -45,15 +45,15 @@ The GraphQL part is using the following libraries:
 * [graphiql](https://github.com/graphql/graphiql)
 
 
-The only java classes I added to expose my existing JAX-RS as GraphQL as well:
+The only java classes I added to expose my existing JAX-RS as GraphQL:
 
 * [MembershipGraphQLListener](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipGraphQLListener.java) - to register the "/graphql" servlet listener.
-* [MembershipGraphQLApi](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipGraphQLApi.java) - the GraphQL Endpoint. Just wrapping the existing Stateless service.
+* [MembershipGraphQLApi](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipGraphQLApi.java) - the GraphQL Endpoint. Just wrapping the existing `@Stateless` service.
 * [MembershipErrorHandler](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipErrorHandler.java) - to handle Exceptions.
 
-Using the annotations from [graphQL-spqr](https://github.com/leangen/GraphQL-SPQR), the MembershipGraphQLApi class really just describe the service and wrap the existing `@Stateless` service:
+Using the annotations from [graphQL-spqr](https://github.com/leangen/GraphQL-SPQR), the `MembershipGraphQLApi` class really just describe the service and wrap the existing `@Stateless` service:
 
-```java
+``` java
 
     @RequestScoped
     public class MembershipGraphQLApi {
@@ -88,7 +88,7 @@ You can test some queries using [http://localhost:8080/membership/rest/openapi-u
 
 This will return:
 
-```javascript
+``` graphql
 
     [
       {
@@ -147,7 +147,7 @@ This will return:
 
 This will return:
 
-```javascript
+``` graphql
 
     {
       "membershipId": 1,
@@ -175,7 +175,7 @@ So let's see if GraphQL delivers on the "No more Over- and Under Fetching" promi
 
 ### Get all memberships and all fields (so the same as the REST get all)
 
-```javascript
+```graphql
 
     query Memberships {
         memberships{
@@ -200,9 +200,9 @@ So let's see if GraphQL delivers on the "No more Over- and Under Fetching" promi
 
 This will return all values, however, it's now easy to define what fields should be included...
 
-### Get all memberships and but only the id field
+### Get all memberships but only include the id field
 
-```javascript
+``` graphql
 
     query Memberships {
         memberships{
@@ -218,7 +218,7 @@ This will return all values, however, it's now easy to define what fields should
 
 The resulting payload is now much smaller:
 
-```javascript
+``` graphql
 
     {
       "data": {
@@ -243,7 +243,7 @@ The resulting payload is now much smaller:
 
 ### Now let's get only specific types of memberships (so get all FREE memberships)
 
-```javascript
+``` graphql
 
     query FilteredMemberships {
         memberships(filter:{
@@ -272,7 +272,7 @@ This will return just the free memberships. Cool !
 
 ### Or even better, all members that's surname starts with "Kru"
 
-```javascript
+``` graphql
 
     query FilteredMemberships {
         memberships(filter:{
@@ -299,7 +299,7 @@ This will return just the free memberships. Cool !
 
 Great !! We found two people:
 
-```javascript
+``` graphql
 
     {
       "data": {
@@ -336,7 +336,7 @@ Great !! We found two people:
 
 ### Getting a certain membership, using a variable on the client:
 
-```javascript
+``` graphql
 
     query Membership($id:Int!) {
         membership(membershipId:$id){
@@ -361,7 +361,7 @@ Great !! We found two people:
 
 **The variable:**
 
-```javascript
+``` graphql
 
     {"id":1}
 
@@ -369,7 +369,7 @@ Great !! We found two people:
 
 ### Include fields on a certain condition:
 
-```javascript
+``` graphql
 
     query Membership($id:Int!,$withOwner: Boolean!) {
         membership(membershipId:$id){
@@ -395,7 +395,7 @@ Great !! We found two people:
 
 **The variable:**
 
-```javascript
+``` graphql
 
     {"id":1,"withOwner": false}
 
@@ -403,7 +403,7 @@ Great !! We found two people:
 
 this will exclude the owner (true to include):
 
-```javascript
+``` graphql
     {
       "data": {
         "membership": {
@@ -418,7 +418,7 @@ this will exclude the owner (true to include):
 
 Let's use the get all query, but paginate.
 
-```javascript
+``` graphql
     query Memberships($itemsPerPage:Int!,$pageNumber:Int!) {
         memberships(
             first:$itemsPerPage,
@@ -435,7 +435,7 @@ Let's use the get all query, but paginate.
 
 **The variable:**
 
-```javascript
+``` graphql
 
     {"itemsPerPage": 2,"pageNumber": 1}
 
@@ -447,7 +447,7 @@ This will return the first 2 results, and then you can page by increasing the "p
 
 #### Create
 
-```javascript
+``` graphql
 
     mutation CreateMember {
         createMembership(membership: {type:FULL,owner: {names: "James",surname:"Small"}}) {
@@ -461,7 +461,7 @@ This will create the new membership and return the id.
 
 #### Update
 
-```javascript
+``` graphql
 
     mutation EditMember($membership: MembershipInput!) {
         createMembership(membership:$membership) {
@@ -471,7 +471,7 @@ This will create the new membership and return the id.
 
 **The variable:**
 
-```javascript
+``` graphql
 
     {
         "membership": {
@@ -493,7 +493,7 @@ This will create the new membership and return the id.
 
 #### Delete
 
-```javascript
+``` graphql
 
     mutation DeleteMembership($id:Int!){
         deleteMembership(membershipId:$id){
@@ -505,7 +505,7 @@ This will create the new membership and return the id.
 
 **The variable:**
 
-```javascript
+``` graphql
 
 {"id":1}
 
@@ -520,7 +520,7 @@ a ConstraintViolationException (that is thrown when the bean validation fails) a
 
 So let's try and create a member with a surname of just one letter.
 
-```javascript
+``` graphql
 
     mutation CreateMember($membership: MembershipInput!) {
         createMembership(membership:$membership) {
@@ -532,7 +532,7 @@ So let's try and create a member with a surname of just one letter.
 
 **The variable:**
 
-```javascript
+``` graphql
 
     {
          "membership": {
@@ -548,7 +548,7 @@ So let's try and create a member with a surname of just one letter.
 
 This will return the bean validation error message:
 
-```javascript
+``` graphql
 
     {
       "data": {
@@ -567,7 +567,7 @@ This will return the bean validation error message:
 
 If you look at the Person POJO:
 
-```java
+``` java
 
     @NotNull(message = "Surname can not be empty") 
     @Size(min=2, message = "Surname '${validatedValue}' is too short, minimum {min} characters")
@@ -579,7 +579,7 @@ If you look at the Person POJO:
 
 The other nice thing about GraphQL is that it has a Schema & Type System that you can query:
 
-```javascript
+``` graphql
 
     {
         __schema {
@@ -610,7 +610,7 @@ Above will describe the queries and mutations available on this endpoint.
 
 You can also describe you Models:
 
-```javascript
+``` graphql
 
     {
         __type(name: "Membership") {
