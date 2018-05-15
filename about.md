@@ -7,7 +7,7 @@ permalink: /about
 
 Hey, I’m Phillip. I’m a Systems Architect living in [Centurion, South Africa](https://goo.gl/maps/HDZungDMdY42).
 I am a fan of technology, coffee and programming. I love dogs and [music](https://play.google.com/music/playlist/AMaBXyk7iwAKaDxB5EdeIAaCE3PtbkaF1qC190EPSM9YB6QkWknsYzqy9E0oQks-FeiDThUCOMtUDNS614oveyFrFOzxqcKqKQ%3D%3D). To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
-I was lucky enough to marry my best friend, [Charmaine](https://www.charmaine-kruger.com). She is also a geek :)
+I was lucky enough to marry my best friend, [Charmaine](https://www.charmaine-kruger.com). She is also a geek :) 
 
 ![Charmaine](/images/ek_en_charmaine2.jpg)
 
@@ -56,7 +56,8 @@ I have extensive experience in [Enterprise Java](https://en.wikipedia.org/wiki/J
 [Portlets](https://en.wikipedia.org/wiki/Java_Portlet_Specification),
 [Spring](https://en.wikipedia.org/wiki/Spring_Framework),
 [Swagger](https://en.wikipedia.org/wiki/OpenAPI_Specification),
-[Lombok](https://projectlombok.org/)
+[Lombok](https://projectlombok.org/),
+[GraphQL](http://graphql.org/)
 and much more.
 
 I am also a contributor to [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
@@ -72,7 +73,14 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 ## <i class="fa fa-rss" aria-hidden="true"></i> Communication
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
-Here are some of my published blog articles:
+
+### Upcoming public talks:
+
+* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)
+* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co)
+* 20 July 2018 - [Writing better API's with GraphQL](http://j-sa.co/schedule-cpt/)at the [Java Cloud Conference](http://j-sa.co)
+
+### Published blog articles:
 
 * [Hollowjars, Deployment scanner and why Wildfly swarm is cool](https://www.javacodegeeks.com/2018/01/hollowjars-deployment-scanner-wildfly-swarm-cool.html)
 * [Fatjars, Thinwars and why OpenLiberty is cool](https://www.javacodegeeks.com/2017/12/fatjars-thinwars-openliberty-cool.html)
