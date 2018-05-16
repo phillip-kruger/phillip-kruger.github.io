@@ -74,7 +74,7 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
-### Upcoming public talks:
+### Upcoming talks:
 
 * 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)
 * 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co)
