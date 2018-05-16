@@ -11,12 +11,12 @@ exactly what they need and nothing more, makes it easier to evolve APIs over tim
 
 -- from [https://graphql.org/](https://graphql.org/)
 
-Anyone that has been building [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) services that is being used by multiple consumers, like other services or web sites or mobile devices, will know that is 
-very hard to build that perfect Endpoint that satisfied all the needs. You typically end up with variations of the same service, for all that special cases :)
+Anyone that has built a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) services that is being used by multiple consumers, like other services or web sites or mobile devices, will know that is 
+very hard to build that perfect Endpoint that satisfies all the needs. You typically end up with variations of the same service, for all those special cases :)
 
-Now, we all know we should just be using [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)... and it was on my TODO list (promise !), until I stumble upon [GraphQL](https://graphql.org).
+Now, we all know we should just be using [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)... and it was on my TODO list (promise !), until I stumbled upon [GraphQL](https://graphql.org).
 
-So in this blog post I explain how you can add GraphQL to you existing [JAX-RS](https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) application, without to much effort.
+So in this blog post I explain how you can add GraphQL to you existing [JAX-RS](https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) application, without too much effort.
 
 # Example project
 
@@ -37,7 +37,7 @@ The example is a basic Membership service, where you can get all members, or a s
 
 The application is a typical JAX-RS, CDI, EJB, JPA, Bean validation Java EE application, and we are adding a new GraphQL Endpoint.
 
-The GraphQL part is using the following libraries:
+The GraphQL part uses the following libraries:
 
 * [graphql-java](https://github.com/graphql-java/graphql-java)
 * [graphql-java-servlet](https://github.com/graphql-java/graphql-java-servlet)
@@ -51,7 +51,7 @@ The only java classes I added to expose my existing JAX-RS as GraphQL:
 * [MembershipGraphQLApi](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipGraphQLApi.java) - the GraphQL Endpoint. Just wrapping the existing `@Stateless` service.
 * [MembershipErrorHandler](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipErrorHandler.java) - to handle Exceptions.
 
-Using the annotations from [graphQL-spqr](https://github.com/leangen/GraphQL-SPQR), the `MembershipGraphQLApi` class really just describe the service and wrap the existing `@Stateless` service:
+Using the annotations from [graphQL-spqr](https://github.com/leangen/GraphQL-SPQR), the `MembershipGraphQLApi` class really just describes and wraps the existing `@Stateless` service:
 
 ```java
     @RequestScoped
@@ -71,7 +71,7 @@ Using the annotations from [graphQL-spqr](https://github.com/leangen/GraphQL-SPQ
     }
 ```
 
-My hope - we will soon have a JAX-QL (or something) as part of JavaEE (or Jakarta EE, or MicroProfile) to make this even easier !!
+My hope - we will soon have a JAX-QL (or something) as part of Java EE (or Jakarta EE, or MicroProfile) to make this even easier !!
 
 ## First some REST
 
@@ -193,7 +193,7 @@ So let's see if GraphQL delivers on the "No more Over- and Under Fetching" promi
     }
 ```
 
-This will return all values, however, it's now easy to define what fields should be included...
+This will return all values, however, it's now easy to define which fields should be included...
 
 ### Get all memberships but only include the id field
 
@@ -232,7 +232,7 @@ The resulting payload is now much smaller:
     }
 ```
 
-### Now let's get only specific types of memberships (so get all FREE memberships)
+### Now lets get only specific types of memberships (so get all FREE memberships)
 
 ```graphql
     query FilteredMemberships {
@@ -463,7 +463,7 @@ This will create the new membership and return the id.
     }
 ```
 
-(added a umlaut on the u of Kruger, now it should be "Krüger")
+(added a umlaut on the u of Kruger, now it should be Krüger)
 
 #### Delete
 
@@ -485,8 +485,8 @@ This will delete membership 1.
 
 ### Exception.
 
-The [MembershipErrorHandler](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipErrorHandler.java) translate
-a ConstraintViolationException (that is thrown when the bean validation fails) and create a nice error message for GraphQL.
+The [MembershipErrorHandler](https://github.com/phillip-kruger/membership/blob/master/src/main/java/com/github/phillipkruger/membership/graphql/MembershipErrorHandler.java) translates
+a ConstraintViolationException (that is thrown when the bean validation fails) and creates a nice error message for GraphQL.
 
 So let's try and create a member with a surname of just one letter.
 
@@ -568,7 +568,7 @@ The other nice thing about GraphQL is that it has a Schema & Type System that yo
 
 Above will describe the queries and mutations available on this endpoint.
 
-You can also describe you Models:
+You can also describe your Models:
 
 ```graphql
     {
@@ -589,9 +589,9 @@ You can also describe you Models:
 
 In this example we did not remove REST, but just added GraphQL as an alternative option for the consumer.
 
-By now it should be clear that the client has much more options to filter and query the data exactly like it needs it. 
+By now it should be clear that the client has a lot more options to filter and query the data exactly like they need it. 
 All this without the server having to do any extra work. This allows for rapid product iterations on the client side.
 
-The payload over the wire is optimized and we are saving bandwith ! 
+The payload over the wire is optimized and we are saving bandwidth ! 
 
-Again, my hope - we will soon have a JAX-QL (or something) as part of JavaEE (or Jakarta EE, or MicroProfile) to make this even easier !!
+Again, my hope - we will soon have a JAX-QL (or something) as part of Java EE (or Jakarta EE, or MicroProfile) to make this even easier !!
