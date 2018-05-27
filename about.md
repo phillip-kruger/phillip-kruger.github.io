@@ -31,7 +31,7 @@ I have a passion for **clean code** and **evolutionary architecture**. I love Ja
 </a>
 
 # Experience
-## <i class="fa fa-code" aria-hidden="true"></i> Java & Java EE
+## <i class="fa fa-code" aria-hidden="true"></i> Java, Java EE & MicroProfile
 I have been writing [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) since the beginning of Java and still loving it! I stay up to date with the Language and [specifications](https://en.wikipedia.org/wiki/Java_Community_Process).
 I have extensive experience in [Enterprise Java](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition), including
 [JAX-RS](https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services),
@@ -60,6 +60,16 @@ I have extensive experience in [Enterprise Java](https://en.wikipedia.org/wiki/J
 [GraphQL](http://graphql.org/)
 and much more.
 
+When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (to build more cloud friendly applications), including 
+[Config](https://microprofile.io/project/eclipse/microprofile-config), 
+[Fault tolerance](https://microprofile.io/project/eclipse/microprofile-fault-tolerance), 
+[Health](https://microprofile.io/project/eclipse/microprofile-health), 
+[Metrics](https://microprofile.io/project/eclipse/microprofile-metrics), 
+[Open API](https://microprofile.io/project/eclipse/microprofile-open-api), 
+[REST Client](https://microprofile.io/project/eclipse/microprofile-rest-client), 
+[JWT RBAC](https://microprofile.io/project/eclipse/microprofile-jwt-auth), 
+[Open Tracing](https://microprofile.io/project/eclipse/microprofile-opentracing).
+
 I am also a contributor to [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
 
 ## <i class="fa fa-linux" aria-hidden="true"></i> Linux
@@ -76,12 +86,16 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Upcoming talks:
 
-* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)
 * 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co)
 * 20 July 2018 - [Writing better API's with GraphQL](http://j-sa.co/schedule-cpt/) at the [Java Cloud Conference](http://j-sa.co)
 
+### Previous talks:
+
+* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)
+
 ### Published blog articles:
 
+* [GraphQL on Wildfly swarm](https://www.javacodegeeks.com/2018/05/graphql-on-wildfly-swarm.html)
 * [Hollowjars, Deployment scanner and why Wildfly swarm is cool](https://www.javacodegeeks.com/2018/01/hollowjars-deployment-scanner-wildfly-swarm-cool.html)
 * [Fatjars, Thinwars and why OpenLiberty is cool](https://www.javacodegeeks.com/2017/12/fatjars-thinwars-openliberty-cool.html)
 * [Some factory examples](https://www.javacodegeeks.com/2017/12/some-factory-examples.html)
