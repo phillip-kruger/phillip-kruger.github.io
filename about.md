@@ -86,12 +86,12 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Upcoming talks:
 
-* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co)
-* 20 July 2018 - [Writing better API's with GraphQL](http://j-sa.co/schedule-cpt/) at the [Java Cloud Conference](http://j-sa.co)
+* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa
+* 20 July 2018 - [Writing better API's with GraphQL](http://j-sa.co/schedule-cpt/) at the [Java Cloud Conference](http://j-sa.co) in Cape Town, South Africa
 
 ### Previous talks:
 
-* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)
+* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)  in Pretoria, South Africa
 
 ### Published blog articles:
 
