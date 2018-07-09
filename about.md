@@ -139,8 +139,9 @@ I have been using many tools through the years. Currently these are some of my f
 [Maven](https://en.wikipedia.org/wiki/Apache_Maven),
 [Ansible](https://en.wikipedia.org/wiki/Ansible_(software)),
 [Netbeans](https://en.wikipedia.org/wiki/NetBeans),
-[Atom](https://atom.io/)
-[Hugo](https://gohugo.io/)
+[Atom](https://atom.io/),
+[Hugo](https://gohugo.io/),
+[Jekyll](https://jekyllrb.com/),
 [Eclipse](https://www.eclipse.org/),
 [Docker](https://en.wikipedia.org/wiki/Docker_(software))
 
