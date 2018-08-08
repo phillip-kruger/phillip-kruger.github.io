@@ -74,15 +74,15 @@ You also (as per SPI) register your implementation in ```META-INF/services``` by
 
 (full example [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/resources/META-INF/services/org.eclipse.microprofile.config.spi.ConfigSource))
 
-Above is a fairly simple example, just keeping config value in a static map. You can then create a JAX-RS service ([example](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigApi.java)) to add and remove values from this map.
+Above is a fairly simple example, just keeping config values in a static map. You can then create a JAX-RS service ([example](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigApi.java)) to add and remove values from this map.
 
 But what if you want a more complex config source? One that itself needs configuration ?
 
-# Using MicroProfile Config Api to configure your own MicroProfile Config Source.
+# Using MicroProfile Config to configure your own MicroProfile Config Source.
 
 For example, if we want a Config source that find the values in [etcd](https://coreos.com/etcd/), we also need to configure the etcd server details. The good news is we can use the Config Api for that !
 
-However, Config Source implementation is not a CDI Bean, so you can not ```@Inject``` the values. You also need to ignore yourself (i.e when configuring your source do not look at your source, else you will be in an endless loop)
+However, Config Source implementations is not CDI Beans, so you can not ```@Inject``` the values. You also need to ignore yourself (i.e when configuring your source do not look at your source, else you will be in an endless loop)
 
 To get the Config without CDI is very easy:
 
@@ -100,7 +100,7 @@ So now we just need to make sure to ignore ourself:
         Config config = ConfigProvider.getConfig();
         Iterable<ConfigSource> configSources = config.getConfigSources();
         for(ConfigSource configsource:configSources){
-            if(!configsource.getName().equals(NAME)){
+            if(!configsource.getName().equals(NAME)){ // Ignoring myself
                 String val = configsource.getValue(key);
                 if(val!=null && !val.isEmpty())return val;
             }
@@ -159,16 +159,14 @@ Using maven:
 
 (see the full ```pom.xml``` [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/example/pom.xml))
 
-If I uncomment ```javaCommandLineOptions``` I can change the etcd server host name, used in my etcd config source to something else.
+If I uncomment ```javaCommandLineOptions``` I can change the etcd server host name, used in my etcd config source, to something else.
 
 I can also use any of the other config sources to do this, for example, including a ```microprofile-config.properties``` in my example war file (like [this example](https://github.com/phillip-kruger/microprofile-extentions/blob/master/example/src/main/webapp/META-INF/microprofile-config.properties)), 
 or use my other custom config source and change this in memory.
 
 # Use it as a library.
 
-You can also bundle all of this in a jar file to be used by any of your projects. I made the above available in maven central, so you can also use that directly.
-
-See [MicroProfile Ext - Config](https://github.com/phillip-kruger/microprofile-extentions/tree/master/config-ext)
+You can also bundle all of this in a jar file to be used by any of your projects. I made the above available in [maven central](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22config-ext%22) and [github](https://github.com/phillip-kruger/microprofile-extentions/tree/master/config-ext), so you can also use that directly.
 
 Just add this to your pom.xml
 
