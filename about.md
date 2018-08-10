@@ -60,7 +60,7 @@ I have extensive experience in [Enterprise Java](https://en.wikipedia.org/wiki/J
 [GraphQL](http://graphql.org/)
 and much more.
 
-When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (to build more cloud friendly applications), including 
+When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (to build more cloud-friendly applications), including 
 [Config](https://microprofile.io/project/eclipse/microprofile-config), 
 [Fault tolerance](https://microprofile.io/project/eclipse/microprofile-fault-tolerance), 
 [Health](https://microprofile.io/project/eclipse/microprofile-health), 
@@ -86,8 +86,8 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Previous talks:
 
-* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation),[video](https://www.youtube.com/watch?v=aSEPxDPc-ag))
-* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/)  in Pretoria, South Africa
+* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](https://www.youtube.com/watch?v=aSEPxDPc-ag))
+* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/) in Pretoria, South Africa ([slides](http://bit.ly/gql-presentation))
 
 ### Published blog articles:
 
