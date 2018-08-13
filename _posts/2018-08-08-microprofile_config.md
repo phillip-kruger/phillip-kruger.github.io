@@ -117,8 +117,6 @@ Now we just need to make sure to ignore our own config source, so in the ```getV
     }
 ```
 
-Where ```NAME``` is the name of your own config source.
-
 (full example [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/EtcdConfigSource.java))
 
 Now I can define the server details of my etcd server with any of the other config source options.
