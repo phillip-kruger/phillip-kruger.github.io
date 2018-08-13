@@ -5,7 +5,7 @@ image: "/images/MicroProfile.jpg"
 bigimg: "/images/MicroProfile_config_source/banner.jpg"
 ---
 
-[MicroProfile Config](https://github.com/eclipse/microprofile-config), that is part of the [MicroProfile](https://microprofile.io/) Specification, is the standardization for Java Enterprise and Microservices configuration. 
+[MicroProfile Config](https://github.com/eclipse/microprofile-config), which is part of the [MicroProfile](https://microprofile.io/) Specification, is the standardization for Java Enterprise and Microservices configuration. 
 
 Out of the box (i.e. mandatory for all implementations as defined by the specification) there are 3 ways to define your configuration:
 
@@ -23,14 +23,14 @@ So if you have a Config property with the key of ```myservice.hostname```, you w
     private String myServiceHostname;
 ```
 
-The system will first see if there are a System property with the key ```myservice.hostname```, if not it will try Environment variables, then all ```microprofile-config.property``` files on the classpath.
+The system will first see if there is a System property with the key ```myservice.hostname```, if not it will try Environment variables, then all ```microprofile-config.property``` files on the classpath.
 If it could not find it anywhere, it will fallback to the ```defaultValue``` in the annotation.
 
 # Your own config source.
 
 You can also provide your own config source(s) and define the load order for that source. The Config Api uses [SPI](Service Provider Interfaces) to load all config sources, so it's pretty easy to create your own.
 
-For example, say we want a source that loads first (i.e. event before System properties) and we store those config value in memory, we can write a class that extends ```org.eclipse.microprofile.config.spi.ConfigSource```:
+For example, say we want a source that loads first (i.e. event before System properties) and we store that config value in memory, we can write a class that extends ```org.eclipse.microprofile.config.spi.ConfigSource```:
 
 ```java
     
@@ -66,7 +66,7 @@ For example, say we want a source that loads first (i.e. event before System pro
 
 (see the full source [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigSource.java))
 
-You also (as per SPI) register your implementation in ```META-INF/services``` by adding a entry in a file called ```org.eclipse.microprofile.config.spi.ConfigSource```
+You also (as per SPI) register your implementation in ```META-INF/services``` by adding an entry in a file called ```org.eclipse.microprofile.config.spi.ConfigSource```
 
 ```
     com.github.phillipkruger.microprofileextentions.config.MemoryConfigSource
@@ -80,9 +80,9 @@ But what if you want a more complex config source? One that itself needs configu
 
 # Using MicroProfile Config to configure your own MicroProfile Config Source.
 
-For example, if we want a Config source that find the values in [etcd](https://coreos.com/etcd/), we also need to configure the etcd server details. The good news is we can use the Config Api for that !
+For example, if we want a Config source that finds the values in [etcd](https://coreos.com/etcd/), we also need to configure the etcd server details. The good news is we can use the Config Api for that !
 
-However, Config Source implementations is not CDI Beans, so you can not ```@Inject``` the values. You also need to ignore yourself (i.e when configuring your source do not look at your source, else you will be in an endless loop)
+However, Config Source implementations are not CDI Beans, so you can not ```@Inject``` the values. You also need to ignore yourself (i.e when configuring your source do not look at your source, else you will be in an endless loop)
 
 To get the Config without CDI is very easy:
 
@@ -90,23 +90,30 @@ To get the Config without CDI is very easy:
     Config config = ConfigProvider.getConfig();
 ```
 
-(thanks to [Rudy De Busscher](https://twitter.com/rdebusscher) and others on the friendly [MicroProfile Google Group](https://groups.google.com/forum/#!topic/microprofile/rkkZJGJpxMU) for helping)
+(thanks to [Mark Struberg](https://twitter.com/struberg), [Rudy De Busscher](https://twitter.com/rdebusscher) and others on [Twitter](https://twitter.com/phillipkruger/status/1027332689505017856) and the friendly [MicroProfile Google Group](https://groups.google.com/forum/#!topic/microprofile/rkkZJGJpxMU) for helping)
 
-So now we just need to make sure to ignore ourself:
+Now we just need to make sure to ignore our own config source, so in the ```getValue``` method: 
 
 ```java
 
-    private String getPropertyValue(String key,String defaultValue){
-        Config config = ConfigProvider.getConfig();
-        Iterable<ConfigSource> configSources = config.getConfigSources();
-        for(ConfigSource configsource:configSources){
-            if(!configsource.getName().equals(NAME)){ // Ignoring myself
-                String val = configsource.getValue(key);
-                if(val!=null && !val.isEmpty())return val;
-            }
+    @Override
+    public String getValue(String key) {
+        if (client == null && key.startsWith(KEY_PREFIX)) {
+            // in case we are about to configure ourselves we simply ignore that key
+            return null;
         }
-        return defaultValue;
+
+        ByteSequence bsKey = ByteSequence.fromString(key);
+        CompletableFuture<GetResponse> getFuture = getClient().getKVClient().get(bsKey);
+        try {
+            GetResponse response = getFuture.get();
+            String value = toString(response);
+            return value;
+        } catch (InterruptedException | ExecutionException ex) {
+            log.log(Level.FINEST, "Can not get config value for [{0}] from etcd Config source: {1}", new Object[]{key, ex.getMessage()});
+        }
         
+        return null;
     }
 ```
 
@@ -174,7 +181,7 @@ Just add this to your pom.xml
     <dependency>
         <groupId>com.github.phillip-kruger.microprofile-extentions</groupId>
         <artifactId>config-ext</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
     </dependency>
 ```
 
