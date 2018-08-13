@@ -7,7 +7,7 @@ bigimg: "/images/Jax-rs_config/banner.jpg"
 
 When you create REST services with JAX-RS, you typically either return nothing (so HTTP 201/2/4 etc) or some data, potentially in JSON format (so HTTP 200), or some Exception / Error (so HTTP 4xx or 5xx).
 
-We usually translate a Runtime Exception into some HTTP 5xx and a Checked Exception into some 4xx. (With the exception of Bean validation's ```ConstraintViolationException```)
+We usually translate a Runtime Exception into some HTTP 5xx and a Checked Exception into some 4xx.
 
 Because we want to keep our boundary clean, we do not include the full Java stacktrace in the body of the response when we translate an Exception to a HTTP response. 
 We usually just add a "REASON" Header with the HTTP 5xx (or sometimes 4xx) response. However, this means that most of our ExceptionMappers looks pretty much the same (something like this):
@@ -18,7 +18,6 @@ We usually just add a "REASON" Header with the HTTP 5xx (or sometimes 4xx) respo
     public class SomeExceptionMapper implements ExceptionMapper<SomeException> {
 
         @Override
-        @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
         public Response toResponse(SomeException exception) {
             return Response.status(500).header("reason", exception.getMessage()).build();
         }
@@ -28,7 +27,7 @@ We usually just add a "REASON" Header with the HTTP 5xx (or sometimes 4xx) respo
 
 # Using MicroProfile Config API 
 
-We can use MicroProfile Config API to create a configurable Exception Mapper, that allows the consumer to configure the mapping (Exception to HTTP Response Code).
+We can use MicroProfile Config API to create a configurable Exception Mapper, that allows the consumer to configure the Exception to HTTP Response Code mapping.
 
 Our ```@Provider``` will handle all Runtime Exceptions:
 
@@ -51,7 +50,7 @@ We ```@Inject``` both the Config and the Providers:
     private Providers providers;
 ```
 
-When we implement the ```toResponse``` method, we see if there is a mapping for this Exception class:
+When we implement the ```toResponse``` method, we see if there is a mapping for this Exception class in our config:
 
 ```java
 
@@ -87,6 +86,8 @@ When we implement the ```toResponse``` method, we see if there is a mapping for 
 ```
 
 (full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/jaxrs-ext/src/main/java/com/github/phillipkruger/microprofileextentions/jaxrs/RuntimeExceptionMapper.java))
+
+We also go up the exception chain until we get a mapping, or then default to a normal 500 error.
 
 So we can add configuration for mappings like this:
 
