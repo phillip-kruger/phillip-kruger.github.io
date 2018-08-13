@@ -64,7 +64,7 @@ For example, say we want a source that loads first (i.e. event before System pro
     }
 ```
 
-(see the full source [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigSource.java))
+(see the full source [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigSource.java))
 
 You also (as per SPI) register your implementation in ```META-INF/services``` by adding an entry in a file called ```org.eclipse.microprofile.config.spi.ConfigSource```
 
@@ -72,9 +72,9 @@ You also (as per SPI) register your implementation in ```META-INF/services``` by
     com.github.phillipkruger.microprofileextentions.config.MemoryConfigSource
 ```
 
-(full example [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/resources/META-INF/services/org.eclipse.microprofile.config.spi.ConfigSource))
+(full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/resources/META-INF/services/org.eclipse.microprofile.config.spi.ConfigSource))
 
-Above is a fairly simple example, just keeping config values in a static map. You can then create a JAX-RS service ([example](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigApi.java)) to add and remove values from this map.
+Above is a fairly simple example, just keeping config values in a static map. You can then create a JAX-RS service ([example](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigApi.java)) to add and remove values from this map.
 
 But what if you want a more complex config source? One that itself needs configuration ?
 
@@ -117,13 +117,13 @@ Now we just need to make sure to ignore our own config source, so in the ```getV
     }
 ```
 
-(full example [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/EtcdConfigSource.java))
+(full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/EtcdConfigSource.java))
 
 Now I can define the server details of my etcd server with any of the other config source options.
 
 # Running the example.
 
-I am running an [example](https://github.com/phillip-kruger/microprofile-extentions/tree/master/example) on [Payara-micro](https://www.payara.fish/) (but it should work on any MicroProfile implementation).
+I am running an [example](https://github.com/phillip-kruger/microprofile-extensions/tree/master/example) on [Payara-micro](https://www.payara.fish/) (but it should work on any MicroProfile implementation).
 
 Using maven:
 
@@ -162,24 +162,24 @@ Using maven:
     </plugin>
 ```
 
-(see the full ```pom.xml``` [here](https://github.com/phillip-kruger/microprofile-extentions/blob/master/example/pom.xml))
+(see the full ```pom.xml``` [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/example/pom.xml))
 
 If I uncomment ```javaCommandLineOptions``` I can change the etcd server host name, used in my etcd config source, to something else.
 
-I can also use any of the other config sources to do this, for example, including a ```microprofile-config.properties``` in my example war file (like [this example](https://github.com/phillip-kruger/microprofile-extentions/blob/master/example/src/main/webapp/META-INF/microprofile-config.properties)), 
+I can also use any of the other config sources to do this, for example, including a ```microprofile-config.properties``` in my example war file (like [this example](https://github.com/phillip-kruger/microprofile-extensions/blob/master/example/src/main/webapp/META-INF/microprofile-config.properties)), 
 or use my other custom config source and change this in memory.
 
 # Use it as a library.
 
-You can also bundle all of this in a jar file to be used by any of your projects. I made the above available in [maven central](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22config-ext%22) and [github](https://github.com/phillip-kruger/microprofile-extentions/tree/master/config-ext), so you can also use that directly.
+You can also bundle all of this in a jar file to be used by any of your projects. I made the above available in [maven central](https://search.maven.org/artifact/com.github.phillip-kruger.microprofile-extensions/config-ext/1.0.9/jar) and [github](https://github.com/phillip-kruger/microprofile-extensions/tree/master/config-ext), so you can also use that directly.
 
 Just add this to your pom.xml
 
 ```xml
     <dependency>
-        <groupId>com.github.phillip-kruger.microprofile-extentions</groupId>
+        <groupId>com.github.phillip-kruger.microprofile-extensions</groupId>
         <artifactId>config-ext</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
     </dependency>
 ```
 
