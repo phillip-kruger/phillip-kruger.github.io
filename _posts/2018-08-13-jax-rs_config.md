@@ -74,7 +74,7 @@ When we implement the ```toResponse``` method, we see if there is a mapping for 
                 String reason = getReason(exception);
                 log.log(Level.FINEST, reason, exception);
                 return Response.status(status).header(REASON, reason).build();
-            } else if(exception.getCause()!=null && exception.getCause()!=null && providers!=null){
+            } else if(exception.getCause()!=null && providers!=null){
                 final Throwable cause = exception.getCause();
                 return handleThrowable(cause);
             } else {
