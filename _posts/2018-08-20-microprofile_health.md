@@ -8,11 +8,11 @@ bigimg: "/images/MicroProfile_health/banner.jpg"
 [MicroProfile Health](https://github.com/eclipse/microprofile-health) API is a very basic API to report the state of your service, based on one or more Health Probe. 
 It's very useful in scenarios where some Server or Cluster Controller need to decide if and when your instance should be restarted.
 
-Using MicroProfile Health API in your application is as simple as implementing one (or more) ```org.eclipse.microprofile.health.HealthCheck``` and annotate the class with ```@Health```.
+Using MicroProfile Health API in your application is as simple as implementing one (or more) ```org.eclipse.microprofile.health.HealthCheck``` and annotating the class with ```@Health```.
 
 The ```HealthCheck``` interface has one method you should implement, namely ```HealthCheckResponse call()```.
 
-So you decide, when this method is called, if your instance is healthy.
+So, you decide, when this method is called, if your instance is healthy.
 
 Your response (```HealthCheckResponse```) contains:
 
@@ -66,7 +66,7 @@ Let's say we have an application that uses a Database, and if the connection to 
 (see the full example [here](https://github.com/phillip-kruger/microprofile-demo/blob/master/membership/src/main/java/com/github/phillipkruger/membership/health/MembershipHealthCheck.java))
 
 In the example above, the health probe name is "membership" and reports **UP** if a connection to the Database could be established within a certain time. 
-It also include a few metadata fields w.r.t the database.
+It also includes a few metadata fields w.r.t the database.
 
 ## /health.
 
@@ -113,7 +113,7 @@ If the database goes down:
 # Creating reusable probes with MicroProfile config.
 
 Certain health probes can be re-used by any of your applications, and you can externalize the settings by using the [Microprofile Config](https://github.com/eclipse/microprofile-config) API. 
-As an example, if we want a Health Probe that checks the System load, we can externalize when the system load should start reporting reporting down.
+As an example, if we want a Health Probe that checks the System load, we can externalize at what stage the system load should start reporting down.
 
 ```java
 
