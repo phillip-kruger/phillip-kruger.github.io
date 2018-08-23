@@ -5,12 +5,12 @@ image: "/images/MicroProfile.jpg"
 bigimg: "/images/MicroProfile_openapi/banner.jpg"
 ---
 
-[MicroProfile OpenApi](https://github.com/eclipse/microprofile-open-api) gives us a standardize way to describe our [JAX-RS](https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) API's using [OpenApi](https://www.openapis.org/) 3.
-If you have used [swagger-jaxrs](https://github.com/swagger-api/swagger-core/wiki/swagger-core-jax-rs-project-setup-1.5.x) and [swagger-annotations](https://github.com/swagger-api/swagger-core/wiki/annotations-1.5.x) before, this will feel very familiar to you as OpenApi is build on the Swagger base.
+[MicroProfile OpenApi](https://github.com/eclipse/microprofile-open-api) gives us a standardized way to describe our [JAX-RS](https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) API's using [OpenApi](https://www.openapis.org/) 3.
+If you have used [swagger-jaxrs](https://github.com/swagger-api/swagger-core/wiki/swagger-core-jax-rs-project-setup-1.5.x) and [swagger-annotations](https://github.com/swagger-api/swagger-core/wiki/annotations-1.5.x) before, this will feel very familiar to you as OpenApi is built on the Swagger base.
 
 *On Nov. 5, 2015, SmartBear in conjunction with 3Scale, Apigee, Capital One, Google, IBM, Intuit, Microsoft, PayPal, and Restlet announced the formation of the Open API Initiative, an open source project under the Linux Foundation. As part of the formation of the OAI, SmartBear donated the Swagger specification to the Linux Foundation, meaning that the OpenAPI Specification is semantically identical to the specification formerly known as the Swagger 2.0 specification* - [www.openapis.org/faq](https://www.openapis.org/faq#OAIFAQ-History)
 
-# Quick overview.
+# Quick overview
 
 ## Application
 
@@ -45,6 +45,7 @@ Then in your service(s), add the annotations describing your service:
 * ```@Tag```
 * ```@Operation```
 * ```@APIResponse```
+* etc.
 
 example:
 
@@ -151,7 +152,7 @@ In your ```pom.xml```:
     </dependency>
 ```
 
-This will pull in Swagger UI via [webjars](http://webjars.org/) and generate the ```index.html``` from a template that you can configure using [MicroProfile Config API](https://github.com/eclipse/microprofile-config)
+This will pull in Swagger UI via [webjars](http://webjars.org/) and generate the ```index.html``` from a template that you can configure using [MicroProfile Config API](https://github.com/eclipse/microprofile-config).
 
 Just adding the above will already give you the default UI, example:
 
@@ -163,16 +164,16 @@ http://localhost:8080/example/api/openapi-ui/
 
 Using the Config API you can Personalize the UI. Here are the config keys you can use:
 
-* openapi-ui.copyrightBy - Adds a name to the copyright in the footer. Default to none.
-* openapi-ui.copyrightYear - Adds the copyright year. Default to current year.
-* openapi-ui.title - Adds the title in the window. Default to "MicroProfile - Open API".
-* openapi-ui.serverInfo - Adds info on the server. Default to the system server info.
-* openapi-ui.contextRoot - Adds the context root. Default to the current value.
-* openapi-ui.swaggerUiTheme - Use a theme from swagger-ui-themes. Default to "flattop".
-* openapi-ui.swaggerHeaderVisibility - Show/hide the swagger logo header. Default to "visible".
-* openapi-ui.exploreFormVisibility - Show/hide the explore form. Default to "hidden".
-* openapi-ui.serverVisibility - Show/hide the server selection. Default to "hidden".
-* openapi-ui.createdWithVisibility - Show/hide the created with footer. Default to "visible".
+* **openapi-ui.copyrightBy** - Adds a name to the copyright in the footer. Defaults to none.
+* **openapi-ui.copyrightYear** - Adds the copyright year. Defaults to current year.
+* **openapi-ui.title** - Adds the title in the window. Defaults to "MicroProfile - Open API".
+* **openapi-ui.serverInfo** - Adds info on the server. Defaults to the system server info.
+* **openapi-ui.contextRoot** - Adds the context root. Defaults to the current value.
+* **openapi-ui.swaggerUiTheme** - Use a theme from swagger-ui-themes. Defaults to "flattop".
+* **openapi-ui.swaggerHeaderVisibility** - Show/hide the swagger logo header. Defaults to "visible".
+* **openapi-ui.exploreFormVisibility** - Show/hide the explore form. Defaults to "hidden".
+* **openapi-ui.serverVisibility** - Show/hide the server selection. Defaults to "hidden".
+* **openapi-ui.createdWithVisibility** - Show/hide the created with footer. Defaults to "visible".
 
 Example: Adding this to ```META-INF/microprofile.properties```
 
@@ -207,4 +208,4 @@ Lastly, you can change the logo to your company logo by including a file named `
 
 # Apiee
 
-For application servers that does not have MicroProfile, see [Apiee](https://github.com/phillip-kruger/apiee)
+For application servers that do not have MicroProfile, see [Apiee](https://github.com/phillip-kruger/apiee)
