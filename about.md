@@ -91,6 +91,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Published blog articles:
 
+* [A configurable JAX-RS ExceptionMapper with MicroProfile Config](https://www.javacodegeeks.com/2018/08/jax-rs-exceptionmapper-config.html)
 * [Your own MicroProfile Config source](https://www.javacodegeeks.com/2018/08/microprofile-config-source.html)
 * [GraphQL on Wildfly swarm](https://www.javacodegeeks.com/2018/05/graphql-on-wildfly-swarm.html)
 * [Hollowjars, Deployment scanner and why Wildfly swarm is cool](https://www.javacodegeeks.com/2018/01/hollowjars-deployment-scanner-wildfly-swarm-cool.html)
