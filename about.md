@@ -84,6 +84,10 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
+### Upcoming talks:
+
+* 17 September 2018 - [Distributed services with MicroProfile](https://www.meetup.com/Jozi-JUG/events/253979187/) at the [Jozi-JUG](https://www.meetup.com/Jozi-JUG/) in Sandton, South Africa
+
 ### Previous talks:
 
 * 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](https://www.youtube.com/watch?v=aSEPxDPc-ag))
