@@ -139,16 +139,16 @@ Above is a quick overview of MicroProfile OpenAPI. Read more about it here:
 
 The latest [Swagger UI](https://swagger.io/tools/swagger-ui/) works on OpenAPI, and you can manually add it to your project 
 (see [this great post](https://www.kodnito.com/posts/documenting-rest-api-using-microprofile-openapi-swagger-ui-payara-micro/) by [Hayri Cicek‏](https://twitter.com/cicekhayri))
-, or you can use [this](https://github.com/phillip-kruger/microprofile-extensions/tree/master/openapi-ext) useful library that will add it automatically:
+, or you can use [this](https://github.com/microprofile-extensions/openapi-ext) useful library that will add it automatically:
 
 In your ```pom.xml```:
 
 ```xml
 
     <dependency>
-        <groupId>com.github.phillip-kruger.microprofile-extensions</groupId>
-        <artifactId>openapi-ext</artifactId>
-        <version>1.0.9</version>
+        <groupId>org.microprofile-ext.openapi-ext</groupId>
+        <artifactId>swagger-ui</artifactId>
+        <version>XXXX</version>
     </dependency>
 ```
 
