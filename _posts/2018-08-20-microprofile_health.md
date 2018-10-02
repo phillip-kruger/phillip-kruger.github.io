@@ -263,7 +263,7 @@ The aggregated result of ```/health``` can then look something like this:
 
 # Adding a nice UI
 
-Even though MicroProfile Health API is build for System to System use, it's still nice to look at the output of /health. 
+Even though MicroProfile Health API is build for System to System use, it's still nice to look at the output of ```/health```. 
 This library gives you a small web gui on top of ```/health```
 
 
@@ -280,7 +280,7 @@ In ```pom.xml```
 
 ```
 
-Then go to /<context_root>/health-ui, eg: http://localhost:7080/profiling/health-ui/
+Then go to ```/<context_root>/health-ui```, eg: ```http://localhost:7080/profiling/health-ui/```
 
 ## Example screenshot
 
