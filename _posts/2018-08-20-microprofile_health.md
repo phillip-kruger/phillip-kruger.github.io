@@ -73,6 +73,7 @@ It also includes a few metadata fields w.r.t the database.
 If you browse to ```/health``` on your server, you will see an aggregated response from all probes and a total state (UP or DOWN) of the server.
 
 ```json
+
     {
        "outcome":"UP",
        "checks":[
@@ -95,6 +96,7 @@ If you browse to ```/health``` on your server, you will see an aggregated respon
 If the database goes down:
 
 ```json
+
     {
        "outcome":"DOWN",
        "checks":[
@@ -158,11 +160,11 @@ As an example, if we want a Health Probe that checks the System load, we can ext
 
 ```
 
-(see the full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/health-ext/src/main/java/com/github/phillipkruger/microprofileextentions/health/SystemLoadHealthCheck.java))
+(see the full example [here](https://github.com/microprofile-extensions/health-ext/blob/master/healthprobe-system/src/main/java/org/microprofileext/health/system/SystemLoadHealthCheck.java))
 
 Above we can now override the default ```0.7``` system load to our own value by changing the ```health.systemload.max``` config value.
 
-[Other examples](https://github.com/phillip-kruger/microprofile-extensions/tree/master/health-ext/src/main/java/com/github/phillipkruger/microprofileextentions/health) could include:
+[Other examples](https://github.com/microprofile-extensions/health-ext/tree/master/healthprobe-jvm) could include:
 
 * Heap Memory
 * Non Heap Memory
@@ -170,16 +172,24 @@ Above we can now override the default ```0.7``` system load to our own value by 
 
 # Using it in your project
 
-You can use all the above in your project, as it's available in maven central and [github](https://github.com/phillip-kruger/microprofile-extensions/tree/master/health-ext):
+You can use all the above in your project, as it's available in maven central under the [MicroProfile Extensions](https://www.microprofile-ext.org) project:
 
 In your ```pom.xml```:
 
 ```xml
 
     <dependency>
-        <groupId>com.github.phillip-kruger.microprofile-extensions</groupId>
-        <artifactId>health-ext</artifactId>
-        <version>1.0.9</version>
+        <groupId>org.microprofile-ext.health-ext</groupId>
+        <artifactId>healthprobe-system</artifactId>
+        <version>XXXXX</version>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.microprofile-ext.health-ext</groupId>
+        <artifactId>healthprobe-jvm</artifactId>
+        <version>XXXXX</version>
+        <scope>runtime</scope>
     </dependency>
 
 ```
@@ -250,3 +260,28 @@ The aggregated result of ```/health``` can then look something like this:
     }
 
 ```
+
+# Adding a nice UI
+
+Even though MicroProfile Health API is build for System to System use, it's still nice to look at the output of /health. 
+This library gives you a small web gui on top of ```/health```
+
+
+In ```pom.xml```
+    
+```xml
+
+    <dependency>
+        <groupId>org.microprofile-ext.health-ext</groupId>
+        <artifactId>health-ui</artifactId>
+        <version>XXXXX</version>
+        <scope>runtime</scope>
+    </dependency>
+
+```
+
+Then go to /<context_root>/health-ui, eg: http://localhost:7080/profiling/health-ui/
+
+## Example screenshot
+
+![](https://raw.githubusercontent.com/microprofile-extensions/health-ext/master/health-ui/screenshot.png)

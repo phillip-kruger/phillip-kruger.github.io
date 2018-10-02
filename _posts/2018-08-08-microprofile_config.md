@@ -28,7 +28,7 @@ If it could not find it anywhere, it will fallback to the ```defaultValue``` in 
 
 # Your own config source.
 
-You can also provide your own config source(s) and define the load order for that source. The Config Api uses [SPI](Service Provider Interfaces) to load all config sources, so it's pretty easy to create your own.
+You can also provide your own config source(s) and define the load order for that source. The Config Api uses SPI (Service Provider Interfaces) to load all config sources, so it's pretty easy to create your own.
 
 For example, say we want a source that loads first (i.e. event before System properties) and we store that config value in memory, we can write a class that extends ```org.eclipse.microprofile.config.spi.ConfigSource```:
 
@@ -64,17 +64,15 @@ For example, say we want a source that loads first (i.e. event before System pro
     }
 ```
 
-(see the full source [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigSource.java))
+(see the full source [here](https://github.com/microprofile-extensions/config-ext/blob/master/configsource-memory/src/main/java/org/microprofileext/config/source/memory/MemoryConfigSource.java))
 
 You also (as per SPI) register your implementation in ```META-INF/services``` by adding an entry in a file called ```org.eclipse.microprofile.config.spi.ConfigSource```
 
 ```
-    com.github.phillipkruger.microprofileextentions.config.MemoryConfigSource
+    org.microprofileext.config.source.memory.MemoryConfigSource
 ```
 
-(full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/resources/META-INF/services/org.eclipse.microprofile.config.spi.ConfigSource))
-
-Above is a fairly simple example, just keeping config values in a static map. You can then create a JAX-RS service ([example](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/MemoryConfigApi.java)) to add and remove values from this map.
+Above is a fairly simple example, just keeping config values in a static map. You can then create a JAX-RS service ([example](https://github.com/microprofile-extensions/config-ext/blob/master/configsource-memory/src/main/java/org/microprofileext/config/source/memory/MemoryConfigApi.java)) to add and remove values from this map.
 
 But what if you want a more complex config source? One that itself needs configuration ?
 
@@ -117,7 +115,7 @@ Now we just need to make sure to ignore our own config source, so in the ```getV
     }
 ```
 
-(full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/config-ext/src/main/java/com/github/phillipkruger/microprofileextentions/config/EtcdConfigSource.java))
+(full example [here](https://github.com/microprofile-extensions/config-ext/blob/master/configsource-etcd/src/main/java/org/microprofileext/config/source/etcd/EtcdConfigSource.java))
 
 Now I can define the server details of my etcd server with any of the other config source options.
 
@@ -171,16 +169,47 @@ or use my other custom config source and change this in memory.
 
 # Use it as a library.
 
-You can also bundle all of this in a jar file to be used by any of your projects. I made the above available in [maven central](https://search.maven.org/artifact/com.github.phillip-kruger.microprofile-extensions/config-ext/1.0.9/jar) and [github](https://github.com/phillip-kruger/microprofile-extensions/tree/master/config-ext), so you can also use that directly.
+You can also bundle all of this in a jar file to be used by any of your projects. All of the above available in maven central under the [MicroProfile Extensions](https://www.microprofile-ext.org) project, so you can also use that directly.
 
 Just add this to your pom.xml
 
 ```xml
+    
     <dependency>
-        <groupId>com.github.phillip-kruger.microprofile-extensions</groupId>
-        <artifactId>config-ext</artifactId>
-        <version>1.0.9</version>
+        <groupId>org.microprofile-ext.config-ext</groupId>
+        <artifactId>configsource-memory</artifactId>
+        <version>XXXX</version>
+        <scope>runtime</scope>
     </dependency>
+
+    <dependency>
+        <groupId>org.microprofile-ext.config-ext</groupId>
+        <artifactId>configsource-file</artifactId>
+        <version>XXXXX</version>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.microprofile-ext.config-ext</groupId>
+        <artifactId>configsource-etcd</artifactId>
+        <version>XXXXXX</version>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.microprofile-ext.config-ext</groupId>
+        <artifactId>configconverter-list</artifactId>
+        <version>XXXX</version>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.microprofile-ext.config-ext</groupId>
+        <artifactId>configconverter-json</artifactId>
+        <version>XXXX</version>
+        <scope>runtime</scope>
+    </dependency>
+
 ```
 
 And you have all of the above config sources.

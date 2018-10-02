@@ -85,18 +85,20 @@ When we implement the ```toResponse``` method, we see if there is a mapping for 
     }
 ```
 
-(full example [here](https://github.com/phillip-kruger/microprofile-extensions/blob/master/jaxrs-ext/src/main/java/com/github/phillipkruger/microprofileextentions/jaxrs/RuntimeExceptionMapper.java))
+(full example [here](https://github.com/microprofile-extensions/jaxrs-ext/blob/master/configurable-exception-handler/src/main/java/org/microprofileext/jaxrs/exceptionhandler/RuntimeExceptionMapper.java))
 
 We also go up the exception chain until we get a mapping, or then default to a normal 500 error.
 
 So we can add configuration for mappings like this:
 
 ```
+
     ## 503 Service Unavailable: The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.
     org.eclipse.microprofile.faulttolerance.exceptions.CircuitBreakerOpenException/mp-jaxrs-ext/statuscode=503
     
     ## 401 Unauthorized (RFC 7235): Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided.
     javax.ws.rs.NotAuthorizedException/mp-jaxrs-ext/statuscode=401
+
 ```
 
 In the above example we will map a CircuitBreakerOpenException (from MicroProfile Fault tolerance API) to a 503 and NotAuthorizedException to a 401.
@@ -112,11 +114,14 @@ You can also bundle all of this in a jar file to be used by any of your projects
 Just add this to your pom.xml
 
 ```xml
+    
     <dependency>
-        <groupId>com.github.phillip-kruger.microprofile-extensions</groupId>
-        <artifactId>jaxrs-ext</artifactId>
-        <version>1.0.9</version>
+        <groupId>org.microprofile-ext.jaxrs-ext</groupId>
+        <artifactId>configurable-exception-handler</artifactId>
+        <version>XXXXX</version>
+        <scope>runtime</scope>
     </dependency>
+
 ```
 
 It comes with a few pre-defined mappings, but you can override it in your configuration.
