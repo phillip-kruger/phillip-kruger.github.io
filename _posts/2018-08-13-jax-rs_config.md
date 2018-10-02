@@ -109,7 +109,7 @@ In the above example we will map a CircuitBreakerOpenException (from MicroProfil
 
 # Use it as a library.
 
-You can also bundle all of this in a jar file to be used by any of your projects. The above available in maven central under the [MicroProfile Extensions](https://www.microprofile-ext.org) project, so you can also use that directly.
+You can also bundle all of this in a jar file to be used by any of your projects. The above is available in maven central under the [MicroProfile Extensions](https://www.microprofile-ext.org) project, so you can also use that directly.
 
 Just add this to your pom.xml
 
