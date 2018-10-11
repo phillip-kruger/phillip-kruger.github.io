@@ -171,7 +171,8 @@ and more.
 
 # Conferences I attended
 
-* [Java Cloud Conference, Johannesburg, South Africa](http://j-sa.co/)
+* [JCon 2018, Düsseldorf, Germany](http://jcon.one/en/)
+* [Java Cloud Conference 2018, Johannesburg, South Africa](http://j-sa.co/)
 * [DevConf ZA 2018, Johannesburg, South Africa](https://www.devconf.co.za/)
 * [JavaOne 2017, San Francisco, USA](https://www.oracle.com/javaone/index.html)
 * [SingularityU 2017, Midrand, South Africa](https://singularityusouthafricasummit.org/)
