@@ -87,8 +87,8 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 ### Previous talks:
 
 * 17 September 2018 - [Distributed services with MicroProfile](https://www.meetup.com/Jozi-JUG/events/253979187/) at the [Jozi-JUG](https://www.meetup.com/Jozi-JUG/) in Sandton, South Africa
-* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](https://www.youtube.com/watch?v=aSEPxDPc-ag))
-* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/) in Pretoria, South Africa ([slides](http://bit.ly/gql-presentation))
+* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](http://bit.ly/mp-youtube-video), [code](http://bit.ly/mp-sourcecode))
+* 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/) in Pretoria, South Africa ([slides](http://bit.ly/gql-presentation), [code](http://bit.ly/gql-sourcecode))
 
 ### Published blog articles:
 
