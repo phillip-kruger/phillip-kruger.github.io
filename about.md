@@ -77,7 +77,8 @@ I have been running [Linux](https://en.wikipedia.org/wiki/Linux) on my Personal 
 and then basically went through many distributions including [Red Hat](https://en.wikipedia.org/wiki/Red_Hat_Linux), [OpenSUSE](https://en.wikipedia.org/wiki/OpenSUSE),
 [Debian](https://en.wikipedia.org/wiki/Debian), [PCLinuxOS](https://en.wikipedia.org/wiki/PCLinuxOS). I then discovered [Gentoo Linux](https://en.wikipedia.org/wiki/Gentoo_Linux),
 and went from a basic Desktop user to being comfortable with building my own OS on my PC. I also used [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu_(operating_system))
-and [Mint](https://en.wikipedia.org/wiki/Linux_Mint). For the past few years I have been using [Arch Linux](https://en.wikipedia.org/wiki/Arch_Linux) and loving it.
+and [Mint](https://en.wikipedia.org/wiki/Linux_Mint). For the past few years I have been using [Arch Linux](https://en.wikipedia.org/wiki/Arch_Linux) and loving it. 
+At work I am running a nice stable [Fedora](https://getfedora.org/) distro with [KDE](https://spins.fedoraproject.org/kde/).
 I am comfortable running and managing Linux servers and [Docker](https://en.wikipedia.org/wiki/Docker_(software)) containers.
 
 ## <i class="fa fa-rss" aria-hidden="true"></i> Communication
@@ -181,7 +182,6 @@ and more.
 * [Mobile World Congress 2011, Barcelona, Spain](https://www.mobileworldcongress.com/)
 * [JavaOne 2011, San Francisco, USA](https://www.oracle.com/javaone/index.html)
 * [Oracle Open World 2007, San Francisco, USA](https://www.oracle.com/openworld/index.html)
-
 
 ![](/images/grand_canyon.jpg)
 
