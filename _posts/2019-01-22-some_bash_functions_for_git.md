@@ -9,7 +9,7 @@ Here some git related functions in my `.bachrc`. Is mostly a backup for me, but 
 
 ## Cloning a git repo
 
-Because I usually clone repos from my github account, this is a shortcut that allows me to just type clone *repo_name* and it will create the URL.
+Because I usually clone repos from my github account, this is a shortcut that allows me to just type ```clone *repo_name*``` and it will create the URL.
 
 ```bash
 
@@ -47,15 +47,15 @@ Because I usually clone repos from my github account, this is a shortcut that al
 
 **Usage:** 
 
-clone <reponame>  - this will go to my github account
+```clone *reponame*```  - this will go to my github account
 
 ![clone1](/images/Bash_git/clone_1.gif)
 
-clone <url>       - clone the repo at the url
+```clone *url*```       - clone the repo at the url
 
 ![clone1](/images/Bash_git/clone_2.gif)
 
-clone             - will ask for the repo name or url
+```clone```             - will ask for the repo name or url
 
 ![clone1](/images/Bash_git/clone_3.gif)
 
@@ -91,7 +91,7 @@ a handy way to keep you fork in sync with changes in the upstream master.
 
 ## Commit
 
-Normal commit, but adding -s to include your signature.
+Normal ```commit```, but adding ```-s``` to include your signature.
 
 ```bash
     function commit {
