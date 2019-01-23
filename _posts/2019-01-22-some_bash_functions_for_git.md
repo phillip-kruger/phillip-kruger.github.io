@@ -113,3 +113,4 @@ Normal commit, but adding -s to include your signature.
     export -f commit
 ```
 
+![clone1](/images/Bash_git/commit.gif)
