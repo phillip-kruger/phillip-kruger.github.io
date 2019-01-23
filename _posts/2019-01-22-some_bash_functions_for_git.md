@@ -9,7 +9,7 @@ Here some git related functions in my `.bachrc`. Is mostly a backup for me, but 
 
 ## Cloning a git repo
 
-Because I usually clone repos from my github account, this is a shortcut that allows me to just type git <repo_name> and it will create the URL.
+Because I usually clone repos from my github account, this is a shortcut that allows me to just type clone *repo_name* and it will create the URL.
 
 ```bash
 
