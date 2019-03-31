@@ -70,7 +70,8 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 [JWT RBAC](https://microprofile.io/project/eclipse/microprofile-jwt-auth), 
 [Open Tracing](https://microprofile.io/project/eclipse/microprofile-opentracing).
 
-I am also a contributor to [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
+### Open Source
+I contribute to [Eclipse MicroProfile](https://microprofile.io/), [MicroProfile Extensions](https://www.microprofile-ext.org/), [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
 
 ## <i class="fa fa-linux" aria-hidden="true"></i> Linux
 I have been running [Linux](https://en.wikipedia.org/wiki/Linux) on my Personal PC since 1999, starting with [Mandrake](https://en.wikipedia.org/wiki/Mandriva_Linux)
@@ -87,6 +88,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Previous talks:
 
+* 26 March 2019 - [Modern application services with OpenShift](https://www.devconf.co.za/#profile-PhillipKruger2019cpt) at [DevConf](https://www.devconf.co.za/) in Cape Town, South Africa
 * 17 September 2018 - [Distributed services with MicroProfile](https://www.meetup.com/Jozi-JUG/events/253979187/) at the [Jozi-JUG](https://www.meetup.com/Jozi-JUG/) in Sandton, South Africa
 * 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](http://bit.ly/mp-youtube-video), [code](http://bit.ly/mp-sourcecode))
 * 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/) in Pretoria, South Africa ([slides](http://bit.ly/gql-presentation), [code](http://bit.ly/gql-sourcecode))
