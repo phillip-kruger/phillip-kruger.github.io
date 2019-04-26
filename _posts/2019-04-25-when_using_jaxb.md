@@ -5,7 +5,7 @@ image: "/images/JAXB/jaxb.jpg"
 bigimg: "/images/JAXB/banner.jpg"
 ---
 
-Not many examples show this, but how you use JAXB in you application can make a huge difference in the performance (and memory usage).
+Not many examples show this, but how you use JAXB in your application can make a huge difference in the performance (and memory usage).
 
 ## The example
 In this blog post I'll use an example Object called `Membership` that looks something like this:
