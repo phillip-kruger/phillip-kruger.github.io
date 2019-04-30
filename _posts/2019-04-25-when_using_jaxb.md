@@ -202,6 +202,8 @@ You can get all the 'good' in a simple library:
 
 ### Using it in your code
 
+(See [https://github.com/phillip-kruger/jaxb-lib](https://github.com/phillip-kruger/jaxb-lib))
+
 ```xml
     <dependency>
         <groupId>com.github.phillip-kruger.jaxb-library</groupId>
