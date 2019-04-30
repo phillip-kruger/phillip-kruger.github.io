@@ -50,7 +50,7 @@ The biggest mistake I usually see is that the JAXB context gets created on every
 (Also see the example code [here](https://github.com/phillip-kruger/jaxb-lib/blob/master/jaxb-batch-example/src/main/java/com/github/phillipkruger/jaxblib/example/util/BadJAXBUtil.java))
 
 The problem here is the `JAXBContext.newInstance` method that creates the context.
-The context only change if the object structure change, and that only happens on a code change,
+The context only changes if the object structure changes, and that only happens on a code change,
 so we can safely only do this once, so change this to be created in a static block like this:
 
 ```java
@@ -92,11 +92,11 @@ so we can safely only do this once, so change this to be created in a static blo
 (Also see the example code [here](https://github.com/phillip-kruger/jaxb-lib/blob/master/jaxb-batch-example/src/main/java/com/github/phillipkruger/jaxblib/example/util/GoodJAXBUtil.java))
 
 
-So let look at what difference that makes.
+So lets look at what difference that makes.
 
 ### Batch Example.
 
-If we convert 10000 objects to and from XML in a loop (one at a time) this is the results:
+If we convert 10000 objects to and from XML in a loop (one at a time) these are the results:
 
 ```bash
 Testing 10000 with Bad util
@@ -105,7 +105,7 @@ Marshal took: 10804 ms
 Unmarshal took: 13762 ms
 ```
 
-and the with the static block:
+and then with the static block:
 
 ```bash
 Testing 10000 with Good util
