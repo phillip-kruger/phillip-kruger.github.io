@@ -86,15 +86,21 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
+### Upcoming talks:
+
+ * 25 July 2019 - [Writing better APIs with MicroProfile GraphQL](http://j-sa.co/schedule-java/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa
+ * 16 September 2019 - [Jakarta EE - A Quick Overview](https://events.rainfocus.com/widget/oracle/oow19/catalogcodeone19?search.codeonetracks=15560568230440096ZiK) at [Oracle Code One](https://www.oracle.com/code-one/) in San Francisco, USA
+ 
 ### Previous talks:
 
 * 26 March 2019 - [Modern application services with OpenShift](https://www.devconf.co.za/#profile-PhillipKruger2019cpt) at [DevConf](https://www.devconf.co.za/) in Cape Town, South Africa
 * 17 September 2018 - [Distributed services with MicroProfile](https://www.meetup.com/Jozi-JUG/events/253979187/) at the [Jozi-JUG](https://www.meetup.com/Jozi-JUG/) in Sandton, South Africa
-* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/schedule-jhb/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](http://bit.ly/mp-youtube-video), [code](http://bit.ly/mp-sourcecode))
+* 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/archived/2018/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](http://bit.ly/mp-youtube-video), [code](http://bit.ly/mp-sourcecode))
 * 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/) in Pretoria, South Africa ([slides](http://bit.ly/gql-presentation), [code](http://bit.ly/gql-sourcecode))
 
 ### Published blog articles:
 
+* [When using JAXB...](https://www.javacodegeeks.com/2019/05/using-jaxb.html)
 * [A configurable JAX-RS ExceptionMapper with MicroProfile Config](https://www.javacodegeeks.com/2018/08/jax-rs-exceptionmapper-config.html)
 * [Your own MicroProfile Config source](https://www.javacodegeeks.com/2018/08/microprofile-config-source.html)
 * [GraphQL on Wildfly swarm](https://www.javacodegeeks.com/2018/05/graphql-on-wildfly-swarm.html)
