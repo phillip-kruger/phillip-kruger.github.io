@@ -86,8 +86,9 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
-### Upcoming talks:
+### Upcoming talks & workshops:
 
+ * 24 July 2019 - [Implementing Microservices with Eclipse MicroProfile](http://j-sa.co/schedule-java/) with [Ivar Grimstad](https://twitter.com/ivar_grimstad) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa
  * 25 July 2019 - [Writing better APIs with MicroProfile GraphQL](http://j-sa.co/schedule-java/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa
  * 16 September 2019 - [Jakarta EE - A Quick Overview](https://events.rainfocus.com/widget/oracle/oow19/catalogcodeone19?search.codeonetracks=15560568230440096ZiK) at [Oracle Code One](https://www.oracle.com/code-one/) in San Francisco, USA
  
