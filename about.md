@@ -99,6 +99,10 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 * 12 July 2018 - [Keynote: Distributed services with MicroProfile](http://j-sa.co/archived/2018/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-presentation), [video](http://bit.ly/mp-youtube-video), [code](http://bit.ly/mp-sourcecode))
 * 16 May 2018 - [Writing better API's with GraphQL](https://www.meetup.com/DeveloperUG/events/kvpqnpyxhbvb) at the [Developer User Group](https://www.meetup.com/DeveloperUG/) in Pretoria, South Africa ([slides](http://bit.ly/gql-presentation), [code](http://bit.ly/gql-sourcecode))
 
+<a href="https://2winglobal.com">
+    <img title="2Win!" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/13052305" alt="2Win!" height="120" width="120"/>
+</a>
+
 ### Published blog articles:
 
 * [When using JAXB...](https://www.javacodegeeks.com/2019/05/using-jaxb.html)
