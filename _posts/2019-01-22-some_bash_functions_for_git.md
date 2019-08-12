@@ -114,3 +114,17 @@ Normal ```commit```, but adding ```-s``` to include your signature.
 ```
 
 ![clone1](/images/Bash_git/commit.gif)
+
+## Rebase a PR to upstream
+
+When you did a PR but need to rebase:
+
+```bash
+    function rebase {
+        git fetch upstream
+        git rebase upstream/master
+        git push -f
+    }
+
+    export -f rebase
+```
