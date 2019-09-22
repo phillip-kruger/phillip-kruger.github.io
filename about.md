@@ -88,7 +88,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
   
 ### Previous talks:
 
-* 16 September 2019 - [Jakarta EE - A Quick Overview](https://events.rainfocus.com/widget/oracle/oow19/catalogcodeone19?search.codeonetracks=15560568230440096ZiK) at [Oracle Code One](https://www.oracle.com/code-one/) in San Francisco, USA
+* 16 September 2019 - [Jakarta EE - A Quick Overview](https://events.rainfocus.com/widget/oracle/oow19/catalogcodeone19?search.codeonetracks=15560568230440096ZiK) at [Oracle Code One](https://www.oracle.com/code-one/) in San Francisco, USA ([slides](http://bit.ly/jakartaee-slides), [code](https://github.com/phillip-kruger/jello))
 * 25 July 2019 - [Writing better APIs with MicroProfile GraphQL](http://j-sa.co/schedule-java/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-graphql-presentation), [code](http://bit.ly/mp-graphql-example))
 * 24 July 2019 - [Implementing Microservices with Eclipse MicroProfile](http://j-sa.co/schedule-java/) with [Ivar Grimstad](https://twitter.com/ivar_grimstad) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa * 25 July 2019 - [Writing better APIs with MicroProfile GraphQL](http://j-sa.co/schedule-java/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([code](https://github.com/ivargrimstad/microprofile-hol))
 * 26 March 2019 - [Modern application services with OpenShift](https://www.devconf.co.za/#profile-PhillipKruger2019cpt) at [DevConf](https://www.devconf.co.za/) in Cape Town, South Africa
