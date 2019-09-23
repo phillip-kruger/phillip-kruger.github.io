@@ -26,11 +26,11 @@ Similar the `groupId` and `artifactId` of both of these contains the "brand" nam
 Although this makes sense and most people would argue that the brand should be visible in both these, this couples the spec to the brand or grouping.
 
 My proposal is to remove the brand from the namespace and maven artifacts. This means we loose some branding element, but gain flexibility. 
-By remove the grouping from the specification, the only thing that tie that specification for a certain umbrella project is the workgroup that work on these specifications.
+By removing the grouping from the specification, the only thing that tie that specification for a certain umbrella project is the workgroup that work on these specifications.
 
 As an example, rather than renaming from `javax` to `jakarta`, we rename to something more neutral, like `org.eclipse.enterprise`.
 
-Because we can make breaking changes in MicroProfile, we also remove the brand from MicroProfile APIs, and also rename the APIs to `org.eclipse.enterprise`
+Because we can make breaking changes in MicroProfile, we also remove the brand from MicroProfile APIs, and also rename the APIs to `org.eclipse.enterprise`.
 
 ![curent](/images/Proposed_namespace_Jakarta/proposed.png)
 
@@ -67,14 +67,14 @@ not want in Jakarta anymore to this profile. This means that client that use the
 # Final thoughts
 
 As with most Architectural decisions, there is a tradeoff. In this case, branding vs portability. However I believe it's worth it to do this. 
-Doing it now is also important, we have this one change to rename the current `javax` namespace, so it's now or never.
+Doing it now is also important, we have this one chance to rename the current `javax` namespace, so it's now or never.
 
 # Appendix A  
 
-* The original announcement: https://eclipse-foundation.blog/2019/05/03/jakarta-ee-java-trademarks/ and this twitter thread: https://twitter.com/mmilinkov/status/1125213654775889921?s=19
-* Mark Little from Red Hat: https://markclittle.blogspot.com/2019/05/to-enterprise-java-and-beyond-personal.html?m=1
-* Ian Robinson, Kevin Sutter from IBM: https://developer.ibm.com/announcements/jakarta-ee-has-landed/?hss_channel=tw-939323243076259842
-* Steve Millidge from Payara: https://blog.payara.fish/jakarta-ee-8-and-beyond?utm_content=90822134&utm_medium=social&utm_source=twitter&hss_channel=tw-2599580401
-* David Blevins from Tomitribe: https://www.tomitribe.com/blog/jakarta-ee-a-new-hope/
-* Ivar Grimstad (Independent): https://www.agilejava.eu/2019/05/05/jakarta-going-forward/
-* Mark Strubert (Independent): https://struberg.wordpress.com/2019/05/06/the-way-forward-for-jakartaee-packages/
+* [The original announcement](https://eclipse-foundation.blog/2019/05/03/jakarta-ee-java-trademarks/) and this [twitter thread](https://twitter.com/mmilinkov/status/1125213654775889921?s=19)
+* [Mark Little from Red Hat](https://markclittle.blogspot.com/2019/05/to-enterprise-java-and-beyond-personal.html?m=1)
+* [Ian Robinson, Kevin Sutter from IBM](https://developer.ibm.com/announcements/jakarta-ee-has-landed/?hss_channel=tw-939323243076259842)
+* [Steve Millidge from Payara](https://blog.payara.fish/jakarta-ee-8-and-beyond?utm_content=90822134&utm_medium=social&utm_source=twitter&hss_channel=tw-2599580401)
+* [David Blevins from Tomitribe](https://www.tomitribe.com/blog/jakarta-ee-a-new-hope/)
+* [Ivar Grimstad](https://www.agilejava.eu/2019/05/05/jakarta-going-forward/)
+* [Mark Strubert](https://struberg.wordpress.com/2019/05/06/the-way-forward-for-jakartaee-packages/)
