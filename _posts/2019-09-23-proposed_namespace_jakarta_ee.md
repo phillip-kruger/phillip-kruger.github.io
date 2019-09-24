@@ -58,8 +58,8 @@ as it is now, might not be a good idea. a Standard is only a standard if there i
 
 Once we have a mechanism to move APIs between brands or groupings without affecting the code and the clients, we can consider other groupings and might be a way to "retire" some APIs from Jakarta.
 
-Example, if we create a new grouping under eclipse, let's call it LegacyProfile, we can, as with MicroProfile, let LecagyProfile depend on Jakarta, but not the other way around. We can then move older APIs that we do 
-not want in Jakarta anymore to this profile. This means that client that use these can still get them without code changes, but it means we an put Jakarta EE on a diet and get it thinner.
+Example, if we create a new grouping under eclipse, let's call it ClassicProfile, we can, as with MicroProfile, let ClassicProfile depend on Jakarta, but not the other way around. We can then move older APIs that we do 
+not want in Jakarta anymore to this profile. This means that client that use these can still get them without code changes, but it means we can put Jakarta EE on a diet and get it thinner.
 
 ![curent](/images/Proposed_namespace_Jakarta/legacy.png)
 
