@@ -18,7 +18,7 @@ Another discussion that is going on is the relationship between MicroProfile and
 
 # Decouple the brand from the specification.
 
-At the moment all specifications under MicroProfile uses the namespace (or package name) `org.eclipse.microprofile` and as mentioned the proposal for Jakarta EE is `jakarata`.
+At the moment all specifications under MicroProfile uses the namespace (or package name) `org.eclipse.microprofile` and as mentioned the proposal for Jakarta EE is `jakarta`.
 Similar the `groupId` and `artifactId` of both of these contains the "brand" name (Jakarta or MicroProfile).
 
 ![curent](/images/Proposed_namespace_Jakarta/current.png)
@@ -26,9 +26,10 @@ Similar the `groupId` and `artifactId` of both of these contains the "brand" nam
 Although this makes sense and most people would argue that the brand should be visible in both these, this couples the spec to the brand or grouping.
 
 My proposal is to remove the brand from the namespace and maven artifacts. This means we loose some branding element, but gain flexibility. 
-By removing the grouping from the specification, the only thing that tie that specification for a certain umbrella project is the workgroup that work on these specifications.
+By removing the grouping from the specification, the only thing that tie that specification to a certain umbrella project is the workgroup that work on these 
+specifications. (The group of people working on this specification)
 
-As an example, rather than renaming from `javax` to `jakarta`, we rename to something more neutral, like `org.eclipse.enterprise`.
+As an example, rather than renaming from `javax` to `jakarta`, we rename to something more neutral, like `org.eclipse.enterprise`. (Just an example)
 
 Because we can make breaking changes in MicroProfile, we also remove the brand from MicroProfile APIs, and also rename the APIs to `org.eclipse.enterprise`.
 
@@ -42,17 +43,16 @@ MicroProfile is a nice place for innovation and experimentation, but not (necess
 creating new specifications.
 
 However, at some point, new APIs do mature and stabilize and no new major features are added, and the API becomes fairly stable. 
-At this point it might be worth to see if the work should move to Jakarta workgroup, and from then onwards support backward compatibility. 
+At this point it might be worth to see if the work should move to a Jakarta workgroup, and from then onwards support backward compatibility. 
 MicroProfile umbrella would still depend on it, however in the same way that it depends on the other APIs it pulls from Jakarta EE.
 
-Because of the above suggested naming, there would be **no** change in the code and users can continue as normal, with the only difference that Jakarta EE has a new API.
-
-The eclipse process followed by Jakarta and MicroProfile is also different, so the way of work will also change when moving this API. 
+Because of the above suggested naming, there would be **no** change in the code and users can continue as normal, with the only difference that Jakarta EE has a new API 
+and that specification is now been maintained under another workgroup and another Eclipse process. 
 
 ## Config example.
 
 If we use config as an example, the API has matured under MicroProfile, and are (potentially) at a point to move the workgroup to Jakarta. Having another standard under Jakarta or JSR
-as it is now, might not be a good idea. a Standard is only a standard if there is only one. In my opinion [JSR382](https://github.com/eclipse/ConfigJSR) should retire in favor of MicroProfile API that moves to Jakarta.
+as it is now, might not be a good idea. A Standard is only a standard if there is only one. In my opinion [JSR382](https://github.com/eclipse/ConfigJSR) should retire in favor of the MicroProfile Config API that moves to Jakarta.
 
 # Future Groupings.
 
