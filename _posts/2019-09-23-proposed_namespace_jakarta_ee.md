@@ -29,9 +29,9 @@ My proposal is to remove the brand from the namespace and maven artifacts. This 
 By removing the grouping/branding from the specification, the only thing that tie that specification to a certain umbrella project is the workgroup that work on these 
 specifications. (The group of people working on this specification)
 
-As an example, rather than renaming from `javax` to `jakarta`, we rename to something more neutral, like `org.eclipse.enterprise`. (Just an example)
+As an example, rather than renaming from `javax` to `jakarta`, we rename to something more neutral, like ~~org.eclipse.enterprise~~ `something.brandless.and.neutral`. (Not sure wat this should be - see update below)
 
-Because we can make breaking changes in MicroProfile, we also remove the brand from MicroProfile APIs, and also rename the APIs to `org.eclipse.enterprise`.
+Because we can make breaking changes in MicroProfile, we also remove the brand from MicroProfile APIs, and also rename the APIs to ~~org.eclipse.enterprise~~ `something.brandless.and.neutral`.
 
 ![curent](/images/Proposed_namespace_Jakarta/proposed.png)
 
@@ -68,6 +68,9 @@ not want in Jakarta anymore to this profile. This means that clients that use th
 
 As with most Architectural decisions, there is a trade-off. In this case, branding vs portability. However I believe it’s worth it. 
 It is also important to act now, we have this one chance to rename the current javax namespace, so it’s now or never.
+
+# Update
+After some discussions: `org.eclipse.*` is a bad idea as this ties us to the eclipse foundation. Not sure what this neutral name should be though.
 
 # Appendix A  
 
