@@ -42,7 +42,7 @@ At the moment, MicroProfile depends on Jakarta EE (but not the other way around)
 MicroProfile is a nice place for innovation and experimentation, but not (necessary) for backward compatibility. This allows MicroProfile to move quickly when 
 creating new specifications.
 
-However, at some point, new APIs do mature and stabilize. When no new major features are added, the API becomes fairly stable. 
+However, at some point, new APIs do mature and become somewhat feature complete. When no new major features are added, the API becomes fairly stable (in terms of features). 
 At this point it might be worth it to see if the work should move to a Jakarta workgroup, and from then onward support backward compatibility. 
 MicroProfile umbrella would still depend on it, however in the same way that it depends on the other APIs it pulls from Jakarta EE.
 
