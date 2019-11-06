@@ -71,7 +71,7 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 [Open Tracing](https://microprofile.io/project/eclipse/microprofile-opentracing).
 
 ### Open Source
-I contribute to [Eclipse MicroProfile](https://microprofile.io/), [MicroProfile Extensions](https://www.microprofile-ext.org/), [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
+I contribute to [Eclipse MicroProfile](https://microprofile.io/), [SmallRye](https://smallrye.io/),[MicroProfile Extensions](https://www.microprofile-ext.org/), [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
 
 ## <i class="fa fa-linux" aria-hidden="true"></i> Linux
 I have been running [Linux](https://en.wikipedia.org/wiki/Linux) on my Personal PC since 1999, starting with [Mandrake](https://en.wikipedia.org/wiki/Mandriva_Linux)
