@@ -88,6 +88,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
   
 ### Previous talks:
 
+* 28 November 2019 - [Quarkus on OpenShift and Azure Functions](https://www.microsoftevents.com/profile/form/index.cfm?PKformID=0x8561667abcd) with [Saurabh Agrawal](https://twitter.com/saurabhcode) at [Microsoft Open Cloud Summit](https://www.microsoftevents.com/profile/form/index.cfm?PKformID=0x8561667abcd) in Johannesburg, South Africa ([slides](https://docs.google.com/presentation/d/1uLwFOLSJon1tmuwcsDhEw6ZGVWbn-E_XjzTmBTBFix0/edit?usp=sharing))
 * 16 September 2019 - [Jakarta EE - A Quick Overview](https://events.rainfocus.com/widget/oracle/oow19/catalogcodeone19?search.codeonetracks=15560568230440096ZiK) at [Oracle Code One](https://www.oracle.com/code-one/) in San Francisco, USA ([slides](http://bit.ly/jakartaee-slides), [video](https://www.youtube.com/watch?v=FL0JNVK2Ig8), [code](https://github.com/phillip-kruger/jello))
 * 25 July 2019 - [Writing better APIs with MicroProfile GraphQL](http://j-sa.co/schedule-java/) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa ([slides](http://bit.ly/mp-graphql-presentation), [code](http://bit.ly/mp-graphql-example))
 * 24 July 2019 - [Implementing Microservices with Eclipse MicroProfile](http://j-sa.co/schedule-java/) with [Ivar Grimstad](https://twitter.com/ivar_grimstad) at the [Java Cloud Conference](http://j-sa.co) in Johannesburg, South Africa
