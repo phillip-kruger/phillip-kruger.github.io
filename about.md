@@ -71,7 +71,13 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 [Open Tracing](https://microprofile.io/project/eclipse/microprofile-opentracing).
 
 ### Open Source
-I contribute to [Eclipse MicroProfile](https://microprofile.io/), [SmallRye](https://smallrye.io/),[MicroProfile Extensions](https://www.microprofile-ext.org/), [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
+I currently contribute to 
+[Eclipse MicroProfile](https://microprofile.io/), 
+[SmallRye](https://smallrye.io/),
+[MicroProfile Extensions](https://www.microprofile-ext.org/) where I mostly work on [MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql).
+
+I previously also contributed to 
+ [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
 
 ## <i class="fa fa-linux" aria-hidden="true"></i> Linux
 I have been running [Linux](https://en.wikipedia.org/wiki/Linux) on my Personal PC since 1999, starting with [Mandrake](https://en.wikipedia.org/wiki/Mandriva_Linux)
@@ -86,6 +92,11 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
   
+### Upcoming talks:
+
+* 25 January 2020 - [Writing better APIs with MicroProfile GraphQL](https://devconfcz2020a.sched.com/event/YOmv/writing-better-apis-with-microprofile-graphql) at [DevConf.CZ](https://www.devconf.info/cz/) in Brno, Czech Republic
+* 25 March 2020 - [Building Querable APIs with MicroProfile GraphQL](https://www.devdotnext.com/speaker/a9c157ad9de24ee087424c36c64aa247) at [dev.next](https://www.devdotnext.com/) in Broomfield, Colorado, USA
+
 ### Previous talks:
 
 * 28 November 2019 - [Quarkus on OpenShift and Azure Functions](https://www.microsoftevents.com/profile/form/index.cfm?PKformID=0x8561667abcd) with [Saurabh Agrawal](https://twitter.com/saurabhcode) at [Microsoft Open Cloud Summit](https://www.microsoftevents.com/profile/form/index.cfm?PKformID=0x8561667abcd) in Johannesburg, South Africa ([slides](https://docs.google.com/presentation/d/1uLwFOLSJon1tmuwcsDhEw6ZGVWbn-E_XjzTmBTBFix0/edit?usp=sharing))
