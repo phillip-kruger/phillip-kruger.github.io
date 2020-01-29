@@ -208,7 +208,7 @@ and more.
 * [JavaOne 2011, San Francisco, USA](https://www.oracle.com/javaone/index.html)
 * [Oracle Open World 2007, San Francisco, USA](https://www.oracle.com/openworld/index.html)
 
-![](/images/grand_canyon.jpg)
+![](/images/P1250242.jpg)
 
 
 {% comment %}
