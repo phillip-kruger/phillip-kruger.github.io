@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About me"
-bigimg: "/images/google.jpg"
+bigimg: "/images/P1250233.jpg"
 permalink: /about
 ---
 
