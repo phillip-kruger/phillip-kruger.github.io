@@ -147,7 +147,7 @@ In your ```pom.xml```:
 
     <dependency>
         <groupId>org.microprofile-ext.openapi-ext</groupId>
-        <artifactId>swagger-ui</artifactId>
+        <artifactId>openapi-ui</artifactId>
         <version>XXXX</version>
     </dependency>
 ```
@@ -167,7 +167,6 @@ Using the Config API you can Personalize the UI. Here are the config keys you ca
 * **openapi-ui.copyrightBy** - Adds a name to the copyright in the footer. Defaults to none.
 * **openapi-ui.copyrightYear** - Adds the copyright year. Defaults to current year.
 * **openapi-ui.title** - Adds the title in the window. Defaults to "MicroProfile - Open API".
-* **openapi-ui.serverInfo** - Adds info on the server. Defaults to the system server info.
 * **openapi-ui.contextRoot** - Adds the context root. Defaults to the current value.
 * **openapi-ui.swaggerUiTheme** - Use a theme from swagger-ui-themes. Defaults to "flattop".
 * **openapi-ui.swaggerHeaderVisibility** - Show/hide the swagger logo header. Defaults to "visible".
