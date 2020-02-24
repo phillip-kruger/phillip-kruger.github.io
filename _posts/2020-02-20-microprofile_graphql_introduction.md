@@ -8,7 +8,7 @@ bigimg: "/images/MicroProfile_GraphQL_introduction/banner.jpg"
 [MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql) is about to release it's first version (1.0). 
 In this blog post we will explore some of the functionalities available in this release.
 
-We will reference an example application, where we use [Thorntail](https://thorntail.io/) as a runtime, and we manually add the [SmallRye GraphQL Implementation](https://github.com/smallrye/smallrye-graphql).
+We will reference an example application, where we use [Thorntail](https://thorntail.io/) as a runtime, manually adding the [SmallRye GraphQL Implementation](https://github.com/smallrye/smallrye-graphql).
 
 ## What is GraphQL?
 
@@ -20,7 +20,7 @@ Read the full [GraphQL Specification](http://spec.graphql.org/draft/)
 
 ## What is MicroProfile GraphQL?
 
-> "The intent of the MicroProfile GraphQL specification is provide a "code-first" set of APIs that will enable users to quickly develop portable GraphQL-based applications in Java.
+> "The intent of the MicroProfile GraphQL specification is to provide a "code-first" set of APIs that will enable users to quickly develop portable GraphQL-based applications in Java.
 > There are 2 main requirements for all implementations of this specification, namely:
 > * Generate and make the GraphQL Schema available. This is done by looking at the annotations in the users code, and must include all GraphQL Queries and Mutations as well as all entities as defined implicitly via the response type or argument(s) of Queries and Mutations.
 > * Execute GraphQL requests. This will be in the form of either a Query or a Mutation. As a minimum the specification must support executing these requests via HTTP."
@@ -29,24 +29,24 @@ Read the full [MicroProfile GraphQL Specification](https://download.eclipse.org/
 
 ## The Example
 
-We will reference an example throughout this post where we have a system that score people based on some actions they do.
+We will reference an example throughout this post where we have a system that score people based on some activities they do.
 
 - How fit they are, example how often they go to the gym
 - How safe they drive, not exceeding the speed limit etc.
-- How many steps they give a day.
-- and so on.
+- How many steps they give a day, etc.
 
-So we have a Person object that contain all the detail about the person (name, surname, address, phone, social media etc.)
-and then we have a score object that contain the score for a certain action.
+We have a Person object that contains all the details about the person (name, surname, address, phone, social media etc.) 
+and we have a score object that contains the score for a certain action.
+
 
 ## Query data
 
-In GraphQL, `Query` is similar to REST's `GET`. A Query does not change data, it only receive data.
-The difference with REST is that you can actually ask what you want.
+In GraphQL, `Query` is similar to REST's `GET`. A Query does not change data, it only receives data.
+The difference is that with GraphQL you can actually ask what you want.
 
 ### Using JAX-RS
 
-Let's say you want some information about a person, in JAX-RS we would something like this:
+Let's say you want some information about a person, in JAX-RS we would create something like this:
 
 ```java
 @Path("/person")
@@ -196,9 +196,9 @@ the `name`, `surname` and `idNumber` as an example, but you are getting a lot of
 
 ### Using MicroProfile GraphQL
 
-Let's now add MicroProfile GraphQL to this and see how we can query the data:
+Now let's add MicroProfile GraphQL to this and see how we can query the data:
 
-First add this to your pom.xml (at least until the runtimes support this out of the box):
+First add this to your pom.xml (at least until the runtime supports this as out of the box functionality):
 
 ```xml
 <dependency>
@@ -229,7 +229,7 @@ public class ProfileGraphQLApi {
 As you can see the code is exactly the same as the REST service, but we have some new annotations:
 
 - `@GraphQLApi` this tells the runtime this is a GraphQL Endpoint, and all methods annotated with `@Query` and `@Mutation` will be exposed.
-- `@Query` this is a querable method.
+- `@Query` this is a queryable method.
 
 You can now `POST` a query to `/graphql`. Let's use the same example above, you want to get the `name`, `surname` and `idNumber` of the person:
 
@@ -266,7 +266,7 @@ We just solved the over-fetching problem:
 
 **"Over-fetching is fetching too much data, so there is data in the response you don't use."**
 
-Now let's say we also want to get the scores for this person. In our rest example we need to get the `idNumber` from our original huge json, 
+Now let's say we also want to get the scores for this person. In the REST example we need to get the `idNumber` from our original huge json, 
 and then make a subsequent call to the score service:
 
 ```java
@@ -328,7 +328,7 @@ public List<Score> getScores(@Source Person person) {
 }
 ```
 
-Now you can add that field in your original `query`, also specifying what sub-fields you are interested in:
+Now you can add that field in your original `query`, also specifying which sub-fields you are interested in:
 
 ```graphql
 {
@@ -344,7 +344,7 @@ Now you can add that field in your original `query`, also specifying what sub-fi
 }
 ```
 
-Above will now include the scores, with the score name and score value in your original query:
+The functionality above will now include the scores, with the score name and score value in your original query:
 
 ```json
 {
@@ -383,18 +383,18 @@ Now we solved the under-fetching problem:
 
 **"Under-fetching is not having enough data with a call to an endpoint, leading you to call a second endpoint."**
 
-So in REST we had to make a call, that returned too much data, so we needed to filter the data to get what we want (over-fetching) and then we had to
-make another call to another service to get the rest of the data we need (under-fetching)
+So in REST we had to make a call, that returned too much data and we had to filter the data to get what we wanted (over-fetching) and then we had to
+make another call to another service to get the rest of the data we needed (under-fetching)
 
-In GraphQL we could make one all that return all the data we need.
+In GraphQL we could make one call to return all the data we need.
 
-And when you did not need the score data, that method will never be called, making the backend more efficient.
+And when you don't need need the score data, that method will never be called, making the back-end more efficient.
 
 ## Mutations
 
 In GraphQL, everything other that fetching data (GET) is called a `mutation` (PUT, POST, DELETE).
 
-Every mutation change the data, and then return the result.
+Every mutation changes the data, and then returns the result.
 
 Let's say we need to create / update a person, we can add the following method to our existing Endpoint:
 
@@ -433,7 +433,7 @@ mutation CreatePerson{
 
 ```
 
-this will return the newly create person:
+this will return the newly created person:
 
 ```json
 {
@@ -451,7 +451,7 @@ this will return the newly create person:
 }
 ```
 
-Now update the missing fields using a mutation (note the inclution of the id):
+Now update the missing fields using a mutation (note the inclusion of the id):
 
 ```graphql
 mutation UpdatePerson{
@@ -509,7 +509,7 @@ mutation DeletePerson{
 }
 ```
 
-will return the data as it was just before we removed it:
+The above functionality will return the data as it was just before we removed it:
 
 ```json
 {
@@ -552,9 +552,9 @@ you will not receive any person, as we deleted that person:
 
 ## Partial results
 
-Because you can 'stitch' fields together like we showed above with the `@Source` annotation, there is a possibility that some of the queries fails.
-Let's say the score data is in a totally separate system than the person data, and that score system is down, however a query came in that request person data and the scores. 
-Rather than failing the whole query, we can return partial results, so still contain all the person data you asked for, but include the error for the scores. So this query we had:
+Because you can 'stitch' fields together like we showed above with the `@Source` annotation, there is a possibility that some of the queries will fail.
+Let's say the score data is in a totally separate system than the person data, and that score system is down, however a query came in that requests person data and the scores. 
+Rather than failing the whole query, we can return partial results, so still return all the person data you asked for, but include the error for the scores. So this query:
 
 ```graphql
 {
@@ -605,7 +605,7 @@ Will now return something like this:
 
 ## Interfaces
 
-Let's say that the score is one way that persons are being measured, but there are other things that can also be used to measure a person (Their age, weight etc.)
+Let's say that the score is one way that a person can be measured, but there are other things that can also be used to measure a person (age, weight etc.)
 
 We can define an interface that Score (and Age and Weight) implements, and this model with the interface will be available in the schema of our endpoint:
 
@@ -632,12 +632,12 @@ type Score implements Measurable {
 
 ## Introspection
 
-Because GraphQL has a type system build in, we can define our model as part of our schema. With REST (JAX-RS) you need to add something like MicroProfile OpenAPI 
+Because GraphQL has a type system built in, we can define our model as part of our schema. With REST (JAX-RS) you need to add something like MicroProfile OpenAPI 
 to describe the endpoint.
 
-In MicroProfile GraphQL you can get the schema that has been generated by going a GET on `/graphql/schema.graphql`
+In MicroProfile GraphQL you can get the schema that has been generated by doing a GET on `/graphql/schema.graphql`
 
-You can also use GraphQL Query to inspect the schema. This is called introspection. Example, if you want to get all the types that is available:
+You can also use GraphQL Query to inspect the schema. This is called introspection. Example, if you want to get all the types that are available:
 
 ```graphql
 {
@@ -682,14 +682,14 @@ This will return:
 
 ## Other annotations
 
-Do can define the model metadata using annotations. GraphQL has built in annotations for all options, but also support JsonB annotations. 
+You can define the model metadata using annotations. GraphQL has built in annotations for all options, but also support JsonB annotations. 
 Most annotations can be used on a field or a method and the following will apply:
 
 - If the annotation is on the field, it applies to both output type (result of a query/mutation) and the input type (input parameter to a query/mutation)
 - If the annotation is only on a getter method, it applies only to the output type (result of a query/mutation)
 - If the annotation is only on a setter method, it applies only to the input type (input parameter to a query/mutation)
 
-Here some of the options available:
+Here are some of the options available:
 
 - `@Name` (or `@JsonbProperty`) will name the field. If the annotation is not present, the field name (or method name without the get/set/is) will be used.
 - `@Description` can be used to provide a description in the generated schema for entity types and fields.
@@ -704,15 +704,15 @@ You can also define the format for Numbers and Dates:
 
 ## In the pipeline
 
-So what is next for MicroProfile GraphQL? There is a few features that is listed in the plan for the next release, here are some:
+So what is next for MicroProfile GraphQL? There are a few features that are listed in the plan for the next release, i.e.:
 
 * **Context** - A request scoped object that has information of the request. This will allow developers to optimize their code further downstream. 
-Example would be to create better SQL based on the fields being requested.
+An example would be to create better SQL based on the fields being requested.
 * **Pagination** - Even though you can technically add pagination by manually adding `first` and `offset` parameters, this feature will allow developers to
-just annotation a method with `@Paginate` and then the pagination fields will be available. This makes your code cleaner.
-* **Support of other MicroProfile APIs** - define how other MicroProfile APIs can be used in conjunction with GraphQL. 
-A Example would be to make sure GraphQL request can report metrics using MicroProfile Metrics.
-* **Custom Scalar** - At the moment, there is a set of pre-defined Scalars that developers can use. This feature will investigate a way to allow developers
+just annotate a method with `@Paginate` and then the pagination fields will be available. This makes your code cleaner.
+* **Support for other MicroProfile APIs** - define how other MicroProfile APIs can be used in conjunction with GraphQL. 
+An example would be to make sure GraphQL requests can report metrics using MicroProfile Metrics.
+* **Custom Scalar** - At the moment, there is a set of pre-defined Scalars that developers can use. We will investigate how to allow developers
 to create and define their own scalars.
 
 See the full [current list](https://github.com/eclipse/microprofile-graphql/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.1) 
