@@ -5,7 +5,7 @@ image: "/images/MicroProfile.jpg"
 bigimg: "/images/MicroProfile_GraphQL_introduction/banner.jpg"
 ---
 
-[MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql) is about to release it's first version (1.0). 
+[MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql) has just released it's first version (1.0). 
 In this blog post we will explore some of the functionalities available in this release.
 
 We will reference an example application, where we use [Thorntail](https://thorntail.io/) as a runtime, manually adding the [SmallRye GraphQL Implementation](https://github.com/smallrye/smallrye-graphql).
@@ -25,7 +25,7 @@ Read the full [GraphQL Specification](http://spec.graphql.org/draft/)
 > * Generate and make the GraphQL Schema available. This is done by looking at the annotations in the users code, and must include all GraphQL Queries and Mutations as well as all entities as defined implicitly via the response type or argument(s) of Queries and Mutations.
 > * Execute GraphQL requests. This will be in the form of either a Query or a Mutation. As a minimum the specification must support executing these requests via HTTP."
 
-Read the full [MicroProfile GraphQL Specification](https://download.eclipse.org/microprofile/microprofile-graphql-1.0.0-RC4/microprofile-graphql.html)
+Read the full [MicroProfile GraphQL Specification](https://download.eclipse.org/microprofile/microprofile-graphql-1.0/microprofile-graphql.html)
 
 ## The Example
 
@@ -204,7 +204,7 @@ First add this to your pom.xml (at least until the runtime supports this as out 
 <dependency>
     <groupId>io.smallrye</groupId>
     <artifactId>smallrye-graphql-servlet</artifactId>
-    <version>0.9.1</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -720,5 +720,5 @@ See the full [current list](https://github.com/eclipse/microprofile-graphql/issu
 ## Links
 
 - The application we referenced in this blog post can be found at [https://github.com/phillip-kruger/graphql-example](https://github.com/phillip-kruger/graphql-example)
-- Read the full specification [https://download.eclipse.org/microprofile/microprofile-graphql-1.0.0-RC4/microprofile-graphql.html](https://download.eclipse.org/microprofile/microprofile-graphql-1.0.0-RC4/microprofile-graphql.html)
+- Read the full specification [https://download.eclipse.org/microprofile/microprofile-graphql-1.0/microprofile-graphql.html](https://download.eclipse.org/microprofile/microprofile-graphql-1.0.0-RC4/microprofile-graphql.html)
 - We used the SmallRye Implementation that you can find at [https://github.com/smallrye/smallrye-graphql](https://github.com/smallrye/smallrye-graphql)
