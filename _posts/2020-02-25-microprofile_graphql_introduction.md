@@ -720,5 +720,5 @@ See the full [current list](https://github.com/eclipse/microprofile-graphql/issu
 ## Links
 
 - The application we referenced in this blog post can be found at [https://github.com/phillip-kruger/graphql-example](https://github.com/phillip-kruger/graphql-example)
-- Read the full specification [https://download.eclipse.org/microprofile/microprofile-graphql-1.0/microprofile-graphql.html](https://download.eclipse.org/microprofile/microprofile-graphql-1.0.0-RC4/microprofile-graphql.html)
+- Read the full specification [https://download.eclipse.org/microprofile/microprofile-graphql-1.0/microprofile-graphql.html](https://download.eclipse.org/microprofile/microprofile-graphql-1.0/microprofile-graphql.html)
 - We used the SmallRye Implementation that you can find at [https://github.com/smallrye/smallrye-graphql](https://github.com/smallrye/smallrye-graphql)
