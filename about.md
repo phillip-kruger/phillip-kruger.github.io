@@ -5,7 +5,10 @@ bigimg: "/images/P1250233.jpg"
 permalink: /about
 ---
 
-Hey, I’m Phillip. I’m a Software Engineer living in [Centurion, South Africa](https://goo.gl/maps/HDZungDMdY42).
+Hey, I’m Phillip. I’m a Software Engineer living in [Olifantsfontein, South Africa](https://goo.gl/maps/Qnmztzn4CywcGXCA6).
+
+I work for [Red Hat](https://www.redhat.com), where I spend most of my time on [MicroProfile](https://microprofile.io/), [SmallRye](https://smallrye.io/) and [Quarkus](https://quarkus.io/)
+
 I am a fan of technology, coffee and programming. I love dogs and [music](https://play.google.com/music/playlist/AMaBXyk7iwAKaDxB5EdeIAaCE3PtbkaF1qC190EPSM9YB6QkWknsYzqy9E0oQks-FeiDThUCOMtUDNS614oveyFrFOzxqcKqKQ%3D%3D). To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
 I was lucky enough to marry my best friend, [Charmaine](https://www.charmaine-kruger.com). She is also a geek :) 
 
@@ -94,7 +97,8 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
   
 ### Upcoming talks:
 
-* 25 March 2020 - [Building Querable APIs with MicroProfile GraphQL](https://www.devdotnext.com/speaker/a9c157ad9de24ee087424c36c64aa247) at [dev.next](https://www.devdotnext.com/) in Broomfield, Colorado, USA
+* 21 April 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.meetup.com/SouJava/events/269608279/) at [SouJava](https://www.meetup.com/SouJava/) (online)
+* ~~25 March 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.devdotnext.com/speaker/a9c157ad9de24ee087424c36c64aa247) at [dev.next](https://www.devdotnext.com/) in Broomfield, Colorado, USA~~ Postponed until August
 
 ### Previous talks:
 
@@ -194,6 +198,7 @@ and more.
 
 # Conferences I attended
 
+* [DevConf.CZ 2020, Brno, Czech Republic](https://www.devconf.info/cz/)
 * [Oracle Code One 2019, San Francisco, USA](https://www.oracle.com/code-one/)
 * [Java Cloud Conference 2019,Johannesburg, South Africa](http://j-sa.co/)
 * [DevConf ZA 2019, Johannesburg & Cape Town, South Africa](https://www.devconf.co.za/)
