@@ -204,7 +204,7 @@ First add this to your pom.xml (at least until the runtime supports this as out 
 <dependency>
     <groupId>io.smallrye</groupId>
     <artifactId>smallrye-graphql-servlet</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
