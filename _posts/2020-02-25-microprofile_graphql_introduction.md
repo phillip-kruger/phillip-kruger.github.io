@@ -8,7 +8,7 @@ bigimg: "/images/MicroProfile_GraphQL_introduction/banner.jpg"
 [MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql) has just released it's first version (1.0). 
 In this blog post we will explore some of the functionalities available in this release.
 
-We will reference an example application, where we use [Thorntail](https://thorntail.io/) as a runtime, manually adding the [SmallRye GraphQL Implementation](https://github.com/smallrye/smallrye-graphql).
+We will reference an example application, where we use [Wildfly](https://wildfly.org/) as a runtime, manually adding the [SmallRye GraphQL Implementation](https://github.com/smallrye/smallrye-graphql).
 
 ## What is GraphQL?
 
@@ -29,7 +29,7 @@ Read the full [MicroProfile GraphQL Specification](https://download.eclipse.org/
 
 ## The Example
 
-We will reference an example throughout this post where we have a system that score people based on some activities they do.
+We will [reference an example](https://github.com/phillip-kruger/graphql-example) throughout this post where we have a system that score people based on some activities they do.
 
 - How fit they are, example how often they go to the gym
 - How safe they drive, not exceeding the speed limit etc.
