@@ -11,7 +11,7 @@ You can now use [code.quarkus.io](https://code.quarkus.io/) to get going with Qu
 
 ![codequarkusio](/images/Supersonic_Subatomic_GraphQL/code_quarkus.png)
 
-This will create a Quarkus started application with the dependencies:
+This will create a Quarkus starter application with the dependencies:
 
 ```xml
     <dependency>
@@ -40,9 +40,9 @@ NOTE: You can remove the `quarkus-resteasy` dependency as we do not need JAX-RS.
 
 Let's change the `ExampleResource` Rest service to be a GraphQL endpoint.
 
-1) Replace the `@Path("/hello")` class annotation to `@GraphQLApi`.
-2) Replace the `@GET` method annotation with `@Query`.
-3) Remove the `@Produces(MediaType.TEXT_PLAIN)` method annotation and all JAX-RS imports.
+1. Replace the `@Path("/hello")` class annotation with `@GraphQLApi`.
+1. Replace the `@GET` method annotation with `@Query`.
+1. Remove the `@Produces(MediaType.TEXT_PLAIN)` method annotation and all JAX-RS imports.
 
 That is it ! Your `ExampleResource` should look like this now:
 
@@ -90,9 +90,7 @@ Also see the [Quarkus GraphQL Guide](https://quarkus.io/guides/microprofile-grap
 
 ## A more detailed example
 
-Let's look at a more detailed example, get the source from this GitHub project:
-
-[GraphQL Example](https://github.com/phillip-kruger/graphql-example)
+Let's look at a more detailed example, get the source from [this GitHub project](https://github.com/phillip-kruger/graphql-example)
 
 In this project browse to the quarkus example:
 
@@ -139,9 +137,9 @@ Now browse to [localhost:8080/graphql-ui/](http://localhost:8080/graphql-ui/) an
 }
 ```
 
-Notice that you have 'code insight' in the editor. That is because GraphQL has a schema and can also support introspection.
+Notice that you have 'code insight' in the editor. That is because GraphQL has a schema and also support introspection.
 
-We can ask only the fields we are interested in, reducing the payload to be much smaller.
+We can ask only the fields we are interested in, making the payload to be much smaller.
 
 ![graphiql](/images/Supersonic_Subatomic_GraphQL/graphiql.png)
 
@@ -295,14 +293,14 @@ Document myDocument = document(
 String graphqlRequest = myDocument.toString();
 ```
 
-For more details see: https://github.com/worldline/dynaql
+For more details see: [github.com/worldline/dynaql](https://github.com/worldline/dynaql)
 
 ### Type safe
 
-The type safe client will be close to MicroProfile RESTClient. Looking at the same example as above, you can see how to use it.
+The type safe client will be closer to MicroProfile RESTClient. Looking at the same example as above, lets see how we can to use it.
 Browse to the `quarkus-client` folder. This example use [Quarkus Command Mode](https://quarkus.io/blog/introducing-command-mode/) to make a Query.
 
-The client is not yet an Quarkus Extension, and here we added it in our project:
+The client is not yet a Quarkus Extension, so we add it in our project like this:
 
 ```xml
 <dependency>
@@ -312,7 +310,7 @@ The client is not yet an Quarkus Extension, and here we added it in our project:
 </dependency>
 ```
 
-Now we can create a POJO that contains only fields that we are interested in. Look at `Person` and `Score`, that are much smaller than the definition on the server side:
+Now we can create a POJO that contains only fields that we are interested in. Look at `Person` and `Score` in the client module, that is much smaller than the definition on the server side:
 
 ![client](/images/Supersonic_Subatomic_GraphQL/client.png)
 
