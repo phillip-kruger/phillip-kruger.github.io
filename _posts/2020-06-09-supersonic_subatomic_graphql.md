@@ -11,7 +11,7 @@ You can now use [code.quarkus.io](https://code.quarkus.io/) to get going with Qu
 
 ![codequarkusio](/images/Supersonic_Subatomic_GraphQL/code_quarkus.png)
 
-This will create a Quarkus starter application with the dependencies:
+This will create a Quarkus starter application with the following dependencies:
 
 ```xml
     <dependency>
@@ -44,7 +44,7 @@ Let's change the `ExampleResource` Rest service to be a GraphQL endpoint.
 1. Replace the `@GET` method annotation with `@Query`.
 1. Remove the `@Produces(MediaType.TEXT_PLAIN)` method annotation and all JAX-RS imports.
 
-That is it ! Your `ExampleResource` should look like this now:
+That is it! Your `ExampleResource` should look like this now:
 
 ```java
 package org.acme;
@@ -110,11 +110,11 @@ Look at `ProfileGraphQLApi.java` that is marked as a `@GraphQLApi`:
 Above method will get a person by `personId`. As you can see the method is made queryable with the `@Query` annotation. You can optionally provide the name ("person" in this case),
 however the default would be "person" anyway (method name without "get"). You can also optionally name the parameter, but the default would be the parameter name ("personId").
 
-The Person Object is a POJO that represent a Person (User or Member) in the system. It has many fields, some that is other complex POJOs:
+The Person Object is a POJO that represents a Person (User or Member) in the system. It has many fields, some that are other complex POJOs:
 
 ![codequarkusio](/images/Supersonic_Subatomic_GraphQL/person.png)
 
-However, the `Query` annotation made it possible that we can query the exact fields we are interest in.
+However, the `Query` annotation makes it possible to query the exact fields we are interested in.
 
 Run the example application:
 
@@ -137,13 +137,13 @@ Now browse to [localhost:8080/graphql-ui/](http://localhost:8080/graphql-ui/) an
 }
 ```
 
-Notice that you have 'code insight' in the editor. That is because GraphQL has a schema and also support introspection.
+Notice that you have 'code insight' in the editor. That is because GraphQL has a schema and also supports introspection.
 
-We can ask only the fields we are interested in, making the payload to be much smaller.
+We can request only the fields we are interested in, making the payload much smaller.
 
 ![graphiql](/images/Supersonic_Subatomic_GraphQL/graphiql.png)
 
-We can also combine queries, example, let say we want to get the fields for person 1 as shown above, and also the name and surname for person 2, we can do:
+We can also combine queries, i.e., lets say we want to get the fields for person 1 as shown above, and also the name and surname for person 2, we can do the following:
 
 ```
 {
@@ -222,7 +222,7 @@ So we can add fields that merge onto the output by adding the `@Source` paramete
 
 ### Partial results
 
-The above example merge two different data sources, but let's say the score system is down. We will then still return the data we have, and an error
+The above example merges two different data sources, but let's say the score system is down. We will then still return the data we have, and an error
 for the score:
 
 ```
@@ -267,7 +267,7 @@ Let's run this example in native mode:
 mvn -Pnative clean install
 ```
 
-This will create a native executable and will now start the application very quick:
+This will create a native executable and will now start the application very quickly:
 
 ![native](/images/Supersonic_Subatomic_GraphQL/native.png)
 
@@ -298,7 +298,7 @@ For more details see: [github.com/worldline/dynaql](https://github.com/worldline
 ### Type safe
 
 The type safe client will be closer to MicroProfile RESTClient. Looking at the same example as above, lets see how we can to use it.
-Browse to the `quarkus-client` folder. This example use [Quarkus Command Mode](https://quarkus.io/blog/introducing-command-mode/) to make a Query.
+Browse to the `quarkus-client` folder. This example uses [Quarkus Command Mode](https://quarkus.io/blog/introducing-command-mode/) to make a Query.
 
 The client is not yet a Quarkus Extension, so we add it in our project like this:
 
@@ -310,11 +310,11 @@ The client is not yet a Quarkus Extension, so we add it in our project like this
 </dependency>
 ```
 
-Now we can create a POJO that contains only fields that we are interested in. Look at `Person` and `Score` in the client module, that is much smaller than the definition on the server side:
+Now we can create a POJO that contains only fields that we are interested in. Looking at `Person` and `Score` in the client module, it is much smaller than the definition on the server side:
 
 ![client](/images/Supersonic_Subatomic_GraphQL/client.png)
 
-All we now need to do is to add an interface that define the queries that we are interested in:
+All we need to do now is to add an interface that defines the queries that we are interested in:
 
 ```java
 @GraphQlClientApi
