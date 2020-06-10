@@ -71,7 +71,7 @@ mvn quarkus:dev
 
 Now browse to [localhost:8080/graphql-ui/](http://localhost:8080/graphql-ui/) and run the following query:
 
-```json
+```
 {
   hello
 }
@@ -131,7 +131,7 @@ mvn quarkus:dev
 
 Now browse to [localhost:8080/graphql-ui/](http://localhost:8080/graphql-ui/) and run the following query:
 
-```json
+```
 {
   person(personId:1){
     names
@@ -152,7 +152,7 @@ We can request only the fields we are interested in, making the payload much sma
 
 We can also combine queries, i.e., lets say we want to get the fields for person 1 as shown above, and also the name and surname for person 2, we can do the following:
 
-```json
+```
 {
   person1: person(personId:1){
     names
