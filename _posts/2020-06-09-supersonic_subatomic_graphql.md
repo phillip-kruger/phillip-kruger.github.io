@@ -5,9 +5,9 @@ image: "/images/Quarkus.png"
 bigimg: "/images/Supersonic_Subatomic_GraphQL/banner.jpg"
 ---
 
-[MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql) is now included in the just released [version 1.5.0](https://quarkus.io/blog/quarkus-1-5-final-released/) of [Quarkus](https://quarkus.io/)
+[MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql) is now included in the just released [version 1.5.0](https://quarkus.io/blog/quarkus-1-5-final-released/) of [Quarkus](https://quarkus.io/).
 
-You can now use [code.quarkus.io](https://code.quarkus.io/) to get going with Quarkus and include the [SmallRye GraphQL Extension](https://github.com/smallrye/smallrye-graphql)
+You can now use [code.quarkus.io](https://code.quarkus.io/) to get going with Quarkus and include the [SmallRye GraphQL Extension](https://github.com/smallrye/smallrye-graphql).
 
 ![codequarkusio](/images/Supersonic_Subatomic_GraphQL/code_quarkus.png)
 
@@ -34,7 +34,8 @@ This will create a Quarkus starter application with the following dependencies:
     </dependency>
 ```
 
-NOTE: You can remove the `quarkus-resteasy` dependency as we do not need JAX-RS.
+NOTE: At the moment, the example application created is a JAX-RS application. There is [some work in progress](https://github.com/quarkusio/quarkus/issues/8134) to allow extensions 
+to define custom examples application, but until then we always get a JAX-RS application. You can remove the `quarkus-resteasy` dependency as we do not need JAX-RS.
 
 ## Your first GraphQL Endpoint.
 
@@ -64,7 +65,7 @@ public class ExampleResource {
 
 You can now run the application using Quarkus dev mode:
 
-```
+```bash
 mvn quarkus:dev
 ```
 
@@ -92,9 +93,15 @@ Also see the [Quarkus GraphQL Guide](https://quarkus.io/guides/microprofile-grap
 
 Let's look at a more detailed example, get the source from [this GitHub project](https://github.com/phillip-kruger/graphql-example)
 
-In this project browse to the quarkus example:
+This is a multi-module application. First compile all modules. In the root:
 
+```bash
+mvn clean install
 ```
+
+Now browse to the quarkus example:
+
+```bash
 cd quarkus-example
 ```
 
@@ -118,13 +125,13 @@ However, the `Query` annotation makes it possible to query the exact fields we a
 
 Run the example application:
 
-```
+```bash
 mvn quarkus:dev
 ```
 
 Now browse to [localhost:8080/graphql-ui/](http://localhost:8080/graphql-ui/) and run the following query:
 
-```
+```json
 {
   person(personId:1){
     names
@@ -145,7 +152,7 @@ We can request only the fields we are interested in, making the payload much sma
 
 We can also combine queries, i.e., lets say we want to get the fields for person 1 as shown above, and also the name and surname for person 2, we can do the following:
 
-```
+```json
 {
   person1: person(personId:1){
     names
@@ -163,7 +170,7 @@ We can also combine queries, i.e., lets say we want to get the fields for person
 ```
 This will return :
 
-```
+```json
 {
   "data": {
     "person1": {
@@ -225,7 +232,7 @@ So we can add fields that merge onto the output by adding the `@Source` paramete
 The above example merges two different data sources, but let's say the score system is down. We will then still return the data we have, and an error
 for the score:
 
-```
+```json
 {
   "errors": [
     {
@@ -261,16 +268,19 @@ for the score:
 
 ### Native mode
 
-Let's run this example in native mode:
+Let's run this example in native mode (use graalvm-ce-java11-19.3.2):
 
-```
+```bash
 mvn -Pnative clean install
 ```
 
 This will create a native executable and will now start the application very quickly:
 
-![native](/images/Supersonic_Subatomic_GraphQL/native.png)
+```bash
+./target/quarkus-example-1.0.0-SNAPSHOT-runner
+```
 
+![native](/images/Supersonic_Subatomic_GraphQL/native.png)
 
 ## In the pipeline
 
@@ -298,7 +308,7 @@ For more details see: [github.com/worldline/dynaql](https://github.com/worldline
 ### Type safe
 
 The type safe client will be closer to MicroProfile RESTClient. Looking at the same example as above, lets see how we can to use it.
-Browse to the `quarkus-client` folder. This example uses [Quarkus Command Mode](https://quarkus.io/blog/introducing-command-mode/) to make a Query.
+From the root of the project, browse to the `quarkus-client` folder. This example uses [Quarkus Command Mode](https://quarkus.io/blog/introducing-command-mode/) to make a Query.
 
 The client is not yet a Quarkus Extension, so we add it in our project like this:
 
@@ -338,10 +348,10 @@ And now we can use this:
 
 ```
 
-Running the Quarkus app we can now make a call to the server and print the response:
+Running the Quarkus client app we can now make a call to the server (make sure this is still running) and print the response:
 
-```
-java -jar quarkus-client-1.0.0-SNAPSHOT-runner.jar 2
+```bash
+java -jar target/quarkus-client-1.0.0-SNAPSHOT-runner.jar 2
 ```
 
 The number (2) is the `personId` in our example:
