@@ -94,10 +94,6 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 ## <i class="fa fa-rss" aria-hidden="true"></i> Communication
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
-  
-### Upcoming talks:
-
-* ~~25 March 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.devdotnext.com/speaker/a9c157ad9de24ee087424c36c64aa247) at [dev.next](https://www.devdotnext.com/) in Broomfield, Colorado, USA~~ Postponed until August
 
 ### Previous talks:
 
@@ -119,6 +115,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Published blog articles:
 
+* [Supersonic Subatomic GraphQL](https://www.javacodegeeks.com/2020/06/supersonic-subatomic-graphql.html)
 * [When using JAXB...](https://www.javacodegeeks.com/2019/05/using-jaxb.html)
 * [A configurable JAX-RS ExceptionMapper with MicroProfile Config](https://www.javacodegeeks.com/2018/08/jax-rs-exceptionmapper-config.html)
 * [Your own MicroProfile Config source](https://www.javacodegeeks.com/2018/08/microprofile-config-source.html)
