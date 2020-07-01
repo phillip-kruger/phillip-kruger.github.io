@@ -97,6 +97,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Previous talks:
 
+* 29 June 2020 - [Wonders of GraphQL](https://www.youtube.com/watch?v=nMti8-zIDQs) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
 * 27 April 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.meetup.com/Jozi-JUG/events/270175167) at [JoziJug](https://www.meetup.com/Jozi-JUG/) (online)([slides](https://bit.ly/mp-graphql-presentation-jozijug),[video](https://youtu.be/UqDdDYo-g-8), [code](https://github.com/phillip-kruger/graphql-example))
 * 21 April 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.meetup.com/SouJava/events/269608279/) at [SouJava](https://www.meetup.com/SouJava/) (online)([slides](http://bit.ly/mp-graphql-presentation-soujava),[video](https://youtu.be/OOnpUeblVPM), [code](https://github.com/phillip-kruger/graphql-example))
 * 25 January 2020 - [Writing better APIs with MicroProfile GraphQL](https://devconfcz2020a.sched.com/event/YOmv/writing-better-apis-with-microprofile-graphql) at [DevConf.CZ](https://www.devconf.info/cz/) in Brno, Czech Republic ([slides](http://bit.ly/mp-graphql-presentation-2020),[video](https://www.youtube.com/watch?v=lA0L7iB-GV8), [code](https://github.com/phillip-kruger/graphql-example))
