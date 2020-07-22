@@ -76,7 +76,7 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 
 ### Open Source
 
-<script
+<!--<script
   src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
 </script>
 <link
@@ -84,14 +84,14 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
 />
 <div class="calendar">
-    <!-- Loading stuff -->
+     Loading stuff 
     Loading the data just for you.
 </div>
 
 <script>
     // or enable responsive functionality:
     GitHubCalendar(".calendar", "phillip-kruger", { responsive: true });
-</script>
+</script>-->
 
 I currently contribute to 
 [Eclipse MicroProfile](https://microprofile.io/), 
