@@ -75,6 +75,24 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 [GraphQL](https://microprofile.io/project/eclipse/microprofile-graphql).
 
 ### Open Source
+
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+<div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+
+<script>
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "phillip-kruger", { responsive: true });
+</script>
+
 I currently contribute to 
 [Eclipse MicroProfile](https://microprofile.io/), 
 [SmallRye](https://smallrye.io/) where I mostly work on [MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql), [MicroProfile Extensions](https://www.microprofile-ext.org/)
@@ -94,6 +112,10 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 ## <i class="fa fa-rss" aria-hidden="true"></i> Communication
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
+
+### Upcoming talks:
+
+* 1 August 2020 - [Building queryable APIs with MicroProfile GraphQL](https://java.geekle.us/#speaker-15) at [Global Summit for Java devs'20](https://java.geekle.us)
 
 ### Previous talks:
 
@@ -116,7 +138,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 ### Published blog articles:
 
-* [Supersonic Subatomic GraphQL](https://www.javacodegeeks.com/2020/06/supersonic-subatomic-graphql.html)
+* [Supersonic Subatomic GraphQL](https://quarkus.io/blog/supersonic-subatomic-graphql/)
 * [When using JAXB...](https://www.javacodegeeks.com/2019/05/using-jaxb.html)
 * [A configurable JAX-RS ExceptionMapper with MicroProfile Config](https://www.javacodegeeks.com/2018/08/jax-rs-exceptionmapper-config.html)
 * [Your own MicroProfile Config source](https://www.javacodegeeks.com/2018/08/microprofile-config-source.html)
