@@ -76,23 +76,6 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 
 ### Open Source
 
-<!--<script
-  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-/>
-<div class="calendar">
-     Loading stuff 
-    Loading the data just for you.
-</div>
-
-<script>
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "phillip-kruger", { responsive: true });
-</script>-->
-
 I currently contribute to 
 [Eclipse MicroProfile](https://microprofile.io/), 
 [SmallRye](https://smallrye.io/) where I mostly work on [MicroProfile GraphQL](https://github.com/eclipse/microprofile-graphql), [MicroProfile Extensions](https://www.microprofile-ext.org/)
@@ -113,12 +96,9 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
-### Upcoming talks:
-
-* 1 August 2020 - [Building queryable APIs with MicroProfile GraphQL](https://java.geekle.us/#speaker-15) at [Global Summit for Java devs'20](https://java.geekle.us)
-
 ### Previous talks:
 
+* 1 August 2020 - [Building queryable APIs with MicroProfile GraphQL](https://java.geekle.us/#speaker-15) at [Global Summit for Java devs'20](https://java.geekle.us)
 * 29 June 2020 - [Wonders of GraphQL](https://www.youtube.com/watch?v=nMti8-zIDQs) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
 * 27 April 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.meetup.com/Jozi-JUG/events/270175167) at [JoziJug](https://www.meetup.com/Jozi-JUG/) (online)([slides](https://bit.ly/mp-graphql-presentation-jozijug),[video](https://youtu.be/UqDdDYo-g-8), [code](https://github.com/phillip-kruger/graphql-example))
 * 21 April 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.meetup.com/SouJava/events/269608279/) at [SouJava](https://www.meetup.com/SouJava/) (online)([slides](http://bit.ly/mp-graphql-presentation-soujava),[video](https://youtu.be/OOnpUeblVPM), [code](https://github.com/phillip-kruger/graphql-example))
