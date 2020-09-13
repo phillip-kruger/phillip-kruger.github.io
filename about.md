@@ -23,7 +23,8 @@ and have the following [strengths](https://www.gallupstrengthscenter.com/):
 * Achiever
 * Relator
 
-# My Professional Skills
+## My Professional Skills
+
 I am an accomplished Software **developer** and **architect** offering experience in creating systems in various industries,
 ranging from banking, insurance, rewards programs, retail and mobile. I have extensive experience in **full stack development**,
 and prefer to be active in all parts of the SDLC. From conceptualizing to running in production.
@@ -33,8 +34,10 @@ I have a passion for **clean code** and **evolutionary architecture**. I love Ja
     <i class="fa fa-university" aria-hidden="true"></i> See my full CV
 </a>
 
-# Experience
-## <i class="fa fa-code" aria-hidden="true"></i> Java, Java EE & MicroProfile
+## Experience
+
+### <i class="fa fa-code" aria-hidden="true"></i> Java, Java EE & MicroProfile
+
 I have been writing [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) since the beginning of Java and still loving it! I stay up to date with the Language and [specifications](https://en.wikipedia.org/wiki/Java_Community_Process).
 I have extensive experience in [Enterprise Java](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition), including
 [JAX-RS](https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services),
@@ -74,7 +77,7 @@ When appropriate, I use Eclipse [MicroProfile](https://microprofile.io/) API's (
 [Open Tracing](https://microprofile.io/project/eclipse/microprofile-opentracing),
 [GraphQL](https://microprofile.io/project/eclipse/microprofile-graphql).
 
-### Open Source
+#### Open Source
 
 I currently contribute to 
 [Eclipse MicroProfile](https://microprofile.io/), 
@@ -83,7 +86,8 @@ I currently contribute to
 I previously also contributed to 
  [JSR 371](https://jcp.org/en/jsr/detail?id=371), the [Model-View-Controller Specification](https://www.mvc-spec.org/) and [Ozark](https://github.com/mvc-spec/ozark) - the reference implementation.
 
-## <i class="fa fa-linux" aria-hidden="true"></i> Linux
+### <i class="fa fa-linux" aria-hidden="true"></i> Linux
+
 I have been running [Linux](https://en.wikipedia.org/wiki/Linux) on my Personal PC since 1999, starting with [Mandrake](https://en.wikipedia.org/wiki/Mandriva_Linux)
 and then basically went through many distributions including [Red Hat](https://en.wikipedia.org/wiki/Red_Hat_Linux), [OpenSUSE](https://en.wikipedia.org/wiki/OpenSUSE),
 [Debian](https://en.wikipedia.org/wiki/Debian), [PCLinuxOS](https://en.wikipedia.org/wiki/PCLinuxOS). I then discovered [Gentoo Linux](https://en.wikipedia.org/wiki/Gentoo_Linux),
@@ -92,11 +96,12 @@ and [Mint](https://en.wikipedia.org/wiki/Linux_Mint). For the past few years I h
 At work I am running a nice stable [Fedora](https://getfedora.org/) distro with [KDE](https://spins.fedoraproject.org/kde/).
 I am comfortable running and managing Linux servers and [Docker](https://en.wikipedia.org/wiki/Docker_(software)) containers.
 
-## <i class="fa fa-rss" aria-hidden="true"></i> Communication
+### <i class="fa fa-rss" aria-hidden="true"></i> Communication
+
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
-### Previous talks
+#### Previous talks
 
 * 1 August 2020 - [Building queryable APIs with MicroProfile GraphQL](https://java.geekle.us/#speaker-15) at [Global Summit for Java devs'20](https://java.geekle.us)
 * 29 June 2020 - [Wonders of GraphQL](https://www.youtube.com/watch?v=nMti8-zIDQs) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
@@ -116,7 +121,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
     <img title="2Win!" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/13052305" alt="2Win!" height="120" width="120"/>
 </a>
 
-### Published blog articles:
+#### Published blog articles
 
 * [MicroProfile OpenAPI for everyone](https://quarkus.io/blog/openapi-for-everyone/)
 * [Supersonic Subatomic GraphQL](https://quarkus.io/blog/supersonic-subatomic-graphql/)
@@ -141,8 +146,8 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
     <img title="DZone" src="https://dzone.com/themes/dz20/images/dz-logo-v.svg" alt="DZone" height="120" width="120"/>
 </a>
 
+### <i class="fa fa-database" aria-hidden="true"></i> Infrastructure
 
-## <i class="fa fa-database" aria-hidden="true"></i> Infrastructure
 I enjoy setting up and automating the environments that my systems need to run.
 [MySQL](https://en.wikipedia.org/wiki/MySQL),
 [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL),
@@ -156,7 +161,8 @@ I enjoy setting up and automating the environments that my systems need to run.
 [WAS Liberty](https://en.wikipedia.org/wiki/IBM_WebSphere_Application_Server),
 [Pluto](https://portals.apache.org/pluto/) and more
 
-## <i class="fa fa-code-fork" aria-hidden="true"></i> Tools
+### <i class="fa fa-code-fork" aria-hidden="true"></i> Tools
+
 I have been using many tools through the years. Currently these are some of my favorites:
 [GIT](https://en.wikipedia.org/wiki/Git),
 [Gogs](https://gogs.io/),
@@ -173,7 +179,8 @@ I have been using many tools through the years. Currently these are some of my f
 [Eclipse](https://www.eclipse.org/),
 [Docker](https://en.wikipedia.org/wiki/Docker_(software))
 
-## <i class="fa fa-html5" aria-hidden="true"></i> Other
+### <i class="fa fa-html5" aria-hidden="true"></i> Other
+
 I have knowledge of many other languages, frameworks and libraries. I believe in using the right tool for the job and can learn a new specification, language or framework quickly and easily.
 Some of these include
 [HTML5](https://en.wikipedia.org/wiki/HTML5),
@@ -198,7 +205,7 @@ Some of these include
 [Apache Cordova](https://en.wikipedia.org/wiki/Apache_Cordova)
 and more.
 
-# Conferences I attended
+## Conferences I attended
 
 * [DevConf.CZ 2020, Brno, Czech Republic](https://www.devconf.info/cz/)
 * [Oracle Code One 2019, San Francisco, USA](https://www.oracle.com/code-one/)
@@ -216,7 +223,6 @@ and more.
 * [Oracle Open World 2007, San Francisco, USA](https://www.oracle.com/openworld/index.html)
 
 ![](/images/P1250242.jpg)
-
 
 {% comment %}
 =======================
