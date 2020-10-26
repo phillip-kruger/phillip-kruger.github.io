@@ -18,6 +18,8 @@ We will look at the following:
 * Transformation and mapping
 * Build tools - Maven and Gradle support
 
+All source code is available here: [github.com/phillip-kruger/graphql-experimental](https://github.com/phillip-kruger/graphql-experimental)
+
 ## Operational Context
 
 The Context Object is an experimental Object that can be injected anywhere in your code, downstream from your `@GraphQLApi`.
