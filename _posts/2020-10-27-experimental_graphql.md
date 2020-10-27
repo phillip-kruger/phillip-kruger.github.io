@@ -579,7 +579,7 @@ public class Person {
     @JsonbDateFormat("dd.MM.yyyy")
     private Date birthDate;
 
-    @JsonbNumberFormat(“#0.00")
+    @JsonbNumberFormat("#0.00")
     public BigDecimal salary;
 }
 ```
