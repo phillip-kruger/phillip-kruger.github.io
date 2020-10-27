@@ -9,14 +9,14 @@ This blog post is a follow up on the initial introductory post, [Supersonic Suba
 
 We will look at the following:
 
-* Operational Context - Optimize your downstream processes
+* Operational Context - Optimize your downstream processes.
 * Cache - Caching your endpoints.
 * Asynchronous - Concurrent execution of multiple requests or sources.
-* Batch - Solving N+1
-* Generics support
-* Events and custom execution
-* Transformation and mapping
-* Build tools - Maven and Gradle support
+* Batch - Solving N+1.
+* Generics support.
+* Events and custom execution.
+* Transformation and mapping.
+* Build tools - Maven and Gradle support.
 
 All source code is available here: [github.com/phillip-kruger/graphql-experimental](https://github.com/phillip-kruger/graphql-experimental)
 
@@ -28,7 +28,7 @@ It's in the `api` module in SmallRye GraphQL, with the intention to eventually m
 
 Example:
 
-We have a Person GraphQL Endpoint, that uses some service to get the person from where ever it's stored.
+We have a Person GraphQL Endpoint, that uses some service to get the person from where ever it is stored.
 
 The endpoint:
 
@@ -69,7 +69,7 @@ public class PersonService {
         // Let's print out the context here and see what we have
         System.out.println(context);
 
-        // Here get the person from the datastore.
+        // Get the person from the datastore here.
     }
 }
 
@@ -86,7 +86,7 @@ Let's do a `Query` to get the name and surname of Person 1:
 }
 ```
 
-### So what can you from context ?
+### So what can you get from context ?
 
 There are a few things we can get:
 
@@ -110,7 +110,7 @@ arguments = {id=1}
 path = /person
 ```
 
-What we probably want to know is what fields has been requested, so that we can do a better database query.
+What we probably want to know is which fields have been requested, so that we can do a better database query.
 
 So the fieldName (`person`) and the selectedFields (`names`,`surname`) is what we need.
 
@@ -157,7 +157,7 @@ That will give us this in the `Context` selectedFields:
 
 ### Context in source methods
 
-Let's add a field to person using `@Source` and see what the context can give us then. First we will add a service that fetch the exchange rate from an api ([exchangeratesapi.io](http://exchangeratesapi.io/)). This allows us to add the exchange rate for that person against some currency.
+Let's add a field to person using `@Source` and see what the context can give us then. First we will add a service that fetches the exchange rate from an api ([exchangeratesapi.io](http://exchangeratesapi.io/)). This allows us to add the exchange rate for that person against some currency.
 
 In Java we add this `Source` method:
 
@@ -209,11 +209,11 @@ fieldName = exchangeRate
 path = /person/exchangeRate
 ```
 
-Note that the fieldName is now `exchangeRate` and the selectedFields is `["rate"]`. You will also not that the source field is populated with the person.
+Note that the fieldName is now `exchangeRate` and the selectedFields is `["rate"]`. You will also note that the source field is populated with the person.
 
 ## Cache
 
-Another question that comes up regularly is how can you cache your endpoint results. As an example, let's say the Exchange Rate information can be daily, so we do not want to make a call to the [exchangeratesapi.io](http://exchangeratesapi.io/) for every call. 
+Another question that comes up regularly is how can you cache your endpoint results. As an example, let's say the Exchange Rate information can be updated daily, so we do not want to make a call to the [exchangeratesapi.io](http://exchangeratesapi.io/) for every call. 
 
 You can just use the caching that comes with Quarkus! Simply include the cache extension:
 
@@ -239,7 +239,7 @@ Read more about caching in Quarkus here: [quarkus.io/guides/cache](https://quark
 
 ## Asynchronous
 
-Now, let's add another service that return the weather conditions for a city:
+Now, let's add another service that returns the weather conditions for a city:
 
 ```java
 @GraphQLApi
@@ -275,7 +275,7 @@ Let's say this person is traveling to London, you can now do something like this
 }
 ```
 
-At the moment the person and weather query will execute sequential, and there is no real reason that this should be the case. We can get the weather at the same time that we get the person.
+At the moment the person and weather query will execute sequentially, and there is no real reason that this should be the case. We can get the weather at the same time that we get the person.
 
 ![async1](/images/Experimental_GraphQL/async1.png)
 
@@ -297,9 +297,9 @@ public CompletableFuture<Weather> getWeather(String city){
 }
 ```
 
-Now person and weather is being fetched concurrently.
+Now person and weather are being fetched concurrently.
 
-Now, let's say this person actually wants to travel to London and New York, we can now do something like this:
+Let's say this person actually wants to travel to London *and* New York, we can do something like this:
 
 ```graphql
 {
@@ -344,7 +344,7 @@ If you want to get ALL people, and you are including a field (like `exchangeRate
 
 This will allow you to get all the people in one method and do one call to get their exchange rates.
 
-So let's change the `getExchangeRate` method to take a `List` of person and return a `List` of `ExchangeRate`:
+So, let's change the `getExchangeRate` method to take a `List` of person and return a `List` of `ExchangeRate`:
 
 ```java
 public List<ExchangeRate> getExchangeRate(@Source List<Person> people, CurencyCode against){
@@ -380,7 +380,7 @@ This will call the `getExchangeRate` method with all people.
 
 ## Generics
 
-It's the year 2050 and we need to extends our travel service to also cater for aliens. Let's add a generic `Being` type:
+It's the year 2050 and we need to extend our travel service to also cater for aliens. Let's add a generic `Being` type:
 
 ```java
 public class Being<T> {
@@ -439,7 +439,7 @@ We can then query both human and alien beings:
 
 ## Events and custom execution
 
-Event are used internally when you enable integration with MicroProfile Metrics, MicroProfile OpenTracing and Bean Validation, but you can also take part in these events. 
+Events are used internally when you enable integration with MicroProfile Metrics, MicroProfile OpenTracing and Bean Validation, but you can also take part in these events. 
 These are all CDI Events and can be used with the `@Observes` annotation.
 
 ### While building the schema
@@ -453,12 +453,12 @@ public Operation createOperation(@Observes Operation operation) {
 }
 ```
 
-Just before the final schema is build, after scanning all annotations and after the above event, you can _take part_ and contribute to the schema:
-This expose the underlying `graphql-java` implementation details, and can be useful when you want to do things that is not yet implemented in SmallRye GraphQL, like subscriptions for instance:
+Just before the final schema is built, after scanning all annotations and after the above event, you can _take part_ and contribute to the schema:
+This exposes the underlying `graphql-java` implementation details, and can be useful when you want to do things that are not yet implemented in SmallRye GraphQL, like subscriptions for instance:
 
 ```java
 public GraphQLSchema.Builder beforeSchemaBuild(@Observes GraphQLSchema.Builder builder) {    
-    // Here add you own, like for example a subscription
+    // Here add you own, in example a subscription
     return builder;
 }
 ```
@@ -484,10 +484,10 @@ In this example request:
 
 the request flow is as follows:
 
-* The Execution service get the request.
+* The Execution service gets the request.
 * The person is being fetched with a `datafetcher`.
 * Your CDI bean (`@GraphQLApi`) method (`getPerson`) is being invoked.
-* The exchange rate in being fetched, passing the above person as an argument.
+* The exchange rate is being fetched, passing the above person as an argument.
 * Your CDI bean (`@GraphQLApi`) method (`getExchangeRate`) is being invoked.
 * Data is being returned.
 
@@ -515,7 +515,7 @@ public void afterExecute(@Observes @AfterExecute Context context) {
 }
 ```
 
-You can also get event when an error happened:
+You can also get events when an error occurs:
 
 ```java
 public void errorExecute(@Observes @ErrorExecute ErrorInfo errorInfo) {
@@ -595,7 +595,7 @@ In the GraphQL Schema this will now map to an `int`.
 
 You can also add an Object that should transform to a `Scalar` Type and not a complex object, example you might have an `Email` Object, but do not want to use a complex type in GraphQL, and rather map this to a `String`:
 
-To do this your `Email` POJO needs to implement the `toString` method and have a contructor that takes a String, or a static `Email fromString(String s)` method, or a `setValue(String value)` method.
+To do this your `Email` POJO needs to implement the `toString` method and have a constructor that takes a String, or a static `Email fromString(String s)` method, or a `setValue(String value)` method.
 
 ```java
 public class Email {
@@ -623,7 +623,7 @@ public class Email {
 }
 ```
 
-You can then use this as a field on your Response and add the `@ToScalar` annotation, Example on person:
+You can then use this as a field on your Response and add the `@ToScalar` annotation, i.e. person:
 
 ```java
 @ToScalar(Scalar.String.class)
