@@ -5,7 +5,7 @@ image: "/images/Quarkus.png"
 bigimg: "/images/Experimental_GraphQL/banner.jpg"
 ---
 
-This blog post is a follow up on the initial introductory post, [Supersonic Subatomic GraphQL](/post/supersonic_subatomic_graphql/), and here we will explore more features, some that experimental, that we hope to eventually move to the MicroProfile GraphQL Specification (based on your feedback !)
+This blog post is a follow up on the initial introductory post, [Supersonic Subatomic GraphQL](/post/supersonic_subatomic_graphql/), and here we will explore more features, some that is experimental, that we hope to eventually move to the MicroProfile GraphQL Specification (based on your feedback !)
 
 We will look at the following:
 
@@ -51,16 +51,16 @@ public class PersonEndpoint {
 }
 ```
 
-A Person is a basic POJO, but can have multiple relationships, that in turn has a Person. So making a call to the database to get a person, can end up retuning more people, depending on the number of relationships. In our example, we have Person 1 that has a `Spouse`, Person 2.
+A Person is a basic POJO, that can have multiple relationships, that in turn has a Person. So making a call to the database to get a person, can end up retuning more people, depending on the number of relationships. In our example, we have Person 1 that has a `Spouse`, Person 2.
 
 ![classdiagramm](/images/Experimental_GraphQL/PersonClassDiagram.png)
 
-Now let's assume that `PersonData` makes a call to a database or some other storage to get the data. We can now inject the context object to get 
+Now let's assume that `PersonService` makes a call to a database or some other storage to get the data. We can now inject the context object to get 
 details on the request, and optimise our call:
 
 ```java
 @ApplicationScoped
-public class PersonData {
+public class PersonService {
     
     @Inject Context context;
     
@@ -90,31 +90,29 @@ Let's do a `Query` to get the name and surname of Person 1:
 
 There are a few things we can get:
 
-```json
-{
-executionId = 30337360,
-request = {"query":"{\n  person(id:1){\n    names\n    surname\n  }\n}","variables":null},
-operationName = null,
-operationTypes = [Query],
-parentTypeName = Query,
-variables = null,
+```properties
+executionId = 30337360
+request = {"query":"{\n  person(id:1){\n    names\n    surname\n  }\n}","variables":null}
+operationName = null
+operationTypes = [Query]
+parentTypeName = Query
+variables = null
 query = {
   person(id:1){
     names
     surname
   }
 },
-fieldName = person,
-selectedFields = ["names","surname"],
-source = null,
-arguments = {id=1},
+fieldName = person
+selectedFields = ["names","surname"]
+source = null
+arguments = {id=1}
 path = /person
-}
 ```
 
-What we probably want to know is what fields has been requested, so that I can do a better database query.
+What we probably want to know is what fields has been requested, so that we can do a better database query.
 
-So the fieldName, `person` and the selectedFields, `names` and `surname` is what we need.
+So the fieldName (`person`) and the selectedFields (`names`,`surname`) is what we need.
 
 A more complex GraphQL Request, will then lead to a more complex datasource query, example, if we want to know the relationships we would do:
 
@@ -159,9 +157,7 @@ That will give us this in the `Context` selectedFields:
 
 ### Context in source methods
 
-Let's add a field to person using `@Source` and see what the context can give us then. We will add a service that fetch the exchange rate from an api ([exchangeratesapi.io](http://exchangeratesapi.io/)).
-
-This allow you to add the exchange rate for that person against some currency.
+Let's add a field to person using `@Source` and see what the context can give us then. First we will add a service that fetch the exchange rate from an api ([exchangeratesapi.io](http://exchangeratesapi.io/)). This allows us to add the exchange rate for that person against some currency.
 
 In Java we add this `Source` method:
 
@@ -189,14 +185,13 @@ Now we can query that (`ExchangeRate`) field:
 
 When we `Inject` and print the context in the `ExchangeRateService` we now get:
 
-```json
-{
-executionId = 17333236733,
-request = {"query":"{\n  person(id:1){\n    names\n    surname\n    exchangeRate(against:GBP){\n      rate\n    }\n  }\n}","variables":null},
-operationName = null,
-operationTypes = [Query],
-parentTypeName = Person,
-variables = null,
+```properties
+executionId = 17333236733
+request = {"query":"{\n  person(id:1){\n    names\n    surname\n    exchangeRate(against:GBP){\n      rate\n    }\n  }\n}","variables":null}
+operationName = null
+operationTypes = [Query]
+parentTypeName = Person
+variables = null
 query = {
   person(id:1){
     names
@@ -205,17 +200,16 @@ query = {
       rate
     }
   }
-},
-fieldName = exchangeRate,
-selectedFields = ["rate"],
-source = com.github.phillipkruger.user.model.Person@7929ad0a,
-arguments = {against=GBP},
-fieldName = exchangeRate,
-path = /person/exchangeRate
 }
+fieldName = exchangeRate
+selectedFields = ["rate"]
+source = com.github.phillipkruger.user.model.Person@7929ad0a
+arguments = {against=GBP}
+fieldName = exchangeRate
+path = /person/exchangeRate
 ```
 
-Note that the `fieldName` is now `exchangeRate` and the `selectedFields` is `["rate"]`. You will also not that the `source` field is populated.
+Note that the fieldName is now `exchangeRate` and the selectedFields is `["rate"]`. You will also not that the source field is populated with the person.
 
 ## Cache
 
@@ -332,7 +326,7 @@ Now, let's say this person actually wants to travel to London and New York, we c
 }
 ```
 
-We can also fetch the exchange rates concurrently:
+We can now change the code to also fetch the exchange rates concurrently:
 
 ![async2](/images/Experimental_GraphQL/async2.png)
 
@@ -344,7 +338,7 @@ public CompletableFuture<ExchangeRate> getExchangeRate(@Source Person person, Cu
 
 ## Batch
 
-If you want to use the get people endpoint, and you are including a field (like `exchangeRate`) with a `Source` method, it means that for every person, we will call the `getExchangeRate` method. Depending on the number of people, that could be a lot of call. So you might rather want to do a batch source method.
+If you want to get ALL people, and you are including a field (like `exchangeRate`) with a `Source` method, it means that for every person, we will call the `getExchangeRate` method. Depending on the number of people, that could be a lot of calls. So you might rather want to do a batch source method.
 
 ![batch](/images/Experimental_GraphQL/batch.png)
 
@@ -428,7 +422,7 @@ We can then query both human and alien beings:
 
 ```graphql
 {
-	person(id:1){
+  person(id:1){
     being{
       names
       surname
@@ -446,20 +440,20 @@ We can then query both human and alien beings:
 ## Events and custom execution
 
 Event are used internally when you enable integration with MicroProfile Metrics, MicroProfile OpenTracing and Bean Validation, but you can also take part in these events. 
-These are all CDI Event and can be used with the `@Observes` annotation.
+These are all CDI Events and can be used with the `@Observes` annotation.
 
 ### While building the schema
 
-When we scan the classpath for annotations and types, we build up a [model](https://github.com/smallrye/smallrye-graphql/tree/master/common/schema-model) of all the operations. You can manipulate this model by taking part in the create operation event:
+When we scan the classpath for annotations and types, we build up a [model](https://github.com/smallrye/smallrye-graphql/tree/master/common/schema-model) of all the operations. You can manipulate this model by taking part in the _create operation_ event:
 
 ```java
 public Operation createOperation(@Observes Operation operation) {
-    // Here manipulate
+    // Here manipulate operation
     return operation;
 }
 ```
 
-Just before the final schema is build, after scanning all annotations and after the above event, you can 'take part' and contribute to the schema:
+Just before the final schema is build, after scanning all annotations and after the above event, you can _take part_ and contribute to the schema:
 This expose the underlying `graphql-java` implementation details, and can be useful when you want to do things that is not yet implemented in SmallRye GraphQL, like subscriptions for instance:
 
 ```java
@@ -477,7 +471,7 @@ In this example request:
 
 ```graphql
 {
-	person(id:1){
+  person(id:1){
     names
     surname
     exchangeRate(against:USD){
@@ -490,11 +484,11 @@ In this example request:
 
 the request flow is as follows:
 
-* The Execution service get the request
+* The Execution service get the request.
 * The person is being fetched with a `datafetcher`.
-* Your CDI bean (`@GraphQLApi`) method is being invoked
-* The exchange rate in being fetched (passing the above person as an argument)
-* Your CDI bean (`@GraphQLApi`) method is being invoked
+* Your CDI bean (`@GraphQLApi`) method (`getPerson`) is being invoked.
+* The exchange rate in being fetched, passing the above person as an argument.
+* Your CDI bean (`@GraphQLApi`) method (`getExchangeRate`) is being invoked.
 * Data is being returned.
 
 You can receive events on all of these points:
@@ -541,7 +535,7 @@ As an example, lets do a request that gets all the names of all the people on st
 
 ```graphql
 {
-	people{
+  people{
     names
   }
 }
@@ -590,7 +584,7 @@ public class Person {
 }
 ```
 
-you can change the mapping of an existing field to map to another `Scalar` type like this:
+MicroProfile GraphQL Specification maps the relevant Java types to a GraphQL Scalar. You can change the mapping of an existing field to map to another Scalar type like this:
 
 ```java
 @ToScalar(Scalar.Int.class)
@@ -599,7 +593,7 @@ Long id; // This usually maps to BigInteger
 
 In the GraphQL Schema this will now map to an `int`.
 
-You can also add an Object that should transform to a `Scalar` Type, example you might have a `Email` Object, but do not want to use a complex type in GraphQL, and rather map this to a `String`:
+You can also add an Object that should transform to a `Scalar` Type and not a complex object, example you might have an `Email` Object, but do not want to use a complex type in GraphQL, and rather map this to a `String`:
 
 To do this your `Email` POJO needs to implement the `toString` method and have a contructor that takes a String, or a static `Email fromString(String s)` method, or a `setValue(String value)` method.
 
