@@ -123,6 +123,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 #### Published blog articles
 
+* [Experimental Graphql](https://quarkus.io/blog/experimental_graphql/)
 * [MicroProfile OpenAPI for everyone](https://quarkus.io/blog/openapi-for-everyone/)
 * [Supersonic Subatomic GraphQL](https://quarkus.io/blog/supersonic-subatomic-graphql/)
 * [When using JAXB...](https://www.javacodegeeks.com/2019/05/using-jaxb.html)
