@@ -3,7 +3,6 @@ title: Stylish API
 tags: [Quarkus, MicroProfile, OpenAPI, Swagger UI]
 image: "/images/Quarkus.png"
 bigimg: "/images/Stylish_API/banner.jpg"
-published: false
 ---
 
 In this blog post we are going to look at the new styling and other new options available in OpenAPI and SwaggerUI Quarkus (v1.10 +).
