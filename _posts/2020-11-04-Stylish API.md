@@ -153,9 +153,9 @@ Note below the missing `Try it out` button on the `POST`
 
 All other Swagger UI options are now available to configure the UI.
 
-## Other OpenAPI Options
+## Other Small new features
 
-Two small new features in OpenAPI, the ability to add the Health Endpoints and the ability to disable the UI in Runtime.
+Two small new features in OpenAPI and Swagger UI, the ability to add the Health Endpoints and the ability to disable the UI and/or Schema in Runtime.
 
 ### Add Health API to Open API
 
@@ -169,10 +169,17 @@ quarkus.health.openapi.included=true
 
 ### Disable in Runtime
 
-You can now disable the Swagger UI in Runtime (previously only available in Build time):
+If you included the UI in your app (`quarkus.swagger-ui.always-include=true`), you can now disable it when starting the application.
 
 ```
 java -jar -Dquarkus.swagger-ui.enable=false target/yourapp-1.0.0-runner.jar
 ```
 
 This will return a **HTTP 404 (Not Found)** on the Swagger UI page.
+
+Simuarly you can disable the schema (usually under `/openai`) by doing:
+
+```
+java -jar -Dquarkus.smallrye-openapi.enable=false target/yourapp-1.0.0-runner.jar
+```
+
