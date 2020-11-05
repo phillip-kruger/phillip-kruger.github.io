@@ -15,11 +15,11 @@ The default style for Swagger UI has changed from the vanilla Swagger UI to a Qu
 
 ![quarkus_brand](/images/Stylish_API/quarkus_brand.png)
 
-In this post we mostly fokus on Swagger UI, but the styling options also apply to the [GraphQL UI](https://quarkus.io/guides/microprofile-graphql#graphiql-ui) and the [Health UI](https://quarkus.io/guides/microprofile-health#health-ui).
+In this post we mostly focus on Swagger UI, but the styling options also apply to the [GraphQL UI](https://quarkus.io/guides/microprofile-graphql#graphiql-ui) and the [Health UI](https://quarkus.io/guides/microprofile-health#health-ui).
 
 ### Theme
 
-[Swagger UI Themes](https://ostranme.github.io/swagger-ui-themes/) is now available in configuration, with the default theme being 'feeling blue'.
+[Swagger UI Themes](https://ostranme.github.io/swagger-ui-themes/) are now available in configuration, with the default theme being 'feeling blue'.
 
 You can change the theme by setting the `quarkus.swagger-ui.theme` property, for example:
 
@@ -61,7 +61,7 @@ To supply your own logo, you need to place a file called `logo.png` in `src/main
 
 ### Style
 
-You can go further, and supply your own `style.css`, to fine-tune the branding. Example, to change the `topbar` of the Swagger-UI screen to the corporate colors of Standard Bank:
+You can go further, and supply your own `style.css`, to fine-tune the branding. In example, to change the `topbar` of the Swagger-UI screen to the corporate colors of Standard Bank:
 
 ```css
 html{
@@ -169,10 +169,10 @@ quarkus.health.openapi.included=true
 
 ### Disable in Runtime
 
-You can now disable the Swagger UI in Runtime (previously only available in Build time)
+You can now disable the Swagger UI in Runtime (previously only available in Build time):
 
 ```
 java -jar -Dquarkus.swagger-ui.enable=false target/yourapp-1.0.0-runner.jar
 ```
 
-Will return a **HTTP 404 (Not Found)** on the Swagger UI page.
+This will return a **HTTP 404 (Not Found)** on the Swagger UI page.
