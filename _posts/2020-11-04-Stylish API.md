@@ -5,7 +5,7 @@ image: "/images/Quarkus.png"
 bigimg: "/images/Stylish_API/banner.jpg"
 ---
 
-In this blog post we are going to look at the new styling and other new options available in OpenAPI and SwaggerUI Quarkus (v1.0.10 +).
+In this blog post we are going to look at the new styling and other new options available in OpenAPI and SwaggerUI Quarkus (v1.10.0 +).
 
 ## Styling
 
@@ -129,7 +129,7 @@ The UI is now fully branded:
 
 ## Other Swagger UI Options
 
-Another new feature available in Quarkus (v1.0.10 +) is the ability to set any of the [configuration options](https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/) available in Swagger UI. As an example, we can set the `urls` and add the petstore (as the default selected option) to Swagger UI:
+Another new feature available in Quarkus (v1.10.0 +) is the ability to set any of the [configuration options](https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/) available in Swagger UI. As an example, we can set the `urls` and add the petstore (as the default selected option) to Swagger UI:
 
 ```properties
 quarkus.swagger-ui.urls.default=/openapi
