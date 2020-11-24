@@ -176,7 +176,7 @@ java -jar -Dquarkus.swagger-ui.enable=false target/yourapp-1.0.0-runner.jar
 
 This will return a **HTTP 404 (Not Found)** on the Swagger UI page.
 
-Similarly you can disable the schema (usually under `/openai`) by doing:
+Similarly you can disable the schema (usually under `/openapi`) by doing:
 
 ```
 java -jar -Dquarkus.smallrye-openapi.enable=false target/yourapp-1.0.0-runner.jar
