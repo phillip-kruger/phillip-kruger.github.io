@@ -5,7 +5,7 @@ image: "/images/Quarkus.png"
 bigimg: "/images/Stylish_API/banner.jpg"
 ---
 
-In this blog post we are going to look at the new styling and other new options available in OpenAPI and SwaggerUI Quarkus (v1.0.10 +).
+In this blog post we are going to look at the new styling and other new options available in OpenAPI and SwaggerUI Quarkus (v1.10.0 +).
 
 ## Styling
 
@@ -15,11 +15,11 @@ The default style for Swagger UI has changed from the vanilla Swagger UI to a Qu
 
 ![quarkus_brand](/images/Stylish_API/quarkus_brand.png)
 
-In this post we mostly fokus on Swagger UI, but the styling options also apply to the [GraphQL UI](https://quarkus.io/guides/microprofile-graphql#graphiql-ui) and the [Health UI](https://quarkus.io/guides/microprofile-health#health-ui).
+In this post we mostly focus on Swagger UI, but the styling options also apply to the [GraphQL UI](https://quarkus.io/guides/microprofile-graphql#graphiql-ui) and the [Health UI](https://quarkus.io/guides/microprofile-health#health-ui).
 
 ### Theme
 
-[Swagger UI Themes](https://ostranme.github.io/swagger-ui-themes/) is now available in configuration, with the default theme being 'feeling blue'.
+[Swagger UI Themes](https://ostranme.github.io/swagger-ui-themes/) are now available in configuration, with the default theme being 'feeling blue'.
 
 You can change the theme by setting the `quarkus.swagger-ui.theme` property, for example:
 
@@ -60,7 +60,7 @@ To supply your own logo, you need to place a file called `logo.png` in `src/main
 
 ### Style
 
-You can go further, and supply your own `style.css`, to fine-tune the branding. Example, to change the `topbar` of the Swagger-UI screen to the corporate colors of ACME:
+You can go further, and supply your own `style.css`, to fine-tune the branding. In example, to change the `topbar` of the Swagger-UI screen to the corporate colors of ACME:
 
 ```css
 html{
@@ -128,7 +128,7 @@ The UI is now fully branded:
 
 ## Other Swagger UI Options
 
-Another new feature available in Quarkus (v1.0.10 +) is the ability to set any of the [configuration options](https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/) available in Swagger UI. As an example, we can set the `urls` and add the petstore (as the default selected option) to Swagger UI:
+Another new feature available in Quarkus (v1.10.0 +) is the ability to set any of the [configuration options](https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/) available in Swagger UI. As an example, we can set the `urls` and add the petstore (as the default selected option) to Swagger UI:
 
 ```properties
 quarkus.swagger-ui.urls.default=/openapi
@@ -152,9 +152,9 @@ Note below the missing `Try it out` button on the `POST`
 
 All other Swagger UI options are now available to configure the UI.
 
-## Other OpenAPI Options
+## Other Small new features
 
-Two small new features in OpenAPI, the ability to add the Health Endpoints and the ability to disable the UI in Runtime.
+Two small new features in OpenAPI and Swagger UI, the ability to add the Health Endpoints and the ability to disable the UI and/or Schema in Runtime.
 
 ### Add Health API to Open API
 
@@ -168,10 +168,16 @@ quarkus.health.openapi.included=true
 
 ### Disable in Runtime
 
-You can now disable the Swagger UI in Runtime (previously only available in Build time)
+If you included the UI in your app (`quarkus.swagger-ui.always-include=true`), you can now disable it when starting the application.
 
 ```
 java -jar -Dquarkus.swagger-ui.enable=false target/yourapp-1.0.0-runner.jar
 ```
 
-Will return a **HTTP 404 (Not Found)** on the Swagger UI page.
+This will return a **HTTP 404 (Not Found)** on the Swagger UI page.
+
+Similarly you can disable the schema (usually under `/openai`) by doing:
+
+```
+java -jar -Dquarkus.smallrye-openapi.enable=false target/yourapp-1.0.0-runner.jar
+```
