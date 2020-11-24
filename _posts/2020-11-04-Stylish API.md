@@ -24,7 +24,7 @@ In this post we mostly fokus on Swagger UI, but the styling options also apply t
 You can change the theme by setting the `quarkus.swagger-ui.theme` property, for example:
 
 ```properties
-quarkus.swagger-ui.theme=monokai
+quarkus.swagger-ui.theme=outline
 ```
 
 ![themed](/images/Stylish_API/themed.png)
@@ -50,18 +50,17 @@ Theme options available:
 
 ### Logo
 
-As part of the custom branding, you can supply your own logo to replace the Quarkus logo. We are going to use [Standard Bank](https://www.standardbank.co.za/) as an example on how you can brand the page:
-
+As part of the custom branding, you can supply your own logo to replace the Quarkus logo. For example, let say you own company that makes everything, ACME, and you are using REST Services for your online store, and wants to brand the Swagger UI Page:
 
 NOTE: Hot reload is not working for logo changes, and remember browser cache, you might need to [force refresh](https://refreshyourcache.com/en/cache/) your browser.
 
-![standardbank logo](/images/Stylish_API/standardbank_logo.png)
+![acme logo](/images/Stylish_API/acme_logo.png)
 
 To supply your own logo, you need to place a file called `logo.png` in `src/main/resources/META-INF/branding`.
 
 ### Style
 
-You can go further, and supply your own `style.css`, to fine-tune the branding. Example, to change the `topbar` of the Swagger-UI screen to the corporate colors of Standard Bank:
+You can go further, and supply your own `style.css`, to fine-tune the branding. Example, to change the `topbar` of the Swagger-UI screen to the corporate colors of ACME:
 
 ```css
 html{
@@ -79,17 +78,17 @@ html{
 
 body{
     margin:0;
-    background: whitesmoke;
+    background: white;
 }
 
 .swagger-ui .topbar { <1>
-    background-color: #0033a1;
+    background-color: whitesmoke;
 }
 
 #footer {
-    background-color: #0033a1;
+    background-color: whitesmoke;
     font-family:sans-serif;
-    color:white;
+    color:#4da32c;
     font-size:70%;
     text-align: center;
 }
@@ -97,7 +96,7 @@ body{
 
 <1> here set the `topbar` background color.
 
-![standardbank css](/images/Stylish_API/standardbank_css.png)
+![acme css](/images/Stylish_API/acme_css.png)
 
 You can change any styling element in this css file, you need to place this file called `style.css` in `src/main/resources/META-INF/branding`.
 
@@ -106,26 +105,26 @@ You can change any styling element in this css file, you need to place this file
 You can also set the HTML title, and add a footer:
 
 ```properties
-quarkus.swagger-ui.title=OpenAPI for Everyone
-quarkus.swagger-ui.footer=&#169; 2020 . Standard Bank
+quarkus.swagger-ui.title=ACME API
+quarkus.swagger-ui.footer=&#169; 2020 . ACME
 ```
 
 Along with other OpenAPI Header fields that can be set via config (as discussed in [this post](/post/openapi_for_everyone/)):
 
 ```properties
-mp.openapi.extensions.smallrye.info.title=Standard Bank API
+mp.openapi.extensions.smallrye.info.title=ACME online store API
 mp.openapi.extensions.smallrye.info.version=1.0.0
-mp.openapi.extensions.smallrye.info.description=The banking API
-mp.openapi.extensions.smallrye.info.contact.email=it@standardbank.co.za
-mp.openapi.extensions.smallrye.info.contact.name=Standard Bank IT
-mp.openapi.extensions.smallrye.info.contact.url=https://www.standardbank.com
+mp.openapi.extensions.smallrye.info.description=We make everything, and sell it online
+mp.openapi.extensions.smallrye.info.contact.email=it@acme.com
+mp.openapi.extensions.smallrye.info.contact.name=ACME IT
+mp.openapi.extensions.smallrye.info.contact.url=https://www.acme.com
 mp.openapi.extensions.smallrye.info.license.name=Apache 2.0
 mp.openapi.extensions.smallrye.info.license.url=http://www.apache.org/licenses/LICENSE-2.0.html
 ```
 
 The UI is now fully branded:
 
-![standardbank footer](/images/Stylish_API/standardbank_footer.png)
+![acme footer](/images/Stylish_API/acme_footer.png)
 
 ## Other Swagger UI Options
 
