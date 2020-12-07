@@ -9,7 +9,7 @@ Hey, I’m Phillip. I’m a Software Engineer living in [Olifantsfontein, South 
 
 I work for [Red Hat](https://www.redhat.com), where I spend most of my time on [MicroProfile](https://microprofile.io/), [SmallRye](https://smallrye.io/) and [Quarkus](https://quarkus.io/)
 
-I am a fan of technology, coffee and programming. I love dogs and [music](https://play.google.com/music/playlist/AMaBXyk7iwAKaDxB5EdeIAaCE3PtbkaF1qC190EPSM9YB6QkWknsYzqy9E0oQks-FeiDThUCOMtUDNS614oveyFrFOzxqcKqKQ%3D%3D). To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
+I am a fan of technology, coffee and programming. I love dogs and [music](https://www.last.fm/user/phillipkruger). To keep active I play [squash](https://en.wikipedia.org/wiki/Squash_(sport)).
 I was lucky enough to marry my best friend, [Charmaine](https://www.charmaine-kruger.com). She is also a geek :) 
 
 ![Me and my family](/images/ons_gesin_2.jpg)
