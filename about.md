@@ -30,8 +30,8 @@ ranging from banking, insurance, rewards programs, retail and mobile. I have ext
 and prefer to be active in all parts of the SDLC. From conceptualizing to running in production.
 I have a passion for **clean code** and **evolutionary architecture**. I love Java, Linux and Open source.
 
-<a href="https://www.acs.org.au">
-    <img title="Certified Professional" src="CP_logo_large.png" alt="ACS Certified Professional" height="120" width="120"/>
+<a href="https://www.acs.org.au" target='_blank'>
+    <img title="Certified Professional" src="/images/CP_logo_large.png" alt="ACS Certified Professional" height="120" width="120"/>
 </a>
 
 <a href='cv/cv.html' class='ui primary basic button' target='_blank'>
