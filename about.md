@@ -107,6 +107,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 #### Previous talks
 
+* 1 March 2021 - [MicroProfile OpenAPI](https://youtu.be/8JsnjHQM36k) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
 * 1 August 2020 - [Building queryable APIs with MicroProfile GraphQL](https://java.geekle.us/#speaker-15) at [Global Summit for Java devs'20](https://java.geekle.us)
 * 29 June 2020 - [Wonders of GraphQL](https://www.youtube.com/watch?v=nMti8-zIDQs) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
 * 27 April 2020 - [Building queryable APIs with MicroProfile GraphQL](https://www.meetup.com/Jozi-JUG/events/270175167) at [JoziJug](https://www.meetup.com/Jozi-JUG/) (online)([slides](https://bit.ly/mp-graphql-presentation-jozijug),[video](https://youtu.be/UqDdDYo-g-8), [code](https://github.com/phillip-kruger/graphql-example))
