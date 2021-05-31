@@ -107,6 +107,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 
 #### Previous talks
 
+* 5 May 2021 - [Writing queryable APIs with MicroProfile GraphQL](https://www.conf42.com/Enterprise_Software_2021_Phillip_Krger_queryable_apis_microprofile_graphql) at [Conf42 Enterprise 2021](https://www.conf42.com/enterprise2021), ([video](https://youtu.be/UnWnSYiGtTE), [code](https://github.com/phillip-kruger/graphql-example) and [code](https://github.com/phillip-kruger/graphql-experimental))
 * 1 March 2021 - [MicroProfile OpenAPI](https://youtu.be/8JsnjHQM36k) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
 * 1 August 2020 - [Building queryable APIs with MicroProfile GraphQL](https://java.geekle.us/#speaker-15) at [Global Summit for Java devs'20](https://java.geekle.us)
 * 29 June 2020 - [Wonders of GraphQL](https://www.youtube.com/watch?v=nMti8-zIDQs) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
