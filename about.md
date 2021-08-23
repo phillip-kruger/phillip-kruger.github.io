@@ -108,6 +108,7 @@ I also enjoy presenting technical topics in forums. I am comfortable running tec
 #### Upcoming talks
 
 * 25 Oct 2021 - [Micro frontends using WebComponents and MicroProfile GraphQL](https://www.eclipsecon.org/2021/sessions/micro-frontends-using-webcomponents-and-microprofile-graphql) at [EclipseCon 2021](https://www.eclipsecon.org/2021)
+* 2 September 2021 - [Writing queryable APIs with MicroProfile GraphQL](https://devconfus2021.sched.com/event/lkfd/writing-queryable-apis-with-microprofile-graphql) at [DevConf.US 2021](https://www.devconf.info/us/)
 
 #### Previous talks
 
