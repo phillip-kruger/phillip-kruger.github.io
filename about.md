@@ -5,7 +5,7 @@ bigimg: "/images/P1250233.jpg"
 permalink: /about
 ---
 
-Hey, I’m Phillip. I’m a Software Engineer living in [Olifantsfontein, South Africa](https://goo.gl/maps/Qnmztzn4CywcGXCA6).
+Hey, I’m Phillip. I’m a Software Engineer living in [Victoria, Australia](https://en.wikipedia.org/wiki/Victoria_(Australia)).
 
 I work for [Red Hat](https://www.redhat.com), where I spend most of my time on [MicroProfile](https://microprofile.io/), [SmallRye](https://smallrye.io/) and [Quarkus](https://quarkus.io/)
 
