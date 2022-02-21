@@ -105,13 +105,10 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
-#### Upcoming talks
-
-* 25 Oct 2021 - [Micro frontends using WebComponents and MicroProfile GraphQL](https://www.eclipsecon.org/2021/sessions/micro-frontends-using-webcomponents-and-microprofile-graphql) at [EclipseCon 2021](https://www.eclipsecon.org/2021)
-
-
 #### Previous talks
 
+* 25 Oct 2021 - [Micro frontends using WebComponents and MicroProfile GraphQL](https://www.eclipsecon.org/2021/sessions/micro-frontends-using-webcomponents-and-microprofile-graphql) at [EclipseCon 2021](https://www.eclipsecon.org/2021) ([video](https://youtu.be/3qTJuqsqzq8))
+* 12 October 2021 - [Micro frontends using WebComponents and MicroProfile GraphQL](https://www.eclipsecon.org/2021/sessions/micro-frontends-using-webcomponents-and-microprofile-graphql) at [Java Africa 2021](https://j-sa.co/)
 * 2 September 2021 - [Writing queryable APIs with MicroProfile GraphQL](https://devconfus2021.sched.com/event/lkfd/writing-queryable-apis-with-microprofile-graphql) at [DevConf.US 2021](https://www.devconf.info/us/), ([video](https://youtu.be/y9vVj9lUvQw), [code](https://github.com/phillip-kruger/graphql-example) and [code](https://github.com/phillip-kruger/graphql-experimental))
 * 5 May 2021 - [Writing queryable APIs with MicroProfile GraphQL](https://www.conf42.com/Enterprise_Software_2021_Phillip_Krger_queryable_apis_microprofile_graphql) at [Conf42 Enterprise 2021](https://www.conf42.com/enterprise2021), ([video](https://youtu.be/UnWnSYiGtTE), [code](https://github.com/phillip-kruger/graphql-example) and [code](https://github.com/phillip-kruger/graphql-experimental))
 * 1 March 2021 - [MicroProfile OpenAPI](https://youtu.be/8JsnjHQM36k) at [Quarkus Insights](https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg) online
