@@ -105,8 +105,13 @@ I am comfortable running and managing Linux servers and [Docker](https://en.wiki
 I enjoy talking and debating about technical concerns. I blog about technical topics and session feedback from conferences.
 I also enjoy presenting technical topics in forums. I am comfortable running technical meetings and finding solutions around a white board.
 
+#### Upcoming talks
+
+* 22 June 2022 - [Intro to Quarkus](https://www.meetup.com/melbourne-java-jvm-users-group/events/286328938/) at the [Melbourne Java & JVM Users Group](https://www.meetup.com/melbourne-java-jvm-users-group/) in Melbourne, Australia.
+
 #### Previous talks
 
+* 7 June 2022 - [Writing Queryable API's with GraphQL](https://jnation.pt/quarkus-day/) at [JNation 2022](https://jnation.pt/) in Portugal.
 * 25 Oct 2021 - [Micro frontends using WebComponents and MicroProfile GraphQL](https://www.eclipsecon.org/2021/sessions/micro-frontends-using-webcomponents-and-microprofile-graphql) at [EclipseCon 2021](https://www.eclipsecon.org/2021) ([video](https://youtu.be/3qTJuqsqzq8))
 * 12 October 2021 - [Micro frontends using WebComponents and MicroProfile GraphQL](https://www.eclipsecon.org/2021/sessions/micro-frontends-using-webcomponents-and-microprofile-graphql) at [Java Africa 2021](https://j-sa.co/)
 * 2 September 2021 - [Writing queryable APIs with MicroProfile GraphQL](https://devconfus2021.sched.com/event/lkfd/writing-queryable-apis-with-microprofile-graphql) at [DevConf.US 2021](https://www.devconf.info/us/), ([video](https://youtu.be/y9vVj9lUvQw), [code](https://github.com/phillip-kruger/graphql-example) and [code](https://github.com/phillip-kruger/graphql-experimental))
